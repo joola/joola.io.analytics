@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<request method="client.list">
+  <!-- Filter by email address (Optional) -->
+  <email></email>
+  <!-- Filter by username (Optional) -->
+  <username></username>
+  <!-- Return only clients modified since this date (Optional) -->
+  <updated_from></updated_from>
+  <!-- Return only clients modified before this date (Optional) -->
+  <updated_to></updated_to>
+  <!-- The page number to show (Optional) -->
+  <page>1</page>
+  <!-- Number of results per page, default 25 (Optional) -->
+  <per_page>25</per_page>
+  <!-- One of 'active', 'archived', 'deleted' -->
+  <folder>active</folder>
+  <!-- Return only clients with this text in their 'notes' (Optional) -->
+  <notes></notes>
+</request>

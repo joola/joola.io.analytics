@@ -1,0 +1,271 @@
+div.jarvisPrompt, #log {
+    width: 940px;
+}
+
+div.jarvisPrompt, #log {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    div.jarvisPrompt, #log {
+        width: 1170px;
+    }
+}
+
+div.jarvisPrompt {
+    opacity:0.7;
+
+    word-wrap: break-word;
+    *margin-bottom: -10px;
+}
+
+div.jarvisPrompt {
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+
+    *width: 100%;
+    *margin-bottom: 2px;
+    *padding-right: 2px;
+    z-index: 100;
+
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+div.jarvisPrompt div.jquery-console-inner {
+    *width: 100%;
+
+    background: #efefef;
+    padding-top: 0.5em;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0.5em;
+    *overflow: auto
+}
+
+div.jarvisPrompt div.jquery-console-prompt-box {
+    color: #444;
+    font-family: monospace;
+}
+
+div.jarvisPrompt div.jquery-console-focus span.jquery-console-cursor {
+    background: #333;
+    color: #eee;
+    font-weight: bold
+}
+
+div.jarvisPrompt div.jquery-console-message-error {
+    color: #ef0505;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0.1em;
+}
+
+div.jarvisPrompt div.jquery-console-message-success {
+    color: #187718;
+    font-family: monospace;
+    padding: 0.1em;
+}
+
+div.jarvisPrompt span.jquery-console-prompt-label {
+    font-weight: bold
+}
+
+
+.dbg-sev {
+    color: #F00
+}
+
+.dbg-w {
+    color: #E92
+}
+
+.dbg-sh {
+    background-color: #fd4;
+    font-weight: bold;
+    color: #000
+}
+
+.dbg-i {
+    color: #666
+}
+
+.dbg-f {
+    color: #999
+}
+
+.dbg-ev {
+    color: #0A0
+}
+
+.dbg-m {
+    color: #990
+}
+
+.bottomwrapper{
+position:fixed;
+bottom:0;
+font: normal 14px monospace;
+}
+
+.logmsg {
+    border-bottom: 1px solid #CCC;
+    padding: 2px;
+    font: 90% monospace
+}
+
+#head {
+    position: absolute;
+    width: 100%;
+    font: x-small arial;
+    border-bottom: 2px solid #999;
+    background-color: #EEE;
+}
+
+#head p {
+    margin: 0px 5px;
+}
+
+#options {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid #999;
+    background-color: #DDD;
+    display: none;
+    padding-left: 5px;
+    font: normal small arial;
+    overflow: auto;
+}
+
+#openbutton, #closebutton {
+    text-decoration: underline;
+    color: #00F;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font: x-small arial;
+}
+
+#clearbutton {
+    text-decoration: underline;
+    color: #00F;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    font: x-small arial;
+}
+
+#exitbutton {
+    text-decoration: underline;
+    color: #00F;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    font: x-small arial;
+}
+/*
+select {
+    font: x-small arial;
+    margin-right: 10px;
+}
+
+hr {
+    border: 0;
+    height: 5px;
+    background-color: #8c8;
+    color: #8c8;
+}
+*/
+.loggerWrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.logdiv {
+    border-top: 0 !important;
+}
+
+.logdiv.expanded {
+    border-top: 1px solid #CCC !important;
+}
+
+.logwrapper {
+    position: absolute;
+    bottom: 31px;
+
+    font: normal 14px monospace;
+
+}
+
+#log {
+    *min-height: 600px;
+    z-index: 1001;
+    *width: 100%;
+    *height: 90%;
+
+    background-color: #FFF;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.vsplitbar {
+    width: 5px;
+    background: #aaa;
+}
+
+#MySplitter .hsplitbar {
+    height: 5px;
+    background: #ddd url(/client/assets/img/hgrabber.gif) no-repeat center;
+    /* No margin, border, or padding allowed */
+}
+
+#MySplitter .hsplitbar.active, #MySplitter .hsplitbar:hover {
+    background: #ccc url(/client/assets/img/hgrabber.gif) no-repeat center;
+}
+
+#MySplitter {
+
+    height: 100%;
+
+}
+
+#TopPane {
+    *position: absolute;
+    *background: #efefef;
+    height: 100px;
+    min-height: 200px;
+    *overflow: auto;
+}
+
+#BottomPane {
+    width: 100%;
+    *position: absolute;
+    *bottom: 31px;
+}
+
+.logheader {
+    height: 20px;
+    background-color: #EFEFEF;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.logfooter {
+    height: 30px;
+    background-color: #EFEFEF;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
