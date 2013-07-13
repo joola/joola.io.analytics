@@ -1,17 +1,26 @@
 var express = require('express'),
     routes = require('./routes'),
-    user = require('./routes/user'),
+    serveSDK = require('./routes/serveSDK'),
     http = require('http'),
     path = require('path'),
     logger = require('./lib/shared/logger');
 
+
+//TODO: Remove this
+global.joola = {};
+joola.config = {};
+joola.config.general = require('./config/joola.analytics.sample.js').configData.general;
+joola.config.joolaServer = require('./config/joola.analytics.sample.js').configData.joolaServer;
+joola.config.cache = require('./config/joola.analytics.sample.js').configData.cache;
+
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 333);
+app.set('port', process.env.PORT || 80);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
+app.use(express.compress());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
@@ -32,6 +41,8 @@ app.use(express.logger({stream: winstonStream}));
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
+
+app.get('/joola*.js', serveSDK.serveSDK);
 
 http.createServer(app).listen(app.get('port'), function () {
     logger.info('Joola Analytics server listening on port ' + app.get('port'));

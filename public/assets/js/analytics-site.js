@@ -34,7 +34,7 @@ function buildContentMenu_Realtime() {
             $item.on('click', function (e) {
                 var matchedContainers = $('.jarvis.container.realtime');
                 //sender._this.showEdit({container:matchedContainers, addNew:true, _this:sender._this});
-                jarvis.getRealtimePanel().showEdit({container:matchedContainers, addNew:true, _this:jarvis.getRealtimePanel()});
+                jarvis.getRealtimePanel().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getRealtimePanel()});
             });
             $(container).append($item);
 
@@ -69,7 +69,7 @@ function buildContentMenu_Dashboards() {
             $item.on('click', function (e) {
                 var matchedContainers = $('.jarvis.container.realtime');
                 //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
-                jarvis.getDashboard().showEdit({container:matchedContainers, addNew:true, _this:jarvis.getDashboard()});
+                jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
             });
             $(container).append($item);
 
@@ -137,7 +137,7 @@ function buildContentMenu_Reports() {
                 $(jarvis).trigger('reportchange', -1);
                 var matchedContainers = $('.jarvis.report.panel');
                 var o = new jarvis.visualisation.report.Editor();
-                o.init(o, {container:matchedContainers, reportID:-1});
+                o.init(o, {container: matchedContainers, reportID: -1});
 
                 //jarvis.visualisation.setDisplay('report');
             });
@@ -278,7 +278,7 @@ function setupLeftNavContents() {
         $li.on('click', function (e) {
             var matchedContainers = $('.jarvis.container.realtime');
             //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
-            jarvis.getDashboard().showEdit({container:matchedContainers, addNew:true, _this:jarvis.getDashboard()});
+            jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
         });
 
         $dashboards.append($li);
@@ -403,7 +403,7 @@ function setupLeftNavContents() {
             $(jarvis).trigger('reportchange', -1);
             var matchedContainers = $('.jarvis.report.panel');
             var o = new jarvis.visualisation.report.Editor();
-            o.init(o, {container:matchedContainers, reportID:-1});
+            o.init(o, {container: matchedContainers, reportID: -1});
         });
         $reports.append($li);
 
@@ -444,7 +444,7 @@ function setupLeftNavEvents() {
             $this.addClass('active');
             $container.addClass('active');
             $header.removeClass('active');
-            $container.css({height:$container.data().height + 'px'});
+            $container.css({height: $container.data().height + 'px'});
         }
     });
 
@@ -478,52 +478,56 @@ function collapseAll() {
 
 }
 
-$(jarvis).bind('setreport', function (e, reportID) {
-    collapseAll();
-    //console.log('repo', reportID);
-    $('.topiclink').removeClass('active');
+$(window).bind('jarvis-loaded', function () {
 
-    var $thetopic = $('.topiclink[data-id="' + reportID + '"]');
-    if ($thetopic.length == 0) {
-        setTimeout(function () {
-            //console.log('d')
-            $thetopic = $('.topiclink[data-id="' + reportID + '"]');
+    $(jarvis).bind('setreport', function (e, reportID) {
+        collapseAll();
+        //console.log('repo', reportID);
+        $('.topiclink').removeClass('active');
+
+        var $thetopic = $('.topiclink[data-id="' + reportID + '"]');
+        if ($thetopic.length == 0) {
+            setTimeout(function () {
+                //console.log('d')
+                $thetopic = $('.topiclink[data-id="' + reportID + '"]');
+                $thetopic.addClass('active');
+                $thetopic.parentsUntil('div.topic').parent().addClass('active');
+            }, 2500);
+        }
+        else {
             $thetopic.addClass('active');
             $thetopic.parentsUntil('div.topic').parent().addClass('active');
-        }, 2500);
-    }
-    else {
-        $thetopic.addClass('active');
-        $thetopic.parentsUntil('div.topic').parent().addClass('active');
-    }
+        }
 
-    jarvis.objects.Reports.Get(null, {id:reportID}, function (sender, data) {
-        pushRecent({type:'report', id:data.ID, data:data});
+        jarvis.objects.Reports.Get(null, {id: reportID}, function (sender, data) {
+            pushRecent({type: 'report', id: data.ID, data: data});
+        });
     });
-});
 
-$(jarvis).bind('setdashboard', function (e, dashboardID) {
-    //console.log('dash', dashboardID);
-    collapseAll();
-    $('.topiclink').removeClass('active');
+    $(jarvis).bind('setdashboard', function (e, dashboardID) {
+        //console.log('dash', dashboardID);
+        collapseAll();
+        $('.topiclink').removeClass('active');
 
-    var $thetopic = $('.topiclink[data-id="' + dashboardID + '"]');
-    if ($thetopic.length == 0) {
-        setTimeout(function () {
-            $thetopic = $('.topiclink[data-id="' + dashboardID + '"]');
+        var $thetopic = $('.topiclink[data-id="' + dashboardID + '"]');
+        if ($thetopic.length == 0) {
+            setTimeout(function () {
+                $thetopic = $('.topiclink[data-id="' + dashboardID + '"]');
+                $thetopic.addClass('active');
+                $thetopic.parentsUntil('div.topic').parent().addClass('active');
+            }, 2500);
+        } else {
             $thetopic.addClass('active');
             $thetopic.parentsUntil('div.topic').parent().addClass('active');
-        }, 2500);
-    } else {
-        $thetopic.addClass('active');
-        $thetopic.parentsUntil('div.topic').parent().addClass('active');
-    }
+        }
 
-    jarvis.objects.Dashboards.Get(null, {id:dashboardID}, function (sender, data) {
-        pushRecent({type:'dashboard', id:data.ID, data:data});
+        jarvis.objects.Dashboards.Get(null, {id: dashboardID}, function (sender, data) {
+            pushRecent({type: 'dashboard', id: data.ID, data: data});
+        });
+
     });
+})
 
-});
 
 $('.helpblock .reporthelp .jarvis.caption').bind('contentchange', function () {
     var $helpblock = $($('.helpblock .resources')[0]);
@@ -531,17 +535,17 @@ $('.helpblock .reporthelp .jarvis.caption').bind('contentchange', function () {
     var resources = [];
     if (jarvis.state.view == 'dashboard') {
         $(this).text('The ' + $(this).text() + ' dashboard');
-        resources.push({title:'About dashboards', url:'http://'});
-        resources.push({title:'Create/edit/delete dashboards', url:'http://'});
-        resources.push({title:'Add widgets to your dashboard', url:'http://'});
+        resources.push({title: 'About dashboards', url: 'http://'});
+        resources.push({title: 'Create/edit/delete dashboards', url: 'http://'});
+        resources.push({title: 'Add widgets to your dashboard', url: 'http://'});
     }
     else if (jarvis.state.view == 'report') {
         $(this).text('The ' + $(this).text() + ' report');
-        var resource = {title:'Test', url:'http://'};
-        resources.push({title:'About reports', url:'http://'});
-        resources.push({title:'Create/edit/delete reports', url:'http://'});
-        resources.push({title:'Viewing metrics', url:'http://'});
-        resources.push({title:'Changing dimensions', url:'http://'});
+        var resource = {title: 'Test', url: 'http://'};
+        resources.push({title: 'About reports', url: 'http://'});
+        resources.push({title: 'Create/edit/delete reports', url: 'http://'});
+        resources.push({title: 'Viewing metrics', url: 'http://'});
+        resources.push({title: 'Changing dimensions', url: 'http://'});
     }
     else {
     }
@@ -650,9 +654,11 @@ function setupRecent() {
                 if (dashboard.Name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
 
                     var reg = new RegExp(term, 'gi');
-                    var final_dashboard_name = dashboard.Name.replace(reg, function(str) {return '<b>'+str+'</b>'});
+                    var final_dashboard_name = dashboard.Name.replace(reg, function (str) {
+                        return '<b>' + str + '</b>'
+                    });
 
-                    var $item = $('<div class="searchresultitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' +final_dashboard_name + '</span></div>');
+                    var $item = $('<div class="searchresultitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + final_dashboard_name + '</span></div>');
                     $item.on('click', function (e) {
                         $(jarvis).trigger('dashboardchange', dashboard.ID);
                         $('.leftnav .results_wrapper').hide();
@@ -669,12 +675,14 @@ function setupRecent() {
                         category = '';
 
                     var reg = new RegExp(term, 'gi');
-                   var final_report_name = report.Name.replace(reg, function(str) {return '<b>'+str+'</b>'});
+                    var final_report_name = report.Name.replace(reg, function (str) {
+                        return '<b>' + str + '</b>'
+                    });
 
                     if (category == '')
-                        var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="subtopic">' +final_report_name+ '</span></div>');
+                        var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="subtopic">' + final_report_name + '</span></div>');
                     else
-                        var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + final_report_name+ '</span></div>');
+                        var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + final_report_name + '</span></div>');
                     $item.on('click', function (e) {
                         $(jarvis).trigger('reportchange', report.ID);
                         $('.leftnav .results_wrapper').hide();

@@ -1,7 +1,7 @@
 {
     "name": "joola-analytics",
     "preferGlobal": false,
-    "version": "2.0.0",
+    "version": "2.0.5",
     "author": "Joola <info@joo.la>",
     "description": "Joola Analytics Website",
     "engine": "node >= 0.10.x",
@@ -15,6 +15,7 @@
         "start": "node app.js"
     },
     "dependencies": {
+        "joola-sdk":"*",
         "express": "3.2.6",
         "jade": "*",
         "async": "*",
