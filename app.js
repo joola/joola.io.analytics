@@ -1,6 +1,8 @@
 var express = require('express'),
     routes = require('./routes'),
     serveSDK = require('./routes/serveSDK'),
+    login = require('./routes/login'),
+    index = require('./routes/index'),
     http = require('http'),
     path = require('path'),
     logger = require('./lib/shared/logger');
@@ -42,6 +44,41 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
+app.get('/login.html', function (req, res) {
+    res.sendfile(__dirname + '/public/login.html');
+});
+app.get('/login.do', login.login);
+app.post('/login.do', login.login);
+
+app.all('/', function (req, res, next) {
+    if (req.session.token) {
+        res.setHeader('joola-token', req.session.token);
+        next();
+    } else {
+        res.redirect('/login.html');
+    }
+});
+
+app.all('*.html', function (req, res, next) {
+    if (req.session.token) {
+        res.setHeader('joola-token', req.session.token);
+        next();
+    } else {
+        res.redirect('/login.html');
+    }
+});
+
+app.all('*', function (req, res, next) {
+    if (req.session.token) {
+        res.setHeader('joola-token', req.session.token);
+        next();
+    }
+    else
+        next();
+});
+
+app.get('/', index.servePage);
+app.get('/index.html', index.servePage);
 app.get('/joola*.js', serveSDK.serveSDK);
 
 http.createServer(app).listen(app.get('port'), function () {

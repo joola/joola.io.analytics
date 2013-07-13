@@ -18,7 +18,8 @@ configData.cache = {
 };
 
 configData.joolaServer = {
-    host: "http://127.0.0.1:8080",
+    host: "127.0.0.1",
+    port: 8080,
     "authToken": "d2ead440-eb12-11e2-91e2-0800200c9a66"
 };
 

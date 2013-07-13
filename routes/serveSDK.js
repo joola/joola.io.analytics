@@ -1,15 +1,40 @@
 var
     fs = require('fs');
 
-var sdkVersion = require('../node_modules/joola-sdk/package.json').version;
-var cachedSDK = '';
+var loadSDK = function (req, res, next) {
+    var result = {
+        success: true,
+        sdk: null,
+        version: null,
+        timestamp: null,
+        etag: null
+    };
 
-fs.readFile('node_modules/joola-sdk/bin/joola.js', 'utf8', function (err, data) {
-    if (err)
-        throw new Error('Failed to load SDK: ' + err);
-    else
-        cachedSDK = data;
-});
+    delete require.cache[require.resolve('../node_modules/joola-sdk/package.json')]
+    result.version = require('../node_modules/joola-sdk/package.json').version;
+
+    fs.readFile('node_modules/joola-sdk/bin/joola.js', function (err, data) {
+        if (err) {
+            result.success = false;
+            throw new Error('Failed to load SDK file: ' + err);
+        }
+        else {
+            fs.stat('node_modules/joola-sdk/bin/joola.js', function (err, stat) {
+                if (err) {
+                    result.success = false;
+                    throw new Error('Failed to load SDK file: ' + err);
+                }
+                else {
+                    result.sdk = data;
+                    result.timestamp = stat.mtime;
+                    result.etag = stat.size + '-' + Date.parse(stat.mtime);
+
+                    next(req, res, result);
+                }
+            })
+        }
+    });
+}
 
 var parseRequest = function (req) {
     var request = {
@@ -22,11 +47,10 @@ var parseRequest = function (req) {
     return request;
 }
 
-var processSDK = function (sdk, req) {
-    var _sdk = sdk;
-
-    _sdk = sdk.replace(/\[\[JARVIS-VERSION\]\]/g,sdkVersion);
-    _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, req.token);
+var processSDK = function (sdk, request) {
+    var _sdk = sdk.sdk.toString()
+    var _sdk = _sdk.replace(/\[\[JARVIS-VERSION\]\]/g, sdk.version);
+    _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, request.token);
     _sdk = _sdk.replace(/\[\[JARVIS-BOOTSTRAP\]\]/g, 'true');
     _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, joola.config.joolaServer.host);
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-CONTENT\]\]/g, '');
@@ -36,14 +60,28 @@ var processSDK = function (sdk, req) {
     return _sdk;
 }
 
+
 exports.serveSDK = function (req, res) {
-    var request = parseRequest(req);
+    loadSDK(req, res, function (req, res, result) {
+        var request = parseRequest(req);
+        var body = processSDK(result, request);
 
-    var body = processSDK(cachedSDK, request);
+        result.etag = request.token + '-' + result.etag;
 
-    res.setHeader('Content-Type', 'text/javascript');
-    res.setHeader('Content-Length', body.length);
-    res.setHeader('joola-token', request.token);
+        res.setHeader('Content-Type', 'text/javascript');
+        res.setHeader('Content-Length', body.length);
+        res.setHeader('Last-Modified', result.timestamp);
+        res.setHeader('Cache-Control', 'public, max-age=31557600');
 
-    res.end(body);
+        if (req.headers['if-none-match'] === result.etag) {
+            res.statusCode = 304;
+            res.end();
+        }
+        else {
+            res.setHeader('ETag', result.etag);
+            res.statusCode = 200;
+        }
+
+        res.end(body);
+    });
 };
