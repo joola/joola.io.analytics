@@ -1,5 +1,6 @@
 var
-    fs = require('fs');
+    fs = require('fs'),
+    url = require('url');
 
 var loadSDK = function (req, res, next) {
     var result = {
@@ -37,8 +38,11 @@ var loadSDK = function (req, res, next) {
 }
 
 var parseRequest = function (req) {
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+
     var request = {
-        token: '123',
+        token: query.token,
         host: '',
         port: 0,
         user: null
@@ -52,7 +56,7 @@ var processSDK = function (sdk, request) {
     var _sdk = _sdk.replace(/\[\[JARVIS-VERSION\]\]/g, sdk.version);
     _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, request.token);
     _sdk = _sdk.replace(/\[\[JARVIS-BOOTSTRAP\]\]/g, 'true');
-    _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, joola.config.joolaServer.host);
+    _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, 'http://' + joola.config.joolaServer.host + ':' + joola.config.joolaServer.port);
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-CONTENT\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-QUERY\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-API\]\]/g, '');
@@ -68,6 +72,7 @@ exports.serveSDK = function (req, res) {
 
         result.etag = request.token + '-' + result.etag;
 
+        res.setHeader('joola-token', request.token);
         res.setHeader('Content-Type', 'text/javascript');
         res.setHeader('Content-Length', body.length);
         res.setHeader('Last-Modified', result.timestamp);
