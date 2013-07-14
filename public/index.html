@@ -253,12 +253,12 @@
 <script src="/assets/js/analytics-site.js"></script>
 <script>
     $().ready(function () {
-        google.load('visualization', '1.0', {'packages': ['corechart']});
-        google.load("visualization", "1.0", {packages: ["imagechart"]});
+        //google.load('visualization', '1.0', {packages: ['corechart']});
+       // google.load("visualization", '1.0', {packages: ['imagechart']});
 
         $(window).bind('jarvis-loaded', function () {
             $.get('/assets/js/analytics-site.js', function () {
-                console.log('loaded');
+                //console.log('loaded');
                 setupLeftNavContents();
             });
 
