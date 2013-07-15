@@ -11,8 +11,6 @@ exports.login = function (req, res) {
         path: '/loginSSO?authToken=' + joola.config.joolaServer.authToken + '&username=' + req.body.username + '&password=' + req.body.password
     };
 
-    console.log(options);
-
     http.get(options,function (response) {
         var body =
             response.on('data', function (chunk) {

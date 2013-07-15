@@ -9,16 +9,21 @@ var express = require('express'),
 
 
 //TODO: Remove this
+
+var configFile = './config/joola.analytics.sample.js';
+if (process.env.JOOLA_CONFIG_ANALYTICS)
+    configFile = process.env.JOOLA_CONFIG_ANALYTICS
+
 global.joola = {};
 joola.config = {};
-joola.config.general = require('./config/joola.analytics.sample.js').configData.general;
-joola.config.joolaServer = require('./config/joola.analytics.sample.js').configData.joolaServer;
-joola.config.cache = require('./config/joola.analytics.sample.js').configData.cache;
+joola.config.general = require(configFile).configData.general;
+joola.config.joolaServer = require(configFile).configData.joolaServer;
+joola.config.cache = require(configFile).configData.cache;
 
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 81);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());

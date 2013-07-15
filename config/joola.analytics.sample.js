@@ -10,7 +10,7 @@ configData.general = {
     serverToken: "joola-analytics-server",
     flatFileDirectory: __dirname + "/public/",
     developmentMode: true,
-    port: 80
+    port: 81
 };
 
 configData.cache = {

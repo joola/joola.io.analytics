@@ -252,10 +252,10 @@
 <script type="text/javascript" src="/joola.min.js?token=[[JARVIS-TOKEN]]"></script>
 <script src="/assets/js/analytics-site.js"></script>
 <script>
-    $().ready(function () {
-        //google.load('visualization', '1.0', {packages: ['corechart']});
-       // google.load("visualization", '1.0', {packages: ['imagechart']});
+    google.load('visualization', '1.0', {packages: ['corechart']});
+    google.load("visualization", '1.0', {packages: ['imagechart']});
 
+    $().ready(function () {
         $(window).bind('jarvis-loaded', function () {
             $.get('/assets/js/analytics-site.js', function () {
                 //console.log('loaded');
