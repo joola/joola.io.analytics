@@ -3,11 +3,11 @@ function buildContentMenus() {
     buildContentMenu_Dashboards();
     buildContentMenu_Reports();
 
+    /*
     jarvis.objects.Dimensions.List(null, null, function () {
     });
     jarvis.objects.Metrics.List(null, null, function () {
-    });
-
+    });*/
 }
 
 function buildContentMenu_Realtime() {
@@ -21,10 +21,10 @@ function buildContentMenu_Realtime() {
                 //if (sender.panelID == -1)
                 //  sender.panelID = item.ID;
 
-                var $item = $('<li class="defaultnav"><a data-id="' + item.ID + '">' + item.Name + '</a></li>');
+                var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                 $item.off('click');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('realtimepanelchange', item.ID);
+                    $(jarvis).trigger('realtimepanelchange', item.id);
                 });
                 $(container).append($item);
             });
@@ -56,10 +56,10 @@ function buildContentMenu_Dashboards() {
                 //if (sender.panelID == -1)
                 //  sender.panelID = item.ID;
 
-                var $item = $('<li class="defaultnav"><a data-id="' + item.ID + '">' + item.Name + '</a></li>');
+                var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                 $item.off('click');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('dashboardchange', item.ID);
+                    $(jarvis).trigger('dashboardchange', item.id);
                 });
                 $(container).append($item);
             });
@@ -91,7 +91,7 @@ function buildContentMenu_Reports() {
             var categories = _.groupBy(data, function (obj) {
                 if (!obj.Category)
                     return '(not set)';
-                return obj.Category.Name;
+                return obj.Category.name;
             });
             //console.log(categories);
 
@@ -108,7 +108,7 @@ function buildContentMenu_Reports() {
                     categoryname = '(not set)';
                 }
                 else {
-                    categoryname = category[0].Category.Name;
+                    categoryname = category[0].Category.name;
                 }
                 if (categoryname != '(not set)') {
 
@@ -116,13 +116,13 @@ function buildContentMenu_Reports() {
                     $(container).append($item);
                 }
                 $(category).each(function (index, item) {
-                    var $item = $('<li class="defaultnav"><a data-id="' + item.ID + '">' + item.Name + '</a></li>');
+                    var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                     $item.off('click');
 
                     //console.log('register click on ' + item.ID);
 
                     $item.on('click', function (e) {
-                        $(jarvis).trigger('reportchange', item.ID);
+                        $(jarvis).trigger('reportchange', item.id);
                     });
                     $(container).append($item);
                 });
@@ -252,18 +252,20 @@ function getParameterByName(name) {
 }
 
 function setupLeftNavContents() {
+    console.log('a');
     jarvis.objects.Dashboards.List(null, null, function () {
+        console.log('b');
         var $dashboards = $('.nav-dashboards');
         $dashboards.empty();
         $(jarvis.objects.Dashboards).each(function (index, dashboard) {
             //console.log(dashboard);
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
-            var $a = $('<a class="topiclink" title="' + dashboard.Name + '" data-id="' + dashboard.ID + '"></a>');
-            var $caption = $('<div class="subtopiccaption">' + dashboard.Name + '</div>');
+            var $a = $('<a class="topiclink" title="' + dashboard.name + '" data-id="' + dashboard.id + '"></a>');
+            var $caption = $('<div class="subtopiccaption">' + dashboard.name + '</div>');
             $a.append($caption);
             $li.append($a);
             $li.on('click', function (e) {
-                $(jarvis).trigger('dashboardchange', dashboard.ID);
+                $(jarvis).trigger('dashboardchange', dashboard.id);
             });
             $dashboards.append($li);
         });
@@ -290,13 +292,13 @@ function setupLeftNavContents() {
         $(jarvis.objects.RealtimePanels).each(function (index, panel) {
             //console.log(dashboard);
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
-            var $a = $('<a class="topiclink" title="' + panel.Name + '"></a>');
-            var $caption = $('<div class="subtopiccaption">' + panel.Name + '</div>');
+            var $a = $('<a class="topiclink" title="' + panel.name + '"></a>');
+            var $caption = $('<div class="subtopiccaption">' + panel.name + '</div>');
             $a.append($caption);
             $li.append($a);
             $li.off('click');
             $li.on('click', function (e) {
-                $(jarvis).trigger('realtimepanelchange', panel.ID);
+                $(jarvis).trigger('realtimepanelchange', panel.id);
             });
             $panels.append($li);
         });
@@ -325,7 +327,7 @@ function setupLeftNavContents() {
         var categories = _.groupBy(data, function (obj) {
             if (!obj.Category)
                 return '(not set)';
-            return obj.Category.Name;
+            return obj.Category.name;
         });
         //console.log(categories);
 
@@ -342,7 +344,7 @@ function setupLeftNavContents() {
                 categoryname = '(not set)';
             }
             else {
-                categoryname = category[0].Category.Name;
+                categoryname = category[0].Category.name;
             }
 
 
@@ -361,13 +363,13 @@ function setupLeftNavContents() {
 
                 $(category).each(function (index, report) {
                     var $li = $('<li class="Mn subtopiclist_topics">');
-                    var $a = $('<a class="topiclink" title="' + report.Name + '" data-id="' + report.ID + '"></a>');
-                    var $caption = $('<div class="subtopiccaption">' + report.Name + '</div>');
+                    var $a = $('<a class="topiclink" title="' + report.name + '" data-id="' + report.id + '"></a>');
+                    var $caption = $('<div class="subtopiccaption">' + report.name + '</div>');
                     $a.append($caption);
                     $li.append($a);
 
                     $li.on('click', function (e) {
-                        $(jarvis).trigger('reportchange', report.ID);
+                        $(jarvis).trigger('reportchange', report.id);
                     });
 
                     $ul.append($li);
@@ -378,8 +380,8 @@ function setupLeftNavContents() {
             else {
                 $(category).each(function (index, report) {
                     var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
-                    var $a = $('<a class="topiclink" title="' + report.Name + '" data-id="' + report.ID + '"></a>');
-                    var $caption = $('<div class="subtopiccaption">' + report.Name + '</div>');
+                    var $a = $('<a class="topiclink" title="' + report.name + '" data-id="' + report.id + '"></a>');
+                    var $caption = $('<div class="subtopiccaption">' + report.name + '</div>');
                     $a.append($caption);
                     $li.append($a);
 
@@ -500,7 +502,7 @@ $(window).bind('jarvis-loaded', function () {
         }
 
         jarvis.objects.Reports.Get(null, {id: reportID}, function (sender, data) {
-            pushRecent({type: 'report', id: data.ID, data: data});
+            pushRecent({type: 'report', id: data.id, data: data});
         });
     });
 
@@ -522,7 +524,7 @@ $(window).bind('jarvis-loaded', function () {
         }
 
         jarvis.objects.Dashboards.Get(null, {id: dashboardID}, function (sender, data) {
-            pushRecent({type: 'dashboard', id: data.ID, data: data});
+            pushRecent({type: 'dashboard', id: data.id, data: data});
         });
 
     });
@@ -575,7 +577,7 @@ function supportsLocalStorage() {
 function pushRecent(item) {
     recent = listRecent();
     $(recent).each(function (index, orecent) {
-        if (orecent.type == item.type && orecent.data.ID == item.data.ID)
+        if (orecent.type == item.type && orecent.data.id == item.data.id)
             recent.splice(index, 1);
     });
     recent.push(item);
@@ -603,25 +605,25 @@ function setupRecent() {
         recent.reverse();
         $(recent).each(function (index, item) {
             if (item.type == 'dashboard') {
-                var $item = $('<div class="recentitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + item.data.Name + '</span></div>');
+                var $item = $('<div class="recentitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + item.data.name + '</span></div>');
 
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('dashboardchange', item.data.ID);
+                    $(jarvis).trigger('dashboardchange', item.data.id);
                     $('.leftnav .popup_wrapper').hide();
                 });
 
                 $('.leftnav .recent_wrapper').append($item);
             }
             else if (item.type == 'report') {
-                var category = item.data.Category.Name;
+                var category = item.data.Category.name;
                 if (category == '(not set)')
                     category = '';
                 if (category == '')
-                    var $item = $('<div class="recentitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="subtopic">' + item.data.Name + '</span></div>');
+                    var $item = $('<div class="recentitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="subtopic">' + item.data.name + '</span></div>');
                 else
-                    var $item = $('<div class="recentitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + item.data.Name + '</span></div>');
+                    var $item = $('<div class="recentitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + item.data.name + '</span></div>');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('reportchange', item.data.ID);
+                    $(jarvis).trigger('reportchange', item.data.id);
                     $('.leftnav .popup_wrapper').hide();
                 });
 
@@ -651,16 +653,16 @@ function setupRecent() {
             $('.searchresultitem').remove();
 
             $(jarvis.objects.Dashboards).each(function (item, dashboard) {
-                if (dashboard.Name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
+                if (dashboard.name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
 
                     var reg = new RegExp(term, 'gi');
-                    var final_dashboard_name = dashboard.Name.replace(reg, function (str) {
+                    var final_dashboard_name = dashboard.name.replace(reg, function (str) {
                         return '<b>' + str + '</b>'
                     });
 
                     var $item = $('<div class="searchresultitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + final_dashboard_name + '</span></div>');
                     $item.on('click', function (e) {
-                        $(jarvis).trigger('dashboardchange', dashboard.ID);
+                        $(jarvis).trigger('dashboardchange', dashboard.id);
                         $('.leftnav .results_wrapper').hide();
                     });
 
@@ -669,13 +671,13 @@ function setupRecent() {
             });
 
             $(jarvis.objects.Reports).each(function (item, report) {
-                if (report.Name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
-                    var category = report.Category.Name;
+                if (report.name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
+                    var category = report.Category.name;
                     if (category == '(not set)')
                         category = '';
 
                     var reg = new RegExp(term, 'gi');
-                    var final_report_name = report.Name.replace(reg, function (str) {
+                    var final_report_name = report.name.replace(reg, function (str) {
                         return '<b>' + str + '</b>'
                     });
 
@@ -684,7 +686,7 @@ function setupRecent() {
                     else
                         var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + final_report_name + '</span></div>');
                     $item.on('click', function (e) {
-                        $(jarvis).trigger('reportchange', report.ID);
+                        $(jarvis).trigger('reportchange', report.id);
                         $('.leftnav .results_wrapper').hide();
                     });
 

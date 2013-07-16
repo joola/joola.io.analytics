@@ -255,7 +255,6 @@
     google.load('visualization', '1.0', {packages: ['corechart']});
     google.load("visualization", '1.0', {packages: ['imagechart']});
 
-    $().ready(function () {
         $(window).bind('jarvis-loaded', function () {
             $.get('/assets/js/analytics-site.js', function () {
                 //console.log('loaded');
@@ -267,7 +266,7 @@
 
             $('.jarvis.version').text('Version ' + jarvis.VERSION);
         });
-    });
+
 </script>
 
 
