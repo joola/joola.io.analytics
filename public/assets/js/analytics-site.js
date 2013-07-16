@@ -87,7 +87,7 @@ function buildContentMenu_Reports() {
         if ($panellist.length > 0) {
             var container = $panellist;
             $(container).empty();
-            //console.log(jarvis.dataaccess.reports);
+
             var categories = _.groupBy(data, function (obj) {
                 if (!obj.Category)
                     return '(not set)';
@@ -102,7 +102,7 @@ function buildContentMenu_Reports() {
             });
 
             _.each(categories, function (category, i) {
-                //console.log(category[0]);
+
                 var categoryname = '';
                 if (!category[0].Category) {
                     categoryname = '(not set)';
@@ -119,7 +119,7 @@ function buildContentMenu_Reports() {
                     var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                     $item.off('click');
 
-                    //console.log('register click on ' + item.ID);
+
 
                     $item.on('click', function (e) {
                         $(jarvis).trigger('reportchange', item.id);
@@ -133,7 +133,7 @@ function buildContentMenu_Reports() {
             $item.on('click', function (e) {
                 //var matchedContainers = $('.jarvis.container.report');
                 //$(jarvis).trigger('reportchange', $(this).attr('data-id'));
-                //console.log('test');
+
                 $(jarvis).trigger('reportchange', -1);
                 var matchedContainers = $('.jarvis.report.panel');
                 var o = new jarvis.visualisation.report.Editor();
@@ -151,9 +151,9 @@ function buildContentMenu_Reports() {
 
 //Textbox handling
 $().ready(function () {
-    //console.log('test')
+
     $('form.required').submit(function (e) {
-        //console.log('submit');
+
         if (!validateForm($(this))) {
             console.log('form validation failed');
             return false;
@@ -252,9 +252,7 @@ function getParameterByName(name) {
 }
 
 function setupLeftNavContents() {
-    console.log('a');
     jarvis.objects.Dashboards.List(null, null, function () {
-        console.log('b');
         var $dashboards = $('.nav-dashboards');
         $dashboards.empty();
         $(jarvis.objects.Dashboards).each(function (index, dashboard) {
