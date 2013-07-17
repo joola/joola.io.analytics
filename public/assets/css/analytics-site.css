@@ -1204,7 +1204,7 @@ table {
 }
 
 .jarvis.dashboard .widget .header:hover {
-    cursor: move;
+    /*cursor: move;*/
 }
 
 .jarvis.dashboard .widget .header .move {

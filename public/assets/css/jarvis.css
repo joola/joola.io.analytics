@@ -318,8 +318,8 @@ tr {
 .jarvis.realtime.geo .header .move,
 .jarvis.dashboard.widget .header .move {
     float: right;
-    cursor: move;
-    background: url('../img/glyphicons_186_move.png');
+    /*cursor: move;*/
+    /*background: url('../img/glyphicons_186_move.png');*/
     background-size: 15px 15px;
     background-position: 0 0;
 
@@ -338,7 +338,7 @@ tr {
 
     float: right;
     cursor: pointer;
-    background: url('../img/glyphicons_119_adjust.png');
+    /*background: url('../img/glyphicons_119_adjust.png');*/
     background-size: 15px 15px;
     background-position: 0 0;
 
@@ -2361,7 +2361,7 @@ i.icon-white {
     margin-right: 5px;
     margin-left: 5px;
 
-    cursor: move;
+    /*cursor: move;*/
 }
 
 .grip.invert {
@@ -3784,4 +3784,16 @@ th.nopaddingtop.metric {
 .disabled > .box > .keyvaluepair:hover {
     background-color:#C5DCFE !important;
     color:#2F67B4 !important;
+}
+
+.panel-edit {
+    display:none;
+}
+
+.widget-add {
+    display:none
+}
+
+.settings {
+    display:none;
 }
