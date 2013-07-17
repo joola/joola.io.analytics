@@ -122,6 +122,7 @@ function buildContentMenu_Reports() {
 
 
                     $item.on('click', function (e) {
+                        console.log(item);
                         $(jarvis).trigger('reportchange', item.id);
                     });
                     $(container).append($item);
@@ -367,6 +368,7 @@ function setupLeftNavContents() {
                     $li.append($a);
 
                     $li.on('click', function (e) {
+                        console.log(report);
                         $(jarvis).trigger('reportchange', report.id);
                     });
 
@@ -384,7 +386,8 @@ function setupLeftNavContents() {
                     $li.append($a);
 
                     $li.on('click', function (e) {
-                        $(jarvis).trigger('reportchange', report.ID);
+                        console.log('report);')
+                        $(jarvis).trigger('reportchange', report.id);
                     });
 
                     $container.append($li);

@@ -37,7 +37,7 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
-app.use(express.session());
+app.use(express.session({expires : new Date(Date.now() + 1200000)}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
