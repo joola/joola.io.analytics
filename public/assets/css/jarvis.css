@@ -3787,13 +3787,13 @@ th.nopaddingtop.metric {
 }
 
 .panel-edit {
-    display:none;
+    display:none !important;
 }
 
 .widget-add {
-    display:none
+    display:none !important;
 }
 
 .settings {
-    display:none;
+    display:none !important;
 }
