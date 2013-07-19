@@ -169,6 +169,12 @@
 <script src="/assets/js/site.js"></script>
 
 <script>
+
+    function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
     if (getParameterByName('error') == '1') {
         $('#submit_alert').text('Username/password could not be verified, please try again.');
         $('#submit_alert').show();
