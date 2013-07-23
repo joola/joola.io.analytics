@@ -269,6 +269,8 @@ function setupLeftNavContents() {
             $dashboards.append($li);
         });
 
+        /* Hiding add new dashboard li */
+        /*
         var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
         var $a = $('<a class="topiclink" title="addnew"></a>');
         var $caption = $('<div class="subtopiccaption">+ Add new dashboard</div>');
@@ -283,6 +285,7 @@ function setupLeftNavContents() {
         });
 
         $dashboards.append($li);
+        */
     });
 
     jarvis.objects.RealtimePanels.List(null, null, function () {
@@ -301,6 +304,7 @@ function setupLeftNavContents() {
             });
             $panels.append($li);
         });
+
 
         var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
         var $a = $('<a class="topiclink" title="addnew"></a>');
@@ -395,6 +399,8 @@ function setupLeftNavContents() {
             }
 
         });
+        /* Hiding add new report li */
+        /*
         var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
         var $a = $('<a class="topiclink" title="addnew"></a>');
         var $caption = $('<div class="subtopiccaption">+ Add new report</div>');
@@ -409,7 +415,7 @@ function setupLeftNavContents() {
             o.init(o, {container: matchedContainers, reportID: -1});
         });
         $reports.append($li);
-
+        */
         setupLeftNavEvents();
     });
 }
