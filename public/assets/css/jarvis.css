@@ -1742,7 +1742,7 @@ table.piechart td {
 }
 
 .jarvis.report.jtable .table th.special.pie select {
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 
 .jarvis.report.jtable .table tr.emptyrowfiller td {
