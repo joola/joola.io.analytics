@@ -3778,12 +3778,24 @@ th.nopaddingtop.metric {
     cursor: default !important;
     opacity:0.6;
 }
-.disabled > .box > .keyvaluepair {
+
+
+.metricscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair {
     cursor: default !important;
 }
-.disabled > .box > .keyvaluepair:hover {
-    background-color:#C5DCFE !important;
-    color:#2F67B4 !important;
+
+.metricscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair:hover {
+    background-color: #C5DCFE !important;
+    color: #2F67B4 !important;
+}
+
+.dimensionscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair {
+    cursor: default !important;
+}
+
+.dimensionscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair:hover {
+    background-color: #DAE2CB !important;
+    color: #738D68 !important;
 }
 
 .panel-edit {
