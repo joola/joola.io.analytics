@@ -1,3 +1,5 @@
+global.loggername = 'joola.analytics';
+
 var express = require('express'),
     routes = require('./routes'),
     serveSDK = require('./routes/serveSDK'),
