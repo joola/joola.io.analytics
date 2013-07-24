@@ -1,4 +1,13 @@
 var
+    http = require('http'),
+    logger = require('../lib/shared/logger');
+
+exports.index = function(req, res){
+    res.render('index', { jarvisToken: req.session.token });
+};
+
+/*
+var
     fs = require('fs');
 
 var loadPage= function (req, res, next) {
@@ -51,12 +60,7 @@ exports.servePage = function (req, res) {
         //res.setHeader('Last-Modified', result.timestamp);
         //res.setHeader('Cache-Control', 'public, max-age=31557600');
 
-        /*
-        if (req.headers['if-none-match'] === result.etag) {
-            res.statusCode = 304;
-            res.end();
-        }
-        else {*/
+        
             res.setHeader('ETag', result.etag);
             res.statusCode = 200;
         //}
@@ -64,3 +68,4 @@ exports.servePage = function (req, res) {
         res.end(body);
     });
 };
+*/

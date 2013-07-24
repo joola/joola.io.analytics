@@ -1146,7 +1146,7 @@ table {
 .jarvis.dashboard .row {
     margin-left: 0;
 }
-
+/*
 .jarvis.dashboard.column-left {
     width: 30%;
     margin: 0;
@@ -1164,7 +1164,7 @@ table {
     margin: 0;
     padding: 0;
 }
-
+*/
 .jarvis.dashboard .widget {
     margin-left: 15px;
 }

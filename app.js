@@ -2,6 +2,7 @@ global.loggername = 'joola.analytics';
 
 var express = require('express'),
     routes = require('./routes'),
+    login2 = require('./routes/login2'),
     serveSDK = require('./routes/serveSDK'),
     login = require('./routes/login'),
     index = require('./routes/index'),
@@ -56,18 +57,20 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
+/*
 app.get('/login.html', function (req, res) {
     res.sendfile(__dirname + '/public/login.html');
 });
-app.get('/login.do', login.login);
-app.post('/login.do', login.login);
+*/
+app.get('/login.do', login2.login);
+app.post('/login.do', login2.login);
 
 app.all('/', function (req, res, next) {
     if (req.session.token) {
         res.setHeader('joola-token', req.session.token);
         next();
     } else {
-        res.redirect('/login.html');
+        res.redirect('/login');
     }
 });
 
@@ -76,7 +79,7 @@ app.all('*.html', function (req, res, next) {
         res.setHeader('joola-token', req.session.token);
         next();
     } else {
-        res.redirect('/login.html');
+        res.redirect('/login');
     }
 });
 
@@ -89,8 +92,9 @@ app.all('*', function (req, res, next) {
         next();
 });
 
-app.get('/', index.servePage);
-app.get('/index.html', index.servePage);
+app.get('/', index.index);
+app.get('/login', login2.index);
+//app.get('/index.html', index.servePage);
 app.get('/joola*.js', serveSDK.serveSDK);
 
 http.createServer(app).listen(app.get('port'), function () {

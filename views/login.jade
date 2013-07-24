@@ -1,0 +1,120 @@
+html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebpro-n4-active.wf-active
+    head
+        link(rel='stylesheet', href='/assets/css/bootstrap.css')
+        link(rel='stylesheet', href='/assets/css/bootstrap-responsive.css')
+        link(rel='stylesheet', href='/assets/css/docs.css')
+        link(rel='stylesheet', href='/assets/css/site.css')
+        link(rel='stylesheet', href='http://use.typekit.net/c/bc8202/ff-meta-serif-web-pro:n5:n7,ff-meta-web-pro:n4.VbN:M:2,VbQ:M:2,ZG3:M:2/d?3bb2a6e53c9684ffdc9a98f71b5b2a62cb9d8d23315479e38020fd548764770ca9789aa1f6c0a6101aa3d34c00b7b43374ea44fa98c775173130c33765a734fb1388a1f9d0daa8b6c3a1fd0a0c1e35945a75f186d9e30f4e2148b4095e6adf5eb1889274074f4ab98de3c28a6d10f6446d5840b7e951e3dff6c37a8c66f4968fee6cdeb4d7c7171cb90d2d4d329c7b2e3da0528d4ac03b8e0769dedcee168970a19ba07c2bfa48dba362af355f62f7f6c2f90d20923f6c1f37447cf5509c0835f190d75d6ead8cf4c466c3d11fb37e76861632')
+        script(src='http://use.typekit.net/rvl8eqz.js')
+        script(src='/assets/js/jquery-1.7.2.min.js')
+        script(src='/assets/js/jquery-ui.min.js')
+        script(src='/assets/js/html5.js')
+        script(src='/assets/js/bootstrap.min.js')
+        script(src='/assets/js/prettify.js')
+        script(src='/assets/js/site.js')
+        
+    
+    body(data-target='.bs-docs-siderbar')
+        div.navbar.navbar-inverse.navbar-static-top
+            div.navbar-inner
+                div.container
+                    a.brand(href='/', style='line-height:26px') Jarvis Analytics
+                        br
+                        span(style='float:right;font-size:82%;font-weight:normal;color:#5d95fa') beta
+        div.container
+            div.hero-unit.content(style='background: none; border: 0; -webkit-box-shadow: none;-moz-box-shadow: none; box-shadow: none; margin-top: 70px;')
+                h3.headertext(style='font-size: 60px; text-align: center;') LOGIN
+                div.row
+                    div.span3 &nbsp
+                    div.span6
+                        p.maintext(style='padding-bottom: 20px; padding-top: 10px;')
+                        div#submit_alert.alert.alert-error(style='display: none; text-align: center;')
+                        form#frm.largerform.required(action='/login.do', method='post', callback="location.href='/'", data-leaveenabled='true', autocomplete='off')
+                            input.on(name='redirect', data-param='redirect', value='/', type='hidden')
+                            div.control-group
+                                label.control-label Username
+                                div.controls
+                                    input.required(type='text', name='username', placeholder='Username')
+
+                            div.control-group
+                                label.control-label Password
+                                div.controls
+                                    input.required(type='text', name='password', placeholder='Password')
+
+                            div.control-group
+                                div.controls
+                                    div.control(style='margin-bottom: 10px; float: clear; margin-left: auto;margin-right: auto; clear: both; padding-right: 0;')
+                                        a.btn.btn-primary.btn-large(onclick="$('#frm').submit();") SIGN IN
+
+        footer.footer
+            div.container
+                div.row
+                    div.span8
+                        h3.bottomcaption Joola Analytics
+                        div.row
+                            div.span2
+                                p Product
+                                ul
+                                    li
+                                        a(href='') What is Joola Analytics?
+                                    li
+                                        a(href='') How does it work?
+                                    li
+                                        a(href='') Get started
+                                    li
+                                        a(href='') Blog
+                            div.span2
+                                p Company
+                                ul
+                                    li
+                                        a(href='') About
+                                    li
+                                        a(href='') Contact Us
+                                    li
+                                        a(href='') Terms of Service
+                            div.span2
+                                p Developers
+                                ul
+                                    li
+                                        a(href='') Overview
+                                    li
+                                        a(href='') FAQ
+                                    li
+                                        a(href='') Documentation
+                                    li
+                                        a(href='') Playground
+                                    li
+                                        a(href='') Support
+                    div.span3
+                        h3.bottomcaption &nbsp;
+                        p Follow us
+                        ul
+                            li
+                                a(href='') @jarvisanalytics
+
+                p(style='font-weight:normal;margin-top:50px;') Built using 
+                    a(href='') Joola 
+                    | Technology © 2013 
+                    a(href='') Joola Smart Solutions Ltd. 
+                    | All rights reserved 
+                    a(href='') Terms and Conditions
+    
+    script(type='text/javascript')
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        if (getParameterByName('error') == '1') {
+            $('#submit_alert').text('Username/password could not be verified, please try again.');
+            $('#submit_alert').show();
+        }
+        else
+            $('#submit_alert').hide();
+
+        $("input").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                $("form").submit();
+            }
+        });
