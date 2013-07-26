@@ -35,7 +35,7 @@ var loadSDK = function (req, res, next) {
             })
         }
     });
-}
+};
 
 var parseRequest = function (req) {
     var url_parts = url.parse(req.url, true);
@@ -46,14 +46,14 @@ var parseRequest = function (req) {
         host: '',
         port: 0,
         user: null
-    }
+    };
 
     return request;
-}
+};
 
 var processSDK = function (sdk, request) {
-    var _sdk = sdk.sdk.toString()
-    var _sdk = _sdk.replace(/\[\[JARVIS-VERSION\]\]/g, sdk.version);
+    var _sdk = sdk.sdk.toString();
+    _sdk = _sdk.replace(/\[\[JARVIS-VERSION\]\]/g, sdk.version);
     _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, request.token);
     _sdk = _sdk.replace(/\[\[JARVIS-BOOTSTRAP\]\]/g, joola.config.joolaServer.bootstrap || 'true');
     _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, 'http://' + joola.config.joolaServer.host + ':' + joola.config.joolaServer.port);
@@ -63,8 +63,7 @@ var processSDK = function (sdk, request) {
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-API\]\]/g, '');
 
     return _sdk;
-}
-
+};
 
 exports.serveSDK = function (req, res) {
     loadSDK(req, res, function (req, res, result) {
