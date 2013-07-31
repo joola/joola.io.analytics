@@ -1,5 +1,7 @@
+doctype 5
 html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebpro-n4-active.wf-active
     head
+        title Login - Jarvis Analytics
         link(rel='stylesheet', href='/assets/css/bootstrap.css')
         link(rel='stylesheet', href='/assets/css/bootstrap-responsive.css')
         link(rel='stylesheet', href='/assets/css/docs.css')
@@ -12,16 +14,15 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
         script(src='/assets/js/bootstrap.min.js')
         script(src='/assets/js/prettify.js')
         script(src='/assets/js/site.js')
-        
-    
+
     body(data-target='.bs-docs-siderbar')
         div.navbar.navbar-inverse.navbar-static-top
             div.navbar-inner
                 div.container
-                    a.brand(href='/', style='line-height:26px') Jarvis Analytics
+                    a.brand(href='/', style='line-height: 26px; margin-top: 10px !important;margin-left: 0;') Jarvis Analytics
                         br
                         span(style='float:right;font-size:82%;font-weight:normal;color:#5d95fa') beta
-        div.container
+        div.container(style='min-height:750px')
             div.hero-unit.content(style='background: none; border: 0; -webkit-box-shadow: none;-moz-box-shadow: none; box-shadow: none; margin-top: 70px;')
                 h3.headertext(style='font-size: 60px; text-align: center;') LOGIN
                 div.row
@@ -39,7 +40,7 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
                             div.control-group
                                 label.control-label Password
                                 div.controls
-                                    input.required(type='text', name='password', placeholder='Password')
+                                    input.required(type='password', name='password', placeholder='Password')
 
                             div.control-group
                                 div.controls
@@ -48,7 +49,7 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
 
         footer.footer
             div.container
-                div.row
+                //div.row
                     div.span8
                         h3.bottomcaption Joola Analytics
                         div.row

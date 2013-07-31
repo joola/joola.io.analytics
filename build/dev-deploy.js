@@ -25,6 +25,6 @@ ncp(basePath, targetDirectory, options, function (err) {
         logger.error('Failed: ' + err);
     else
         logger.info('...Files copied');
+    logger.info('Build script finished');
 });
 
-logger.info('Build script finished');

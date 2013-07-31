@@ -1541,3 +1541,7 @@ table .header:hover::after {
     display:none;
 }
 
+
+.chartcontrol .resolutionpicker {
+    display: none;
+}

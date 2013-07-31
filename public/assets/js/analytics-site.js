@@ -4,10 +4,10 @@ function buildContentMenus() {
     buildContentMenu_Reports();
 
     /*
-    jarvis.objects.Dimensions.List(null, null, function () {
-    });
-    jarvis.objects.Metrics.List(null, null, function () {
-    });*/
+     jarvis.objects.Dimensions.List(null, null, function () {
+     });
+     jarvis.objects.Metrics.List(null, null, function () {
+     });*/
 }
 
 function buildContentMenu_Realtime() {
@@ -118,7 +118,6 @@ function buildContentMenu_Reports() {
                 $(category).each(function (index, item) {
                     var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                     $item.off('click');
-
 
 
                     $item.on('click', function (e) {
@@ -271,21 +270,21 @@ function setupLeftNavContents() {
 
         /* Hiding add new dashboard li */
         /*
-        var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
-        var $a = $('<a class="topiclink" title="addnew"></a>');
-        var $caption = $('<div class="subtopiccaption">+ Add new dashboard</div>');
-        $a.append($caption);
-        $li.append($a);
+         var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
+         var $a = $('<a class="topiclink" title="addnew"></a>');
+         var $caption = $('<div class="subtopiccaption">+ Add new dashboard</div>');
+         $a.append($caption);
+         $li.append($a);
 
-        $li.off('click');
-        $li.on('click', function (e) {
-            var matchedContainers = $('.jarvis.container.realtime');
-            //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
-            jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
-        });
+         $li.off('click');
+         $li.on('click', function (e) {
+         var matchedContainers = $('.jarvis.container.realtime');
+         //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
+         jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
+         });
 
-        $dashboards.append($li);
-        */
+         $dashboards.append($li);
+         */
     });
 
     jarvis.objects.RealtimePanels.List(null, null, function () {
@@ -401,21 +400,21 @@ function setupLeftNavContents() {
         });
         /* Hiding add new report li */
         /*
-        var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
-        var $a = $('<a class="topiclink" title="addnew"></a>');
-        var $caption = $('<div class="subtopiccaption">+ Add new report</div>');
-        $a.append($caption);
-        $li.append($a);
+         var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
+         var $a = $('<a class="topiclink" title="addnew"></a>');
+         var $caption = $('<div class="subtopiccaption">+ Add new report</div>');
+         $a.append($caption);
+         $li.append($a);
 
-        $li.off('click');
-        $li.on('click', function (e) {
-            $(jarvis).trigger('reportchange', -1);
-            var matchedContainers = $('.jarvis.report.panel');
-            var o = new jarvis.visualisation.report.Editor();
-            o.init(o, {container: matchedContainers, reportID: -1});
-        });
-        $reports.append($li);
-        */
+         $li.off('click');
+         $li.on('click', function (e) {
+         $(jarvis).trigger('reportchange', -1);
+         var matchedContainers = $('.jarvis.report.panel');
+         var o = new jarvis.visualisation.report.Editor();
+         o.init(o, {container: matchedContainers, reportID: -1});
+         });
+         $reports.append($li);
+         */
         setupLeftNavEvents();
     });
 }
@@ -708,6 +707,10 @@ function setupRecent() {
         var term = $('.searchmore_text').val();
         search(e, term);
     });
-
-
 }
+
+$(window).bind('jarvis-initialized', function () {
+    $(jarvis).bind('jarvis-session-timeout', function () {
+        location.href = '/login';
+    })
+});

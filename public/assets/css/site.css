@@ -1,4 +1,6 @@
-.ortest { }
+.ortest {
+}
+
 .jarvis.logo {
     margin-top: 5px;
 
@@ -168,7 +170,7 @@ body {
     background-image: none;
     background-repeat: repeat-x;
     border-color: #252525;
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr = '#ff222222', endColorstr = '#ff111111', GradientType = 0);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
 
 .secondarynav {
@@ -792,6 +794,7 @@ table {
 .jumbotron.subhead {
     min-height: 0 !important;
 }
+
 /*
 .jarvis.datebox .container .datetable .dropdownmarker {
     background: #EBEBEB url(/assets/img/date_control_down.gif) no-repeat 50% 50% !important;
@@ -825,7 +828,7 @@ table {
     background-image: -moz-linear-gradient(top, #F6F6F6, silver);
     background-image: -o-linear-gradient(top, #F6F6F6, silver);
     background-image: linear-gradient(top, #F6F6F6, silver);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f6f6f6', EndColorStr = '#c0c0c0');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f6f6f6', EndColorStr='#c0c0c0');
     border: 1px solid #E1E1E1;
     border-bottom: 0;
     border-radius: 5px;
@@ -857,7 +860,7 @@ table {
     background-image: -moz-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: -o-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: linear-gradient(top, #F7F7F7, #D2D2D2);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f7f7f7', EndColorStr = '#d2d2d2');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f7f7f7', EndColorStr='#d2d2d2');
     padding: 1px 10px;
     cursor: pointer;
 }
@@ -869,7 +872,7 @@ table {
     background-image: -moz-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: -o-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: linear-gradient(top, #F7F7F7, #D2D2D2);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f7f7f7', EndColorStr = '#d2d2d2');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f7f7f7', EndColorStr='#d2d2d2');
     padding: 1px 10px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -965,11 +968,11 @@ table {
     color: graytext !important;
 }
 
-.table_wrapper input[type="text"], input[type="password"] {
+.table_wrapper input[type="text"], .table_wrapper input[type="password"] {
     height: 19px;
 }
 
-.table_wrapper input[type="text"], input[type="password"], textarea {
+.table_wrapper input[type="text"], .table_wrapper input[type="password"], textarea {
     border-top: 1px solid #A3A3A3;
     border-left: 1px solid #A3A3A3;
     border-bottom: 1px solid #CCC;
@@ -1448,20 +1451,20 @@ ul.subtopiclist_container.active {
 .helpblock .reporthelp .jarvis.description {
 }
 
-.helpblock .resources{
-    margin-top:10px;
+.helpblock .resources {
+    margin-top: 10px;
 }
 
-.helpblock .resources .resource{
+.helpblock .resources .resource {
     cursor: pointer;
-    font-size:13px;
+    font-size: 13px;
     padding-bottom: 6px;
 }
 
 .leftnav .popup_wrapper {
     background: white;
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
     border: 1px solid #CACACA;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
     color: #555;
@@ -1474,33 +1477,31 @@ ul.subtopiclist_container.active {
     top: 137px;
     z-index: 10001;
 
-    margin-left:15px;
+    margin-left: 15px;
 }
 
-.leftnav .popup_wrapper .recent_wrapper{
+.leftnav .popup_wrapper .recent_wrapper {
     background: #F3F3F3;
 }
 
-.recentlyviewedcaption{
+.recentlyviewedcaption {
     font: bold 11px Arial;
     padding: 6px 6px 6px 9px;
 }
 
-.recentitem, .searchresultitem
- {
+.recentitem, .searchresultitem {
     border-color: #F3F3F3;
     padding: 5px 5px 5px 23px;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.recentitem:hover, .searchresultitem:hover
-{
+.recentitem:hover, .searchresultitem:hover {
     background-color: #E8E8E8;
     color: #444;
 }
 
-.recentitem .topic, .searchresultitem .topic{
+.recentitem .topic, .searchresultitem .topic {
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1508,7 +1509,7 @@ ul.subtopiclist_container.active {
     white-space: nowrap;
 }
 
-.recentitem .subtopic,.searchresultitem .subtopic{
+.recentitem .subtopic, .searchresultitem .subtopic {
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1516,28 +1517,28 @@ ul.subtopiclist_container.active {
     white-space: nowrap;
 }
 
-.recentitem .seperator, .searchresultitem .seperator{
+.recentitem .seperator, .searchresultitem .seperator {
     color: #AAA;
     display: inline-block;
     padding: 0 0.5em;
     vertical-align: text-bottom;
 }
 
-.results_wrapper{
+.results_wrapper {
     border-bottom: 1px solid #CACACA;
     overflow-y: auto;
 }
 
-li,.btn,.listcontainer {
+li, .btn, .listcontainer {
     -webkit-user-select: none;
 }
 
-.footer .container{
-    width:100%;
+.footer .container {
+    width: 100%;
 }
 
 table .header:hover::after {
     visibility: hidden;
-    display:none;
+    display: none;
 }
 
