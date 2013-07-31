@@ -1,4 +1,6 @@
-.ortest {}
+.ortest {
+}
+
 .jarvis.logo {
     margin-top: 5px;
 
@@ -168,7 +170,7 @@ body {
     background-image: none;
     background-repeat: repeat-x;
     border-color: #252525;
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr = '#ff222222', endColorstr = '#ff111111', GradientType = 0);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
 
 .secondarynav {
@@ -792,6 +794,7 @@ table {
 .jumbotron.subhead {
     min-height: 0 !important;
 }
+
 /*
 .jarvis.datebox .container .datetable .dropdownmarker {
     background: #EBEBEB url(/assets/img/date_control_down.gif) no-repeat 50% 50% !important;
@@ -825,7 +828,7 @@ table {
     background-image: -moz-linear-gradient(top, #F6F6F6, silver);
     background-image: -o-linear-gradient(top, #F6F6F6, silver);
     background-image: linear-gradient(top, #F6F6F6, silver);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f6f6f6', EndColorStr = '#c0c0c0');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f6f6f6', EndColorStr='#c0c0c0');
     border: 1px solid #E1E1E1;
     border-bottom: 0;
     border-radius: 5px;
@@ -857,7 +860,7 @@ table {
     background-image: -moz-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: -o-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: linear-gradient(top, #F7F7F7, #D2D2D2);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f7f7f7', EndColorStr = '#d2d2d2');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f7f7f7', EndColorStr='#d2d2d2');
     padding: 1px 10px;
     cursor: pointer;
 }
@@ -869,7 +872,7 @@ table {
     background-image: -moz-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: -o-linear-gradient(top, #F7F7F7, #D2D2D2);
     background-image: linear-gradient(top, #F7F7F7, #D2D2D2);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, StartColorStr = '#f7f7f7', EndColorStr = '#d2d2d2');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#f7f7f7', EndColorStr='#d2d2d2');
     padding: 1px 10px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1146,6 +1149,7 @@ table {
 .jarvis.dashboard .row {
     margin-left: 0;
 }
+
 /*
 .jarvis.dashboard.column-left {
     width: 30%;
@@ -1448,20 +1452,20 @@ ul.subtopiclist_container.active {
 .helpblock .reporthelp .jarvis.description {
 }
 
-.helpblock .resources{
-    margin-top:10px;
+.helpblock .resources {
+    margin-top: 10px;
 }
 
-.helpblock .resources .resource{
+.helpblock .resources .resource {
     cursor: pointer;
-    font-size:13px;
+    font-size: 13px;
     padding-bottom: 6px;
 }
 
 .leftnav .popup_wrapper {
     background: white;
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
     border: 1px solid #CACACA;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
     color: #555;
@@ -1474,33 +1478,31 @@ ul.subtopiclist_container.active {
     top: 137px;
     z-index: 10001;
 
-    margin-left:15px;
+    margin-left: 15px;
 }
 
-.leftnav .popup_wrapper .recent_wrapper{
+.leftnav .popup_wrapper .recent_wrapper {
     background: #F3F3F3;
 }
 
-.recentlyviewedcaption{
+.recentlyviewedcaption {
     font: bold 11px Arial;
     padding: 6px 6px 6px 9px;
 }
 
-.recentitem, .searchresultitem
- {
+.recentitem, .searchresultitem {
     border-color: #F3F3F3;
     padding: 5px 5px 5px 23px;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.recentitem:hover, .searchresultitem:hover
-{
+.recentitem:hover, .searchresultitem:hover {
     background-color: #E8E8E8;
     color: #444;
 }
 
-.recentitem .topic, .searchresultitem .topic{
+.recentitem .topic, .searchresultitem .topic {
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1508,7 +1510,7 @@ ul.subtopiclist_container.active {
     white-space: nowrap;
 }
 
-.recentitem .subtopic,.searchresultitem .subtopic{
+.recentitem .subtopic, .searchresultitem .subtopic {
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1516,49 +1518,48 @@ ul.subtopiclist_container.active {
     white-space: nowrap;
 }
 
-.recentitem .seperator, .searchresultitem .seperator{
+.recentitem .seperator, .searchresultitem .seperator {
     color: #AAA;
     display: inline-block;
     padding: 0 0.5em;
     vertical-align: text-bottom;
 }
 
-.results_wrapper{
+.results_wrapper {
     border-bottom: 1px solid #CACACA;
     overflow-y: auto;
 }
 
-li,.btn,.listcontainer {
+li, .btn, .listcontainer {
     -webkit-user-select: none;
 }
 
-.footer .container{
-    width:100%;
+.footer .container {
+    width: 100%;
 }
 
 table .header:hover::after {
     visibility: hidden;
-    display:none;
+    display: none;
 }
-
 
 .chartcontrol .resolutionpicker {
     display: none;
 }
 
 table .span3 {
-    float:left;
-    width:25%
+    float: left;
+    width: 25%
 }
 
 table .span4 {
-    float:left;
-    width:30%
+    float: left;
+    width: 30%
 }
 
 table .span5 {
-    float:left;
-    width:45%
+    float: left;
+    width: 45%
 }
 
 .jarvis.report.jtable .table td.dimensionvalue:hover {
@@ -1583,30 +1584,28 @@ table .span5 {
 .jarvis.dashboard.jtable.widget .content, .jarvis.dashboard.bartable.widget .content {
     min-height: 0;
 }
-
-
+/*
 span.selectWrapper {
     position: relative;
     display: inline-block;
-    overflow:hidden;
-    width:auto;
-    min-width:70px;
+    overflow: hidden;
+    width: auto;
+    min-width: 70px;
 }
 
 span.selectWrapper select {
     display: inline-block;
     padding: 4px 11px 3px 5px;
-    margin:0 10px;
+    margin: 0 10px;
     font: inherit;
-    outline:none; /* remove focus ring from Webkit */
+    outline: none; /* remove focus ring from Webkit */
     line-height: 1.2;
     background: #f5f5f5;
-    height:30px;
-    color:#666666;
-    border:1px solid #dddddd;
+    height: 30px;
+    color: #666666;
+    border: 1px solid #dddddd;
 
 }
-
 
 /* Select arrow styling */
 span.selectWrapper:after {
@@ -1619,36 +1618,34 @@ span.selectWrapper:after {
     padding: 0 7px;
     background: #f5f5f5;
     color: white;
-    border:1px solid #dddddd;
-    border-left:0px;
-    pointer-events:none;
+    border: 1px solid #dddddd;
+    border-left: 0px;
+    pointer-events: none;
 }
 
 span.selectWrapper:after {
     /*content: none;*/
 }
 
-@media screen and (min-width:0\0) {
-    span.selectWrapper:after
-    {
-        display:none;
+@media screen and (min-width:0 \0) {
+    span.selectWrapper:after {
+        display: none;
     }
 }
-
+*/
 input[type=checkbox] {
-    top:0 !important;
+    top: 0 !important;
 }
 
 .barwrapper {
-    max-width:80px;
-    float:left;
-    width:100%
+    max-width: 80px;
+    float: left;
+    width: 100%
 }
 
-.jarvis.report.jtable td.compare-daterange{
-    color:#777;
+.jarvis.report.jtable td.compare-daterange {
+    color: #777;
 }
-
 
 .jarvis.dashboard.bartable .tablebar {
 
@@ -1684,20 +1681,18 @@ input[type=checkbox] {
 
 .jarvis.dashboard.bartable .compareperiod .tablebar.base_ratio {
     height: 15px;
-    margin-bottom:1px;
+    margin-bottom: 1px;
 }
+
 .jarvis.dashboard.bartable .compareperiod .tablebar.compare_ratio {
     height: 14px;
 }
 
 .jarvis.dashboard.bartable .compareperiod .tablebarwrapper .tablebarcaption {
-    font-size:12px;
-    color:#999999;
-    float:left;
+    font-size: 12px;
+    color: #999999;
+    float: left;
 }
-
-
-
 
 .jarvis.dashboard.bartable .barcaption .caption {
     line-height: 17px;
@@ -1731,4 +1726,167 @@ input[type=checkbox] {
 
 .jarvis.dashboard.bartable .barcaption {
     height: auto;
+}
+
+/*datebox*/
+
+.jarvis.picker.datebox .container .datetable .dates {
+    /*background-color: #f5f5f5;*/
+    padding-bottom: 2px;
+    padding: 5px;
+
+    padding-left: 8px;
+
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.jarvis.picker.datebox .container .datetable .dates .datelabel {
+    /*font-size: 0.875em;*/
+}
+
+.jarvis.picker.datebox .container .datetable .dropdownmarker {
+    background: #f5f5f5 url("../img/arrow_down.png") center no-repeat;
+    width: 25px;
+    margin-right: 5px;
+
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.jarvis.datebox .container.expanded .datetable .dropdownmarker {
+    background: #f5f5f5 url("../img/arrow_up.png") center no-repeat !important;
+}
+
+.jarvis.datebox select {
+    display: inline-block;
+    float: none;
+    height: auto;
+    margin-top: auto;
+    width: auto;
+}
+
+.jarvis.datebox .daterange {
+    padding-left: 0 !important;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption .checker {
+    top: 4px;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption {
+    font-weight: 300;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate {
+    font-weight: 300;
+}
+
+.jarvis.datebox .daycell {
+    font-size: 11px;
+    font-weight: 300 !important;
+}
+
+.jarvis.datebox .daycell a {
+
+    color: #0088cc;
+    border-bottom: 0;
+}
+
+.ui-datepicker-calendar th {
+    font-weight: 600;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .apply {
+    margin-top: -5px;
+}
+
+.jarvis.datebox .picker .wrapper .calendars .datetable-prev div, .jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+    padding-top: 6px !important;
+    padding-bottom: 0px !important;
+    /*height: 28px;*/
+}
+
+.jarvis.datebox .picker .wrapper .calendars .datetable-prev div {
+    padding-left: 5px !important;
+    padding-right: 0px !important;
+}
+
+.jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+    padding-left: 5px !important;
+    padding-right: 0px !important;
+
+}
+
+.jarvis.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .jarvis.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
+    height: 11px;
+    padding: 4px;
+    width: 4px;
+    padding-left: 0;
+    padding-right: 4px;
+    border: 0;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate {
+    display: none;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .divider {
+    display: none;
+}
+
+.jarvis.datebox ._buttons {
+    bottom: 15px;
+    position: absolute;
+    right: 25px;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer input, .jarvis.datebox .picker .wrapper .control .optionscontainer textarea {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.jarvis.datebox .picker .wrapper .control .optionscontainer .apply {
+
+}
+
+.jarvis.datebox .picker .wrapper .calendars {
+    padding-top: 5px;
+}
+
+.jarvis.datebox .ui-datepicker-title {
+    /*height: 28px;*/
+    color: #666 !important;
+    padding-top: 3px;
+    /*font-weight: 600;*/
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    background: whiteSmoke;
+    z-index: 950;
+
+    min-height: 731px;
+    opacity: 0.5;
+
+    height: 100% !important;
+}
+
+.overlay img {
+    position: relative;
+    left: 40%;
+    top: 400px;
+}
+
+.bodywrapper {
+    position: relative;
 }
