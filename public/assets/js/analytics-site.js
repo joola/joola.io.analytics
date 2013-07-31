@@ -93,7 +93,7 @@ function buildContentMenu_Reports() {
                     return '(not set)';
                 return obj.Category.name;
             });
-            //console.log(categories);
+
 
             categories = _.sortBy(categories, function (obj) {
                 if (!obj[0].Category)
@@ -121,7 +121,7 @@ function buildContentMenu_Reports() {
 
 
                     $item.on('click', function (e) {
-                        console.log(item);
+
                         $(jarvis).trigger('reportchange', item.id);
                     });
                     $(container).append($item);
@@ -163,7 +163,7 @@ $().ready(function () {
     $('form.largerform input, form.managed input, form.largerform textarea').each(function (index, item) {
         if ($(this).attr('type') != 'hidden') {
             $(this).on('change', function (e) {
-                console.log('change', this);
+
                 $(this).removeClass('error');
 
                 if ($(this).val() != '')
@@ -194,7 +194,7 @@ $().ready(function () {
 
         $('form.largerform input, form.managed input, form.largerform textarea').each(function (index, item) {
             if ($(this).attr('type') != 'hidden') {
-                console.log($(this))
+
                 if ($(this).val() != '')
                     $(this).trigger('change');
             }
@@ -208,11 +208,11 @@ function verifyEmail(sEmail) {
     var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     if (sEmail.search(emailRegEx) == -1) {
         //alert("Please enter a valid email address.");
-        console.log('email wrong');
+
     }
     else {
         //alert("Woohoo!  The email address is in the correct format and they are the same.");
-        console.log('email ok');
+
         status = true;
     }
     return status;
@@ -223,7 +223,7 @@ function validateForm(frm) {
     var $frm = $(frm);
 
     $frm.find('input.required, select.required, textarea.required').each(function (index, item) {
-        //console.log($(this), $(this).val());
+
         if ($(this).val() == '' || $(this).val() == '-1') {
             validated = false;
             $(this).addClass('error');
@@ -256,7 +256,7 @@ function setupLeftNavContents() {
         var $dashboards = $('.nav-dashboards');
         $dashboards.empty();
         $(jarvis.objects.Dashboards).each(function (index, dashboard) {
-            //console.log(dashboard);
+
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
             var $a = $('<a class="topiclink" title="' + dashboard.name + '" data-id="' + dashboard.id + '"></a>');
             var $caption = $('<div class="subtopiccaption">' + dashboard.name + '</div>');
@@ -291,7 +291,7 @@ function setupLeftNavContents() {
         var $panels = $('.nav-panels');
         $panels.empty();
         $(jarvis.objects.RealtimePanels).each(function (index, panel) {
-            //console.log(dashboard);
+
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
             var $a = $('<a class="topiclink" title="' + panel.name + '"></a>');
             var $caption = $('<div class="subtopiccaption">' + panel.name + '</div>');
@@ -331,7 +331,7 @@ function setupLeftNavContents() {
                 return '(not set)';
             return obj.Category.name;
         });
-        //console.log(categories);
+
 
         categories = _.sortBy(categories, function (obj) {
             if (!obj[0].Category)
@@ -340,7 +340,7 @@ function setupLeftNavContents() {
         });
 
         _.each(categories, function (category, i) {
-            //console.log(category[0]);
+
             var categoryname = '';
             if (!category[0].Category) {
                 categoryname = '(not set)';
@@ -371,7 +371,7 @@ function setupLeftNavContents() {
                     $li.append($a);
 
                     $li.on('click', function (e) {
-                        console.log(report);
+
                         $(jarvis).trigger('reportchange', report.id);
                     });
 
@@ -389,7 +389,7 @@ function setupLeftNavContents() {
                     $li.append($a);
 
                     $li.on('click', function (e) {
-                        console.log('report);')
+
                         $(jarvis).trigger('reportchange', report.id);
                     });
 
@@ -440,7 +440,7 @@ function setupLeftNavEvents() {
         var $container = $($this.find('.subtopiclist_container'));
         var $header = $($this.find('.subtopiclistheader'));
 
-        //console.log($container);
+
         if ($container.hasClass('active')) {
             $this.removeClass('active');
             $container.removeClass('active');
@@ -485,18 +485,18 @@ function collapseAll() {
     $('ul.subtopic').removeClass('active');
 
 }
-
-$(window).bind('jarvis-loaded', function () {
+$(window).bind('jarvis-initialized', function () {
 
     $(jarvis).bind('setreport', function (e, reportID) {
+
         collapseAll();
-        //console.log('repo', reportID);
+
         $('.topiclink').removeClass('active');
 
         var $thetopic = $('.topiclink[data-id="' + reportID + '"]');
         if ($thetopic.length == 0) {
             setTimeout(function () {
-                //console.log('d')
+
                 $thetopic = $('.topiclink[data-id="' + reportID + '"]');
                 $thetopic.addClass('active');
                 $thetopic.parentsUntil('div.topic').parent().addClass('active');
@@ -513,7 +513,8 @@ $(window).bind('jarvis-loaded', function () {
     });
 
     $(jarvis).bind('setdashboard', function (e, dashboardID) {
-        //console.log('dash', dashboardID);
+
+
         collapseAll();
         $('.topiclink').removeClass('active');
 
@@ -651,7 +652,7 @@ function setupRecent() {
 
 
     var search = function (e, term) {
-        console.log('search', term);
+
         if ((term == '' || term.length < 1 ) && e.which != 13) {
             $('.searchresultitem').remove();
         }

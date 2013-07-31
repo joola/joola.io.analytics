@@ -70,7 +70,7 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
                                 div.resources
                                     div.resourcewrapper
                                         a.resource Help center
-               
+
                     td.navsep
                         div(style='min-width:5px;width:5px')
                     td.content_wrapper
@@ -162,17 +162,13 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
     script(src='/joola.min.js?token=#{jarvisToken}', type='text/javascript')
     script(type='text/javascript')
         google.load('visualization', '1.0', {packages: ['corechart']});
-        google.load("visualization", '1.0', {packages: ['imagechart']});
-    
-        $(window).bind('jarvis-loaded', function () {
-            $.get('/assets/js/analytics-site.js', function () {
+            google.load("visualization", '1.0', {packages: ['imagechart']});
 
+            $(window).bind('jarvis-loaded', function () {
                 setupLeftNavContents();
-            });
 
-            jarvis.bootstrap = true;
-            jarvis.visualisation.init();
-
-            $('.jarvis.version').text('Version ' + jarvis.VERSION);
-        });
+                jarvis.bootstrap = true;
+                jarvis.visualisation.init();
+                $('.jarvis.version').text('Version ' + jarvis.VERSION);
+                });
 
