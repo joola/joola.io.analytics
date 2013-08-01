@@ -3809,3 +3809,46 @@ th.nopaddingtop.metric {
 .settings {
     display:none !important;
 }
+
+
+
+.jarvis.breadcrumbs {
+    padding-top: 5px;
+              padding-bottom:5px;
+    font-size: 14px;
+    font-weight: 300;
+                   float:left;
+    overflow: auto;
+}
+
+.jarvis.breadcrumbs .crumb {
+    float: left;
+}
+
+.jarvis.breadcrumbs .crumb .caption {
+
+}
+
+.jarvis.breadcrumbs .crumb .value {
+    color: #08C;
+}
+
+.jarvis.breadcrumbs .crumb .value:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.jarvis.breadcrumbs .crumb .value:last-of-type {
+    color: inherit;
+}
+
+.jarvis.breadcrumbs .crumb .value:last-of-type:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.jarvis.breadcrumbs .crumb .sep {
+    padding-left: 5px;
+    background-color:transparent;
+    padding-right: 5px;
+}
