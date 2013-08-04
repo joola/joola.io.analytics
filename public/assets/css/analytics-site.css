@@ -1842,3 +1842,12 @@ input[type=checkbox] {
 .bodywrapper {
     position: relative;
 }
+
+
+.jarvis.report.jtable .table td.dimensionvalue {
+    color: #222;
+}
+
+.jarvis.report.jtable .table td.dimensionvalue .drilldownlink {
+    border-bottom: 1px dotted #222;
+}

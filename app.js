@@ -34,7 +34,7 @@ var app = express();
 app.set('port', joola.config.general.port || 80);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.favicon());
+app.use(express.favicon('public/assets/ico/favicon.ico'));
 app.use(express.compress());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
