@@ -2,6 +2,43 @@ var
     http = require('http'),
     logger = require('../lib/shared/logger');
 
+exports.index = function (req, res) {
+    res.render('login', { title: 'Joola Analytics' });
+};
+
+exports.checkLoginNeeded = function (next) {
+    logger.info('Check login needed...');
+
+    var options = {
+        host: joola.config.joolaServer.host,
+        port: joola.config.joolaServer.port,
+        path: '/loginNeeded'
+    };
+
+    http.get(options,function (response) {
+        var body =
+            response.on('data', function (chunk) {
+                body += chunk;
+            });
+
+        response.on('end', function () {
+            var responseToken = body.replace('[object Object]', '');
+            responseToken = JSON.parse(responseToken);
+
+            if (!responseToken['needed']) {
+                logger.info('Login not needed.');
+                next(false);
+            }
+            else {
+                logger.info('Login needed.');
+                next(true);
+            }
+        });
+    }).on('error', function (e) {
+            throw e;
+        });
+};
+
 exports.login = function (req, res) {
     logger.info('Login request for username [' + req.body.username + ']');
 
@@ -23,7 +60,7 @@ exports.login = function (req, res) {
 
             if (!responseToken['joola-token']) {
                 logger.error('Login failed for username [' + req.body.username + '].');
-                res.redirect('/login.html?error=1');
+                res.redirect('/login/?error=1');
                 return;
             }
             logger.info('Login success for username [' + responseToken.user.displayName + ']');
@@ -32,6 +69,7 @@ exports.login = function (req, res) {
         });
     }).on('error', function (e) {
             logger.error('Login failed for username [' + req.body.username + ']: ' + e.message);
-            res.redirect('/login.html?error=1');
+            res.redirect('/login/?error=1');
         });
+
 };

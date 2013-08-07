@@ -1,7 +1,7 @@
 doctype 5
 html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebpro-n4-active.wf-active
     head
-        title Login - Jarvis Analytics
+        title Demo - Jarvis Analytics
         link(rel='stylesheet', href='/assets/css/bootstrap.css')
         link(rel='stylesheet', href='/assets/css/bootstrap-responsive.css')
         link(rel='stylesheet', href='/assets/css/docs.css')
@@ -21,31 +21,10 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
                 div.container
                     a.brand(href='/', style='line-height: 26px; margin-top: 10px !important;margin-left: 0;') Jarvis Analytics
                         br
-                        span(style='float:right;font-size:82%;font-weight:normal;color:#5d95fa;padding-bottom:5px;') beta
+                        span(style='float:right;font-size:82%;font-weight:normal;color:#5d95fa;padding-bottom:5px;') demo
         div.container(style='min-height:750px')
             div.hero-unit.content(style='background: none; border: 0; -webkit-box-shadow: none;-moz-box-shadow: none; box-shadow: none; margin-top: 70px;')
-                h3.headertext(style='font-size: 60px; text-align: center;') LOGIN
-                div.row
-                    div.span3 &nbsp
-                    div.span6
-                        p.maintext(style='padding-bottom: 20px; padding-top: 10px;')
-                        div#submit_alert.alert.alert-error(style='display: none; text-align: center;')
-                        form#frm.largerform.required(action='/login.do', method='post', callback="location.href='/'", data-leaveenabled='true', autocomplete='off')
-                            input.on(name='redirect', data-param='redirect', value='/', type='hidden')
-                            div.control-group
-                                label.control-label Username
-                                div.controls
-                                    input.required(type='text', name='username', placeholder='Username')
 
-                            div.control-group
-                                label.control-label Password
-                                div.controls
-                                    input.required(type='password', name='password', placeholder='Password')
-
-                            div.control-group
-                                div.controls
-                                    div.control(style='margin-bottom: 10px; float: clear; margin-left: auto;margin-right: auto; clear: both; padding-right: 0;')
-                                        a.btn.btn-primary.btn-large(onclick="$('#frm').submit();") SIGN IN
 
         footer.footer
             div.container
@@ -99,7 +78,7 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
                     a(href='') Joola Smart Solutions Ltd. 
                     | All rights reserved 
                     a(href='') Terms and Conditions
-    
+
     script(type='text/javascript').
         function getParameterByName(name) {
             var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);

@@ -1,7 +1,7 @@
 {
     "name": "joola-analytics",
     "preferGlobal": false,
-    "version": "2.2.56",
+    "version": "2.2.61",
     "author": "Joola <info@joo.la>",
     "description": "Joola Analytics Website",
     "engine": "node >= 0.10.x",
