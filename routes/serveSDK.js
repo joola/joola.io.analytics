@@ -61,6 +61,7 @@ var processSDK = function (sdk, request) {
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-CONTENT\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-QUERY\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-API\]\]/g, '');
+    _sdk = _sdk.replace(/\[\[JARVIS-LOGINREDIRECTURL\]\]/g, joola.config.joolaServer.loginRedirectUrl || null);
 
     return _sdk;
 };
