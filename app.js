@@ -5,6 +5,7 @@ var express = require('express'),
     serveSDK = require('./routes/serveSDK'),
     index = require('./routes/index'),
     http = require('http'),
+    https = require('https'),
     path = require('path'),
     logger = require('./lib/shared/logger'),
     fs = require('fs');
