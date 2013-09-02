@@ -119,6 +119,19 @@ app.use(function (req, res, next) {
     res.type('txt').send('Not found');
 });
 
-http.createServer(app).listen(app.get('port'), function () {
-    logger.info('Joola Analytics server listening on port ' + app.get('port'));
+var secureOptions = {
+    key: fs.readFileSync(joola.config.general.keyFile),
+    cert: fs.readFileSync(joola.config.general.certFile)
+};
+
+http.createServer(app).listen(joola.config.general.port || 80, function (err) {
+    if (err)
+        throw err;
+    logger.info('Joola Analytics server listening on port ' + joola.config.general.port || 80);
+});
+
+https.createServer(secureOptions, app).listen(joola.config.general.securePort || 443, function (err) {
+    if (err)
+        throw err;
+    logger.info('Joola Analytics server listening on secure port ' + joola.config.general.securePort || 443);
 });
