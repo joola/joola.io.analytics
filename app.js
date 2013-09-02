@@ -30,7 +30,7 @@ joola.config.cache = require(configFile).configData.cache;
 var app = express();
 
 // all environments
-app.set('port', joola.config.general.port || 80);
+//app.set('port', joola.config.general.port || 80);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon('public/assets/ico/favicon.ico'));
