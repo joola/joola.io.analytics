@@ -10,7 +10,11 @@ configData.general = {
     serverToken: "joola-analytics-server",
     flatFileDirectory: __dirname + "/public/",
     developmentMode: true,
-    port: 80
+    port: 80,
+    securePort: 443,
+    secure: false,
+    keyFile: __dirname + '/certs/key.pem',
+    certFile: __dirname + '/certs/cert.pem'
 };
 
 configData.cache = {
