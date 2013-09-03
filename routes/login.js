@@ -1,6 +1,7 @@
 var
 // http = require('http'),
     logger = require('../lib/shared/logger');
+    configFile = require('../config/joola.analytics.sample.js');
 
 exports.index = function (req, res) {
     res.render('login', { title: 'Joola Analytics' });
@@ -15,10 +16,14 @@ exports.checkLoginNeeded = function (next) {
         host: joola.config.joolaServer.host,
         port: joola.config.joolaServer.port,
         path: '/loginNeeded',
+        sampleData: configFile.configData.general.sampleData,
         rejectUnauthorized: false
     };
 
     getter.get(options,function (response) {
+        if (options.sampleData) {
+            next(false);
+        }
         var body =
             response.on('data', function (chunk) {
                 body += chunk;
@@ -40,6 +45,7 @@ exports.checkLoginNeeded = function (next) {
     }).on('error', function (e) {
             throw e;
         });
+        
 };
 
 exports.login = function (req, res) {
