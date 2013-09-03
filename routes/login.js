@@ -1,6 +1,7 @@
 var
     http = require('http'),
-    logger = require('../lib/shared/logger');
+    logger = require('../lib/shared/logger'),
+    configFile = require('../config/joola.analytics.sample.js');
 
 exports.index = function (req, res) {
     res.render('login', { title: 'Joola Analytics' });
@@ -8,7 +9,17 @@ exports.index = function (req, res) {
 
 exports.checkLoginNeeded = function (next) {
     logger.info('Check login needed...');
-
+    if (configFile.configData.general.sampleData) {
+        logger.info('Login not needed');
+        next(false);
+        
+    }
+    else {
+        logger.info('Login needed');
+        next(true);
+        
+    }
+    /*
     var options = {
         host: joola.config.joolaServer.host,
         port: joola.config.joolaServer.port,
@@ -37,6 +48,7 @@ exports.checkLoginNeeded = function (next) {
     }).on('error', function (e) {
             throw e;
         });
+        */
 };
 
 exports.login = function (req, res) {

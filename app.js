@@ -27,6 +27,7 @@ joola.config.general = require(configFile).configData.general;
 joola.config.joolaServer = require(configFile).configData.joolaServer;
 joola.config.cache = require(configFile).configData.cache;
 
+
 var app = express();
 
 // all environments

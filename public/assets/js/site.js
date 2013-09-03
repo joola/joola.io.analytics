@@ -1122,3 +1122,7 @@ function ConfirmDialog(caption, message, yes_callback, no_callback) {
         return this;
     };
 })(jQuery);
+
+$('.demonoticebar.dismiss').on('click', function() {
+    
+}   );

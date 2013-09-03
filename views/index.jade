@@ -16,6 +16,11 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
         script(src='/assets/js/prettify.js')
         script(src='/assets/js/analytics-site.js')
     body
+        div.demonoticebar(style='display:none') You are currently viewing demo data 
+            a(href='https://joolatech.atlassian.net/wiki/display/JAD/Welcome') click here
+            |  to learn more about how to integrate your data with Jarvis             
+            br
+            a.dismiss(href="javascript:void(0);") (Close this message)
         div.navbar.navbar-inverse.navbar-static-top
             div.navbar-inner
                 div._container
@@ -173,3 +178,14 @@ html.wf-ffmetaserifwebpro-n5-active.wf-ffmetaserifwebpro-n7-active.wf-ffmetawebp
                 $('.jarvis.version').text('Version ' + jarvis.VERSION);
                 });
 
+    script(type='text/javascript').
+        var sampleData = #{sampleData};
+        if (sampleData) { 
+            $('.demonoticebar > .dismiss').on('click', function() { 
+              $('.demonoticebar').slideUp(200);
+              document.cookie = "hidedemonotice=true;max-age=" + 60 * 60 * 24 * 10;
+            });   
+            if (document.cookie.indexOf('hidedemonotice=') == '-1') {
+                $('.demonoticebar').delay(3000).slideDown(400);
+            }
+        }
