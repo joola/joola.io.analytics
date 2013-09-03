@@ -1,5 +1,5 @@
 var
-    http = require('http'),
+// http = require('http'),
     logger = require('../lib/shared/logger');
 
 exports.index = function (req, res) {
@@ -9,13 +9,16 @@ exports.index = function (req, res) {
 exports.checkLoginNeeded = function (next) {
     logger.info('Check login needed...');
 
+    var getter = (joola.config.joolaServer.secure ? require('https') : require('http'));
+
     var options = {
         host: joola.config.joolaServer.host,
         port: joola.config.joolaServer.port,
-        path: '/loginNeeded'
+        path: '/loginNeeded',
+        rejectUnauthorized: false
     };
 
-    http.get(options,function (response) {
+    getter.get(options,function (response) {
         var body =
             response.on('data', function (chunk) {
                 body += chunk;
@@ -42,13 +45,16 @@ exports.checkLoginNeeded = function (next) {
 exports.login = function (req, res) {
     logger.info('Login request for username [' + req.body.username + ']');
 
+    var getter = (joola.config.joolaServer.secure ? require('https') : require('http'));
+
     var options = {
         host: joola.config.joolaServer.host,
         port: joola.config.joolaServer.port,
-        path: '/loginSSO?authToken=' + joola.config.joolaServer.authToken + '&username=' + req.body.username + '&password=' + req.body.password
+        path: '/loginSSO?authToken=' + joola.config.joolaServer.authToken + '&username=' + req.body.username + '&password=' + req.body.password,
+        rejectUnauthorized: false
     };
 
-    http.get(options,function (response) {
+    getter.get(options,function (response) {
         var body =
             response.on('data', function (chunk) {
                 body += chunk;
