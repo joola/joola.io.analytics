@@ -12,7 +12,7 @@ configData.general = {
     developmentMode: true,
     port: 80,
     securePort: 443,
-    secure: false,
+    secure: true,
     keyFile: __dirname + '/certs/key.pem',
     certFile: __dirname + '/certs/cert.pem'
 };
@@ -24,7 +24,8 @@ configData.cache = {
 configData.joolaServer = {
     host: "127.0.0.1",
     port: 8080,
-    contentHost: '127.0.0.1',
+    secure: true,
+    contentHost: 'https://127.0.0.1',
     bootstrap: 'false',
     "authToken": "d2ead440-eb12-11e2-91e2-0800200c9a66",
     loginRedirectUrl: null

@@ -130,8 +130,10 @@ http.createServer(app).listen(joola.config.general.port || 80, function (err) {
     logger.info('Joola Analytics server listening on port ' + joola.config.general.port || 80);
 });
 
-https.createServer(secureOptions, app).listen(joola.config.general.securePort || 443, function (err) {
-    if (err)
-        throw err;
-    logger.info('Joola Analytics server listening on secure port ' + joola.config.general.securePort || 443);
-});
+if (joola.config.general.secure) {
+    https.createServer(secureOptions, app).listen(joola.config.general.securePort || 443, function (err) {
+        if (err)
+            throw err;
+        logger.info('Joola Analytics server listening on secure port ' + joola.config.general.securePort || 443);
+    });
+}
