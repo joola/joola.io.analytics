@@ -85,7 +85,7 @@ process.env.JOOLA_CONFIG_ANALYTICS_HOMEPAGE = 'c:\\dev\\joola-analytics\\public\
  });
  }
  });*/
-app.get('/', index.index);
+app.get('/', index.index2);
 app.get('/index', index.index2);
 app.get('/homepage', index.homepage);
 app.get('/login', login.index);
