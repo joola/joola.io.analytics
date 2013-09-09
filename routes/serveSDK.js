@@ -45,7 +45,8 @@ var parseRequest = function (req) {
         token: query.token,
         host: '',
         port: 0,
-        user: null
+        user: null,
+        req: req
     };
 
     return request;
@@ -57,7 +58,7 @@ var processSDK = function (sdk, request) {
     _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, request.token);
     _sdk = _sdk.replace(/\[\[JARVIS-BOOTSTRAP\]\]/g, joola.config.joolaServer.bootstrap || 'true');
     _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, (joola.config.joolaServer.secure ? 'https://' : 'http://') + joola.config.joolaServer.host + ':' + joola.config.joolaServer.port);
-    _sdk = _sdk.replace(/\[\[JARVIS-CONTENTHOST\]\]/g, joola.config.joolaServer.contentHost);
+    _sdk = _sdk.replace(/\[\[JARVIS-CONTENTHOST\]\]/g, joola.config.joolaServer.contentHost || request.req.headers.host);
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-CONTENT\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-QUERY\]\]/g, '');
     _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-API\]\]/g, '');
