@@ -1,29 +1,66 @@
 {
-    "name": "joola-analytics",
-    "preferGlobal": false,
-    "version": "2.3.2",
-    "author": "Joola <info@joo.la>",
-    "description": "Joola Analytics Website",
-    "engine": "node >= 0.10.x",
-
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/joola/joola-analytics.git"
+  "name": "joola.io.analytics",
+  "preferGlobal": false,
+  "version": "3.0.0",
+  "author": "Joola <info@joo.la>",
+  "description": "joola.io's analytics website",
+  "engine": "node >= 0.10.x",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joola/joola.io.analytics.git"
+  },
+  "contributors": [
+    {
+      "name": "Itay Weinberger",
+      "email": "itay@joo.la",
+      "url": "http://joo.la"
     },
-    "scripts": {
-        "start": "node app.js"
-    },
-    "dependencies": {
-        "joola-sdk":"2.3.x",
-        "express": "3.2.6",
-        "jade": "*",
-        "async": "*",
-        "underscore": "*",
-        "winston": "*",
-        "request": "*",
-        "process": "*",
-        "path": "*",
-        "ncp": "*"
+    {
+      "name": "Or Weinberger",
+      "email": "or@joo.la",
+      "url": "http://joo.la"
     }
+  ],
+  "scripts": {
+    "test": "make test",
+    "start": "node joola.io.analytics.js",
+    "debug": "npm-inspector && npm start && open \"http://http://127.0.0.1:8080/debug?port=5858\"",
+    "monitor": "mocha --reporter min --watch",
+    "debugtest": "mocha --debug-brk --reporter spec",
+    "blanket": {
+      "pattern": "test",
+      "data-cover-never": "node_modules"
+    },
+    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "bin": {
+    "joola.io.analytics": "./bin/joola.io.analytics"
+  },
+  "dependencies": {
+    "joola-sdk": "2.3.x",
+    "express": "3.2.6",
+    "jade": "*",
+    "async": "*",
+    "underscore": "*",
+    "winston": "*",
+    "request": "*",
+    "process": "*",
+    "path": "*",
+    "ncp": "*"
+  },
+  "devDependencies": {
+    "closurecompiler": "*",
+    "underscore": "1.x",
+    "mocha-lcov-reporter": "0.x",
+    "coveralls": "2.x",
+    "should": "1.x",
+    "mocha": "1.x",
+    "sinon": "1.x",
+    "chai": "1.x",
+    "sinon-chai": "2.x",
+    "blanket": "1.x",
+    "jshint": "2.x"
+  },
+  "license": "GPL-3.0"
 }
