@@ -29,7 +29,7 @@
     "monitor": "mocha --reporter min --watch",
     "debugtest": "mocha --debug-brk --reporter spec",
     "blanket": {
-      "pattern": "lib",
+      "pattern": "test",
       "data-cover-never": "node_modules"
     },
     "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
