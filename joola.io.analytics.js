@@ -14,9 +14,9 @@ var express = require('express'),
 //TODO: Remove this
 
 var configFile = './config/joola.analytics.sample.js';
-if (process.env.JOOLA_CONFIG_ANALYTICS && process.env.JOOLA_CONFIG_ANALYTICS != '') {
+if (process.env.JOOLA_CONFIG_ANALYTICS && process.env.JOOLA_CONFIG_ANALYTICS !== '') {
   logger.info('Loading configuration file from [' + process.env.JOOLA_CONFIG_ANALYTICS + ']');
-  configFile = process.env.JOOLA_CONFIG_ANALYTICS
+  configFile = process.env.JOOLA_CONFIG_ANALYTICS;
 }
 else {
   logger.warn('Using sample configuration file from [' + configFile + ']');
