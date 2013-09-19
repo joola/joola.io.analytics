@@ -12,8 +12,7 @@ configData.general = {
     developmentMode: true,
     port: 80,
     securePort: 443,
-    secure: true,
-    sampleData: true,
+    secure: false,
     keyFile: __dirname + '/certs/key.pem',
     certFile: __dirname + '/certs/cert.pem'
 };
