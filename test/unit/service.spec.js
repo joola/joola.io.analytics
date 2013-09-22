@@ -11,7 +11,7 @@ describe("services", function () {
 
 	it("should return a page", function (done) {
 		this.timeout = 5000;
-    request.get('/').expect(200, function (err) {
+    request.get('/').expect(302, function (err) {
       if (err)
         return done(err);
       done();
