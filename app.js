@@ -1,25 +1,25 @@
 global.loggername = 'joola.analytics';
 
 var express = require('express'),
-    login = require('./routes/login'),
-    serveSDK = require('./routes/serveSDK'),
-    index = require('./routes/index'),
-    http = require('http'),
-    https = require('https'),
-    path = require('path'),
-    logger = require('./lib/shared/logger'),
-    fs = require('fs');
+  login = require('./routes/login'),
+  serveSDK = require('./routes/serveSDK'),
+  index = require('./routes/index'),
+  http = require('http'),
+  https = require('https'),
+  path = require('path'),
+  logger = require('./lib/shared/logger'),
+  fs = require('fs');
 
 
 //TODO: Remove this
 
 var configFile = './config/joola.analytics.sample.js';
 if (process.env.JOOLA_CONFIG_ANALYTICS && process.env.JOOLA_CONFIG_ANALYTICS != '') {
-    logger.info('Loading configuration file from [' + process.env.JOOLA_CONFIG_ANALYTICS + ']');
-    configFile = process.env.JOOLA_CONFIG_ANALYTICS
+  logger.info('Loading configuration file from [' + process.env.JOOLA_CONFIG_ANALYTICS + ']');
+  configFile = process.env.JOOLA_CONFIG_ANALYTICS
 }
 else {
-    logger.warn('Using sample configuration file from [' + configFile + ']');
+  logger.warn('Using sample configuration file from [' + configFile + ']');
 }
 
 global.joola = {};
@@ -37,19 +37,19 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon('public/assets/ico/favicon.ico'));
 app.use(express.compress());
-app.use(express.logger('dev'));
+//app.use(express.logger((global.test ? null : 'dev')));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
 app.use(express.session({expires: new Date(Date.now() + 1200000)}));
 
 var winstonStream = {
-    write: function (message, encoding) {
-        logger.info(message);
-    }
+  write: function (message, encoding) {
+    logger.info(message);
+  }
 };
 
-app.use(express.logger({stream: winstonStream}));
+app.use(express.logger((global.test ? function(req,res){} : {stream: winstonStream})));
 
 process.env.JOOLA_CONFIG_ANALYTICS_HOMEPAGE = 'c:\\dev\\joola-analytics\\public\\homepage.html';
 
@@ -97,44 +97,44 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.use(function (error, req, res, next) {
-    res.status(500);
-    res.render('page500', { title: 'Page error - Joola Analytics', error: error });
+  res.status(500);
+  res.render('page500', { title: 'Page error - Joola Analytics', error: error });
 });
 
 app.use(function (req, res, next) {
-    res.status(404);
+  res.status(404);
 
-    // respond with html page
-    if (req.accepts('html')) {
-        res.render('page404', { title: 'Page not found - Joola Analytics' });
-        return;
-    }
+  // respond with html page
+  if (req.accepts('html')) {
+    res.render('page404', { title: 'Page not found - Joola Analytics' });
+    return;
+  }
 
-    // respond with json
-    if (req.accepts('json')) {
-        res.send({ error: 'Not found' });
-        return;
-    }
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
 
-    // default to plain-text. send()
-    res.type('txt').send('Not found');
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
 });
 
-var secureOptions = {
-    key: fs.readFileSync(joola.config.general.keyFile),
-    cert: fs.readFileSync(joola.config.general.certFile)
-};
-
 http.createServer(app).listen(joola.config.general.port || 80, function (err) {
-    if (err)
-        throw err;
-    logger.info('Joola Analytics server listening on port ' + joola.config.general.port || 80);
+  if (err)
+    throw err;
+  logger.info('Joola Analytics server listening on port ' + joola.config.general.port || 80);
 });
 
 if (joola.config.general.secure) {
-    https.createServer(secureOptions, app).listen(joola.config.general.securePort || 443, function (err) {
-        if (err)
-            throw err;
-        logger.info('Joola Analytics server listening on secure port ' + joola.config.general.securePort || 443);
-    });
+  var secureOptions = {
+    key: fs.readFileSync(joola.config.general.keyFile),
+    cert: fs.readFileSync(joola.config.general.certFile)
+  };
+
+  https.createServer(secureOptions, app).listen(joola.config.general.securePort || 443, function (err) {
+    if (err)
+      throw err;
+    logger.info('Joola Analytics server listening on secure port ' + joola.config.general.securePort || 443);
+  });
 }
