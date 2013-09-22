@@ -1,5 +1,5 @@
 /*!
- * Jarvis Analytics v1.4.0
+ * joola.io v1.4.0
  *
  * Copyright 2012 Joola Smart Solutions Ltd.
  * Licensed under the Apache License v2.0
@@ -163,12 +163,12 @@
     color: #333;
 }
 
-.jarvis.realtime.datepicker .datebox {
+.joolaio.realtime.datepicker .datebox {
     font-size: 14px;
     font-weight: bold;
 }
 
-.jarvis.realtime.datebox .datebox {
+.joolaio.realtime.datebox .datebox {
     font-size: 14px;
     font-weight: bold;
 }
@@ -207,13 +207,13 @@ tr {
 
 }
 
-.jarvis.realtime.metricbox .caption {
+.joolaio.realtime.metricbox .caption {
     font-size: 200%;
     line-height: normal;
     text-align: center;
 }
 
-.jarvis.realtime.metricbox .value {
+.joolaio.realtime.metricbox .value {
     text-shadow: rgb(255, 255, 255) 0px 0px 100px;
     font-size: 600%;
     border-radius: 8px;
@@ -221,58 +221,58 @@ tr {
     text-align: center;
 }
 
-.jarvis.realtime.metricbox .subcaption {
+.joolaio.realtime.metricbox .subcaption {
     font-size: 120%;
     line-height: normal;
     text-align: center;
 }
 
-.jarvis.realtime.table th {
+.joolaio.realtime.table th {
     border-right: 0;
     border-left: 0;
 
     text-align: center;
 }
 
-.jarvis.realtime.table td {
+.joolaio.realtime.table td {
 
 }
 
-.jarvis.realtime.table td.index {
+.joolaio.realtime.table td.index {
     width: 5%;
     text-align: center;
 }
 
-.jarvis.realtime.table th.metric {
+.joolaio.realtime.table th.metric {
     background-image: url(/assets/img/img/sort_desc.gif);
     background-repeat: no-repeat;
     background-position: 98% 50%;
 }
 
-.jarvis.realtime.table td.dimension {
+.joolaio.realtime.table td.dimension {
     cursor: pointer;
     color: #08C;
     text-decoration: none;
 }
 
-.jarvis.realtime.table td.metric {
+.joolaio.realtime.table td.metric {
     text-align: right;
 }
 
-.jarvis.realtime.table th:first-of-type {
+.joolaio.realtime.table th:first-of-type {
     border-right: 0;
     border-left: 1px solid #DDD;
 }
 
-.jarvis.realtime.table tr.empty td {
+.joolaio.realtime.table tr.empty td {
     text-align: center;
 }
 
-.jarvis.container {
+.joolaio.container {
 
 }
 
-.jarvis.container .panel {
+.joolaio.container .panel {
     min-height: 620px;
 
 }
@@ -299,24 +299,24 @@ tr {
     margin-left: 135px;
 }
 
-.jarvis.realtime.table .header,
-.jarvis.realtime.geo .header,
-.jarvis.dashboard.widget .header {
+.joolaio.realtime.table .header,
+.joolaio.realtime.geo .header,
+.joolaio.dashboard.widget .header {
     cursor: default;
 }
 
-.jarvis.realtime.geo {
+.joolaio.realtime.geo {
     margin-bottom: 18px;
 
 }
 
-.jarvis.realtime.geo .innercontainer {
+.joolaio.realtime.geo .innercontainer {
     border: 1px solid #ddd;
 }
 
-.jarvis.realtime.table .header .move,
-.jarvis.realtime.geo .header .move,
-.jarvis.dashboard.widget .header .move {
+.joolaio.realtime.table .header .move,
+.joolaio.realtime.geo .header .move,
+.joolaio.dashboard.widget .header .move {
     float: right;
     /*cursor: move;*/
     /*background: url('../img/glyphicons_186_move.png');*/
@@ -332,9 +332,9 @@ tr {
     -webkit-transition: opacity 0.2s;
 }
 
-.jarvis.realtime.table .header .settings,
-.jarvis.realtime.geo .header .settings,
-.jarvis.dashboard.widget .header .settings {
+.joolaio.realtime.table .header .settings,
+.joolaio.realtime.geo .header .settings,
+.joolaio.dashboard.widget .header .settings {
 
     float: right;
     cursor: pointer;
@@ -352,12 +352,12 @@ tr {
     -webkit-transition: opacity 0.2s;
 }
 
-.jarvis.realtime.geo:hover .header .settings {
+.joolaio.realtime.geo:hover .header .settings {
     display: none;
 
 }
 
-.jarvis.realtime.geo .header .globe {
+.joolaio.realtime.geo .header .globe {
     float: right;
     cursor: pointer;
     background: url('../img/glyphicons_340_globe.png');
@@ -374,40 +374,40 @@ tr {
     -webkit-transition: opacity 0.2s;
 }
 
-.jarvis.realtime.table:hover .header .settings,
-.jarvis.realtime.geo:hover .header .settings,
-.jarvis.dashboard.widget:hover .header .settings {
+.joolaio.realtime.table:hover .header .settings,
+.joolaio.realtime.geo:hover .header .settings,
+.joolaio.dashboard.widget:hover .header .settings {
     opacity: 0.5;
     -webkit-transition: opacity 0.4s;
 }
 
-.jarvis.realtime.geo:hover .header .globe {
+.joolaio.realtime.geo:hover .header .globe {
     opacity: 0.5;
     -webkit-transition: opacity 0.4s;
 }
 
-.jarvis.realtime.table .header .settings:hover,
-.jarvis.realtime.geo .header .settings:hover,
-.jarvis.dashboard.widget .settings:hover {
+.joolaio.realtime.table .header .settings:hover,
+.joolaio.realtime.geo .header .settings:hover,
+.joolaio.dashboard.widget .settings:hover {
     opacity: 1;
     -webkit-transition: opacity 0.4s;
 }
 
-.jarvis.realtime.geo .header .globe:hover {
+.joolaio.realtime.geo .header .globe:hover {
     opacity: 1;
     -webkit-transition: opacity 0.4s;
 }
 
-.jarvis.realtime.table:hover .header .move,
-.jarvis.realtime.geo:hover .header .move,
-.jarvis.dashboard.widget:hover .header .move {
+.joolaio.realtime.table:hover .header .move,
+.joolaio.realtime.geo:hover .header .move,
+.joolaio.dashboard.widget:hover .header .move {
     opacity: 0.5;
     -webkit-transition: opacity 0.4s;
 }
 
-.jarvis.realtime.table .header .move:hover,
-.jarvis.realtime.geo .header .move:hover,
-.jarvis.dashboard.widget .header .move:hover {
+.joolaio.realtime.table .header .move:hover,
+.joolaio.realtime.geo .header .move:hover,
+.joolaio.dashboard.widget .header .move:hover {
     opacity: 1;
     -webkit-transition: opacity 0.4s;
 }
@@ -631,12 +631,12 @@ body.WideScreen .subnav .nav .dropdown
 }
 */
 
-.jarvis.datebox {
+.joolaio.datebox {
     /*margin-top: -5px;*/
     float: right;
 }
 
-.jarvis.datebox .container {
+.joolaio.datebox .container {
     background-color: white;
     border: 1px solid #EFEFEF;
     cursor: pointer;
@@ -647,21 +647,21 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-radius: 5px;
 }
 
-.jarvis.datebox .container .datetable {
+.joolaio.datebox .container .datetable {
     border-collapse: collapse;
 }
 
-.jarvis.datebox .container .datetable .dates {
+.joolaio.datebox .container .datetable .dates {
     padding: 3px;
 }
 
-.jarvis.datebox .container .datetable .dates .datelabel {
+.joolaio.datebox .container .datetable .dates .datelabel {
     color: #1C2E3D;
     font-size: 145%;
 }
 
 /*
-.jarvis.datebox .container .datetable .dropdownmarker {
+.joolaio.datebox .container .datetable .dropdownmarker {
     background: #F7F7F7 url(/assets/img/date_control_down.gif) no-repeat 50% 50%;
     padding-left: 18px;
     border-radius: 0 5px 5px 0;
@@ -670,7 +670,7 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-bottom-right-radius: 5px;
 }
 */
-.jarvis.datebox .container {
+.joolaio.datebox .container {
     background-color: white;
     border: 1px solid #EFEFEF;
     cursor: pointer;
@@ -683,11 +683,11 @@ body.WideScreen .subnav .nav .dropdown
     width: auto;
 }
 
-.jarvis.datebox .container:hover {
+.joolaio.datebox .container:hover {
     border: 1px solid #CCC;
 }
 
-.jarvis.datebox .container.expanded {
+.joolaio.datebox .container.expanded {
     border: 1px solid #CCC;
     border-bottom: 1px solid white;
     border-radius: 5px 5px 0 0;
@@ -698,34 +698,34 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-bottom-right-radius: 0;
 }
 
-.jarvis.datebox .picker.compare {
+.joolaio.datebox .picker.compare {
     margin-top: 17px;
 }
 
-.jarvis.datebox .container .datetable {
+.joolaio.datebox .container .datetable {
     border-collapse: collapse;
 }
 
-.jarvis.datebox .container .datetable .dates {
+.joolaio.datebox .container .datetable .dates {
     padding: 5px;
 }
 
-.jarvis.datebox .container .datetable .dates .datelabel {
+.joolaio.datebox .container .datetable .dates .datelabel {
     color: #1C2E3D;
     font-size: 145%;
 }
 
-.jarvis.datebox .container .datetable .dates .compare {
+.joolaio.datebox .container .datetable .dates .compare {
     color: #999;
     font-size: 13px;
 }
 
-.jarvis.datebox .container .datetable .dates .compare .datelabel.fromdate, .jarvis.datebox .container .datetable .dates .compare .datelabel.todate {
+.joolaio.datebox .container .datetable .dates .compare .datelabel.fromdate, .joolaio.datebox .container .datetable .dates .compare .datelabel.todate {
     font-size: 13px;
     color: #333;
 }
 
-.jarvis.datebox .container .datetable .dropdownmarker {
+.joolaio.datebox .container .datetable .dropdownmarker {
     background: #F7F7F7 url(/assets/img/date_control_down.gif) no-repeat 50% 50%;
     padding-left: 18px;
     border-radius: 0 5px 5px 0;
@@ -734,11 +734,11 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-bottom-right-radius: 5px;
 }
 
-.jarvis.datebox .container.expanded .datetable .dropdownmarker {
+.joolaio.datebox .container.expanded .datetable .dropdownmarker {
     background: #F7F7F7 url(/assets/img/date_control_up.gif) no-repeat 50% 50%;
 }
 
-.jarvis.datebox .picker {
+.joolaio.datebox .picker {
     position: absolute;
     background-color: #F7F7F7;
     border: 1px solid #CCC;
@@ -755,32 +755,32 @@ body.WideScreen .subnav .nav .dropdown
     /*right: 0px;*/
 }
 
-.jarvis.datebox .picker .wrapper .control {
+.joolaio.datebox .picker .wrapper .control {
     padding: 0 10px;
     white-space: nowrap;
     vertical-align: top;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer {
+.joolaio.datebox .picker .wrapper .control .optionscontainer {
     display: block;
     clear: both;
     padding: 5px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .customdate {
     /*font-size: 75%;*/
     font-weight: bold;
     margin-bottom: 3px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate select {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .customdate select {
     border: #9A9A9A solid 1px;
     background-color: white;
     color: black;
     /*font-size: 100%;*/
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate select.selector {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .customdate select.selector {
     width: auto;
     height: auto;
     padding: 1px;
@@ -790,7 +790,7 @@ body.WideScreen .subnav .nav .dropdown
     width: 120px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption {
     border: #CCC solid 1px;
     cursor: pointer;
     /*font-size: 70%;*/
@@ -803,7 +803,7 @@ body.WideScreen .subnav .nav .dropdown
     margin-top: 2px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
     border: #07C solid 3px;
     margin-top: 0;
 
@@ -812,19 +812,19 @@ body.WideScreen .subnav .nav .dropdown
     margin-right: 0;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .comparerange .dateoption.active {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .comparerange .dateoption.active {
     border: #86BE2B solid 3px;
 
     margin-bottom: 4px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.invalid {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.invalid {
     border: #B00 solid 3px;
 
     margin-bottom: 4px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption {
     padding: 3px;
     white-space: nowrap;
     padding-right: 22px;
@@ -835,28 +835,28 @@ body.WideScreen .subnav .nav .dropdown
     margin-bottom: 3px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer  .compareoption .checker {
+.joolaio.datebox .picker .wrapper .control .optionscontainer  .compareoption .checker {
     /*vertical-align: bottom;*/
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption.visible {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption.visible {
     display: block;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .divider {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .divider {
     border-top: #666 dotted 1px;
     margin-top: 3px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .buttons {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .buttons {
     padding-top: 15px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .apply {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .apply {
     margin-top: -15px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .cancel {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .cancel {
     text-decoration: underline;
     color: #24B;
     cursor: pointer;
@@ -864,30 +864,30 @@ body.WideScreen .subnav .nav .dropdown
     padding-left: 10px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars {
+.joolaio.datebox .picker .wrapper .calendars {
     white-space: nowrap;
     margin: 2px;
 
     width: 405px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars table {
+.joolaio.datebox .picker .wrapper .calendars table {
     border-collapse: collapse;
 
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev, .jarvis.datebox .picker .wrapper .calendars .datetable-next {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev, .joolaio.datebox .picker .wrapper .calendars .datetable-next {
     vertical-align: top;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div, .jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div, .joolaio.datebox .picker .wrapper .calendars .datetable-next div {
     border: #CCC solid 1px;
     background-color: #DDD;
     cursor: pointer;
     padding: 3px 5px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div {
     border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
     -webkit-border-top-left-radius: 3px;
@@ -896,7 +896,7 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-bottom-right-radius: 0;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-next div {
     border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
     -webkit-border-top-left-radius: 0;
@@ -905,22 +905,22 @@ body.WideScreen .subnav .nav .dropdown
     -webkit-border-bottom-right-radius: 3px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .jarvis.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .joolaio.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
     height: 9px;
     padding: 0;
     width: 4px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block {
     background: url(/assets/img/button_arrow_prev_ltr.gif) no-repeat
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
+.joolaio.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
     background: url(/assets/img/button_arrow_next_ltr.gif) no-repeat
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer input,
-.jarvis.datebox .picker .wrapper .control .optionscontainer textarea {
+.joolaio.datebox .picker .wrapper .control .optionscontainer input,
+.joolaio.datebox .picker .wrapper .control .optionscontainer textarea {
 
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -933,18 +933,18 @@ body.WideScreen .subnav .nav .dropdown
 
 }
 
-.jarvis.datebox .picker .wrapper .calendars .ui-datepicker-prev, .jarvis.datebox .picker .wrapper .calendars .ui-datepicker-next {
+.joolaio.datebox .picker .wrapper .calendars .ui-datepicker-prev, .joolaio.datebox .picker .wrapper .calendars .ui-datepicker-next {
     display: none;
 }
 
-.jarvis.datebox .ui-datepicker-calendar td {
+.joolaio.datebox .ui-datepicker-calendar td {
 
     border-bottom: #F7F7F7 solid 1px;
     border-right: #F7F7F7 solid 1px;
     background-color: white;
 }
 
-.jarvis.datebox .ui-datepicker-title {
+.joolaio.datebox .ui-datepicker-title {
     text-align: center;
     background-color: #DDD;
     font-size: 85%;
@@ -953,7 +953,7 @@ body.WideScreen .subnav .nav .dropdown
     border-bottom: #CCC solid 1px;
 }
 
-.jarvis.datebox .daycell {
+.joolaio.datebox .daycell {
     text-align: center;
     padding: 2px 3px;
     vertical-align: middle;
@@ -962,15 +962,15 @@ body.WideScreen .subnav .nav .dropdown
     cursor: pointer;
 }
 
-.jarvis.datebox .daycell a {
+.joolaio.datebox .daycell a {
     text-decoration: none;
 }
 
-.jarvis.datebox .daycell:hover {
+.joolaio.datebox .daycell:hover {
     background-color: #FC3;
 }
 
-.jarvis.datebox .daycell.disabled, .jarvis.datebox .daycell.ui-state-disabled {
+.joolaio.datebox .daycell.disabled, .joolaio.datebox .daycell.ui-state-disabled {
     cursor: default;
 
     color: #DDD;
@@ -978,19 +978,19 @@ body.WideScreen .subnav .nav .dropdown
     background-color: white;
 }
 
-.jarvis.datebox .daycell.inrange {
+.joolaio.datebox .daycell.inrange {
     background-color: #07C;
 }
 
-.jarvis.datebox .daycell.inrange:hover {
+.joolaio.datebox .daycell.inrange:hover {
     background-color: #FC3;
 }
 
-.jarvis.datebox .daycell.inrange a {
+.joolaio.datebox .daycell.inrange a {
     color: white;
 }
 
-.jarvis.datebox .daycell.compare.disabled {
+.joolaio.datebox .daycell.compare.disabled {
     cursor: default;
 
     color: #DDD;
@@ -998,15 +998,15 @@ body.WideScreen .subnav .nav .dropdown
     background-color: white;
 }
 
-.jarvis.datebox .daycell.compare.inrange {
+.joolaio.datebox .daycell.compare.inrange {
     background-color: #86BE2B;
 }
 
-.jarvis.datebox .daycell.basencompare.inrange {
+.joolaio.datebox .daycell.basencompare.inrange {
     background-color: #00B1AB;;
 }
 
-.jarvis.datebox .daycell.compare.inrange:hover {
+.joolaio.datebox .daycell.compare.inrange:hover {
     background-color: #FC3;
 }
 
@@ -1240,22 +1240,11 @@ body.WideScreen .subnav .nav .dropdown
     cursor: default;
 }
 
-.icon-stats {
-    background-image: url("/jarvisapi/img/glyphicons_040_stats.png");
-    background-position: 0;
-    height: 14px;
-    width: 14px;
-}
-
-.icon-charts {
-    background-image: url("/jarvisapi/img/glyphicons_041_charts.png");
-}
-
-.jarvis.container .btn {
+.joolaio.container .btn {
     /*height: 29px;*/
 }
 
-.jarvis.container a.btn {
+.joolaio.container a.btn {
     /*height: auto;
     padding-bottom: 5px;
     border: 0;
@@ -1263,13 +1252,13 @@ body.WideScreen .subnav .nav .dropdown
 
 }
 
-.jarvis.container a.btn:hover {
+.joolaio.container a.btn:hover {
     /* border: 1px solid #CCC;
      background-color: whiteSmoke;
      padding-left: 8px;*/
 }
 
-.jarvis.container a.btn.selected:hover {
+.joolaio.container a.btn.selected:hover {
     /*  border: 1px solid #CCC;
       background-color: whiteSmoke;
       padding-left: 9px;*/
@@ -1489,10 +1478,6 @@ table.display thead th div.DataTables_sort_wrapper span {
     right: 0;
 }
 
-.ui-state-default .ui-icon {
-    /*background-image: url(/jarvisapi/img/sort_sprite_washed.png);*/
-}
-
 .ui-icon-triangle-1-n {
     background-image: url(/assets/img/sort_asc.gif); /*background-position: 0 -16px;*/
 }
@@ -1507,7 +1492,7 @@ background-position: -128px 0;
 }*/
 .ui-icon {
     width: 16px;
-    height: 16px; /*background-image: url(/jarvisapi/img/sort_sprite.png);*/
+    height: 16px;
 }
 
 .ui-icon {
@@ -1620,7 +1605,7 @@ table.piechart td {
     background-color: #AADFF3;
 }
 
-.jarvis.crumb.all {
+.joolaio.crumb.all {
     color: #08C;
     text-decoration: none;
     cursor: pointer;
@@ -1643,89 +1628,89 @@ table.piechart td {
     text-align: center !important;
 }
 
-.jarvis.report.tabs {
+.joolaio.report.tabs {
     margin-bottom: 10px;
 }
 
-.jarvis.report.metricgroups {
+.joolaio.report.metricgroups {
 
 }
 
-.jarvis.report.jtable {
+.joolaio.report.jtable {
 
 }
 
-.jarvis.report.jtable .topheader {
+.joolaio.report.jtable .topheader {
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     text-align: center;
 }
 
-.jarvis.report.jtable .table th.dimension {
+.joolaio.report.jtable .table th.dimension {
     text-align: left;
 }
 
-.jarvis.report.jtable .table td {
+.joolaio.report.jtable .table td {
 }
 
-.jarvis.report.jtable .table th.check {
+.joolaio.report.jtable .table th.check {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table th.id {
+.joolaio.report.jtable .table th.id {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.check {
+.joolaio.report.jtable .table td.check {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.id {
+.joolaio.report.jtable .table td.id {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.dimensionvalue {
+.joolaio.report.jtable .table td.dimensionvalue {
     text-align: left;
     color: #08C;
 
     cursor: pointer;
 }
 
-.jarvis.report.jtable .table td.dimensionvalue:hover {
+.joolaio.report.jtable .table td.dimensionvalue:hover {
     text-decoration: underline;
 }
 
-.jarvis.report.jtable .table td.metricvalue {
+.joolaio.report.jtable .table td.metricvalue {
     text-align: right;
 }
 
-.jarvis.report.jtable .table td.comparison.metricvalue {
+.joolaio.report.jtable .table td.comparison.metricvalue {
     color: #999;
 }
 
-.jarvis.report.jtable .table td.metricvalue.positive {
+.joolaio.report.jtable .table td.metricvalue.positive {
     color: #4B9525;
 }
 
-.jarvis.report.jtable .table td.metricvalue.negative {
+.joolaio.report.jtable .table td.metricvalue.negative {
     color: #932D22;
 }
 
-.jarvis.report.jtable .table td.comparison {
+.joolaio.report.jtable .table td.comparison {
     font-weight: bold;
 }
 
-.jarvis.report.jtable .table th.special {
+.joolaio.report.jtable .table th.special {
     width: 10%;
 }
 
-.jarvis.report.jtable .table td.special {
+.joolaio.report.jtable .table td.special {
     vertical-align: top;
     border-left: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
@@ -1733,29 +1718,29 @@ table.piechart td {
     width: 10%;
 }
 
-.jarvis.report.jtable .table td.special .highcharts-container {
+.joolaio.report.jtable .table td.special .highcharts-container {
     border-bottom: 0;
 }
 
-.jarvis.report.jtable .table th.special.pie {
+.joolaio.report.jtable .table th.special.pie {
     font-size: 11px;
 }
 
-.jarvis.report.jtable .table th.special.pie select {
+.joolaio.report.jtable .table th.special.pie select {
     /*margin-left: 5px;*/
 }
 
-.jarvis.report.jtable .table tr.emptyrowfiller td {
+.joolaio.report.jtable .table tr.emptyrowfiller td {
     border-top: 0;
     background-color: inherit;;
 }
 
-.jarvis.report.jtable .table tr.emptyrowfiller.first {
+.joolaio.report.jtable .table tr.emptyrowfiller.first {
     border-top: 1px solid #DDD;
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     cursor: pointer;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -1765,135 +1750,135 @@ table.piechart td {
 
 }
 
-.jarvis.report.jtable .table th:hover {
+.joolaio.report.jtable .table th:hover {
     background-color: #e0e0e0;
 }
 
-.jarvis.report.jtable .table th.id:hover,
-.jarvis.report.jtable .table th.check:hover,
-.jarvis.report.jtable .table th.special:hover {
+.joolaio.report.jtable .table th.id:hover,
+.joolaio.report.jtable .table th.check:hover,
+.joolaio.report.jtable .table th.special:hover {
     background-color: inherit;
     cursor: default;
 }
 
-.jarvis.report.jtable .table th.sortkey.DESC {
+.joolaio.report.jtable .table th.sortkey.DESC {
     background-image: url(/assets/img/sort_desc.gif);
     background-repeat: no-repeat;
     background-position: 98% 50%;
 }
 
-.jarvis.report.jtable .table th.sortkey.ASC {
+.joolaio.report.jtable .table th.sortkey.ASC {
     background-image: url(/assets/img/sort_asc.gif);
     background-repeat: no-repeat;
     background-position: 98% 50%;
 }
 
-.jarvis.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
+.joolaio.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
     background-color: #e0e0e0;
 }
 
-.jarvis.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
+.joolaio.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
     background-color: #ececec;
 }
 
-.jarvis.report.jtable .table td.sortkey {
+.joolaio.report.jtable .table td.sortkey {
     font-weight: bold;
 }
 
-.jarvis.report.jtable  .topheader {
+.joolaio.report.jtable  .topheader {
     /*background-color: whiteSmoke;*/
     background-color: white;
     /*height: 38px;*/
 }
 
-.jarvis.report.jtable .topheader .headercontent {
+.joolaio.report.jtable .topheader .headercontent {
     float: right;
 
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol {
+.joolaio.report.jtable  .topheader .tablecontrol {
     padding-top: 5px;
     padding-bottom: 5px;
     min-height: 30px;
 
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .secondary {
+.joolaio.report.jtable  .topheader .tablecontrol .secondary {
     float: left;
     padding-left: 10px;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
     float: right;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar .search {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar .search {
     float: left;
     /* margin-right: 30px;*/
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
     float: right;
     padding-right: 10px;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
     float: right;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
     height: 17px;
     width: 17px;
     margin-top: -3px;
 }
 
-.jarvis.report.jtable .bottomfooter {
+.joolaio.report.jtable .bottomfooter {
     min-height: 30px;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent {
+.joolaio.report.jtable .bottomfooter .footercontent {
     vertical-align: middle;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pager {
+.joolaio.report.jtable .bottomfooter .footercontent .pager {
     float: right;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pageinfo {
+.joolaio.report.jtable .bottomfooter .footercontent .pageinfo {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 8px;
     float: right;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol {
     float: right;
     font-weight: bold;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol .button {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol .button {
     font-weight: bold;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
     background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
     height: 29px;
     width: 10px;
 
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
     background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
     height: 29px;
     width: 10px;
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     vertical-align: middle;
 }
 
-.jarvis.report.jtable .metricpicker {
+.joolaio.report.jtable .metricpicker {
     margin-bottom: 0;
 }
 
@@ -1925,18 +1910,18 @@ td.special.bar .percentagecaption {
     min-height: 146px;
 }
 
-.jarvis .nav {
+.joolaio .nav {
     margin-bottom: 0;
 }
 
-.jarvis.dashboard.widget .content {
+.joolaio.dashboard.widget .content {
     border: 1px solid #ddd;
     padding: 5px;
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
 
-.jarvis.dashboard.widget .content .value {
+.joolaio.dashboard.widget .content .value {
     font-size: 19px;
     font-weight: bold;
     padding-top: 5px;
@@ -1945,7 +1930,7 @@ td.special.bar .percentagecaption {
     color: black;
 }
 
-.jarvis.dashboard.widget .content .daterange {
+.joolaio.dashboard.widget .content .daterange {
     color: #666;
     display: block;
     font-size: 13px;
@@ -1954,7 +1939,7 @@ td.special.bar .percentagecaption {
     display: none;
 }
 
-.jarvis.dashboard.widget .content .site {
+.joolaio.dashboard.widget .content .site {
     color: #999;
     display: inline;
     font-size: 12px;
@@ -1962,11 +1947,11 @@ td.special.bar .percentagecaption {
     padding: 0;
 }
 
-.jarvis.dashboard.widget .content .minichart {
+.joolaio.dashboard.widget .content .minichart {
     float: right;
 }
 
-.jarvis.dashboard.widget .content .compare .daterange {
+.joolaio.dashboard.widget .content .compare .daterange {
     margin-top: 10px;
 }
 
@@ -1999,7 +1984,7 @@ td.special.bar .percentagecaption {
     font-weight: bold;
 }
 
-.jarvis.dashboard.widget .content .highcharts-container {
+.joolaio.dashboard.widget .content .highcharts-container {
     border: 0;
     margin-right: auto;
     margin-left: auto;
@@ -2007,34 +1992,34 @@ td.special.bar .percentagecaption {
     margin-top: 20px;
 }
 
-.jarvis.dashboard.pie .content .legend {
+.joolaio.dashboard.pie .content .legend {
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
 
 }
 
-.jarvis.dashboard.pie .content table {
+.joolaio.dashboard.pie .content table {
     border: 0;
 }
 
-.jarvis.dashboard.pie .content table tr, .jarvis.dashboard.pie .content table td {
+.joolaio.dashboard.pie .content table tr, .joolaio.dashboard.pie .content table td {
     border: 0;
 
 }
 
-.jarvis.dashboard.pie .content .legenditem {
+.joolaio.dashboard.pie .content .legenditem {
     margin-bottom: 5px;
     width: auto;
 }
 
-.jarvis.dashboard.pie .content .legend .caption {
+.joolaio.dashboard.pie .content .legend .caption {
     font-size: 15px;
     font-weight: bold;
 
 }
 
-.jarvis.dashboard.pie .content .legend .colorbox {
+.joolaio.dashboard.pie .content .legend .colorbox {
     height: 13px;
     width: 13px;
     float: left;
@@ -2043,7 +2028,7 @@ td.special.bar .percentagecaption {
     margin-top: 2px;
 }
 
-.jarvis.dashboard.pie .content .legend .summary {
+.joolaio.dashboard.pie .content .legend .summary {
     font-size: 11px;
     padding-left: 20px;
 }
@@ -2052,7 +2037,7 @@ td.special.bar .percentagecaption {
     color: #5D95FA;
 }
 
-.jarvis.picker.metrics, .jarvis.picker.dimensions {
+.joolaio.picker.metrics, .joolaio.picker.dimensions {
     min-height: 30px;;
 }
 
@@ -2092,12 +2077,12 @@ td.special.bar .percentagecaption {
     margin-left: 10px;
 }
 
-.jarvis.picker.metrics .metricswrapper, .jarvis.picker.dimensions .dimensionswrapper {
+.joolaio.picker.metrics .metricswrapper, .joolaio.picker.dimensions .dimensionswrapper {
     float: left;
     clear: both;
 }
 
-.jarvis.picker.metrics .metricswrapper .metricscontainer, .jarvis.picker.dimensions .dimensionswrapper .dimensionscontainer {
+.joolaio.picker.metrics .metricswrapper .metricscontainer, .joolaio.picker.dimensions .dimensionswrapper .dimensionscontainer {
     display: none;
     position: absolute;
 
@@ -2261,7 +2246,7 @@ i.icon-white {
     text-align: left;
 }
 
-.jarvis.picker.metrics .metricswrapper .customadd, .jarvis.picker.dimensions .dimensionswrapper .customadd {
+.joolaio.picker.metrics .metricswrapper .customadd, .joolaio.picker.dimensions .dimensionswrapper .customadd {
     border: 1px dashed;
     border-radius: 3px 3px 3px 3px;
     cursor: pointer;
@@ -2279,19 +2264,19 @@ i.icon-white {
     -webkit-border-bottom-right-radius: 3px;
 }
 
-.jarvis.picker.metrics .metricswrapper .customadd.metric {
+.joolaio.picker.metrics .metricswrapper .customadd.metric {
     background: #F2F6FF;
     border-color: #7B98E8;
     color: #7B98E8;
 }
 
-.jarvis.picker.dimensions .dimensionswrapper .customadd.dimension {
+.joolaio.picker.dimensions .dimensionswrapper .customadd.dimension {
     background: #F4FFE6;
     border-color: #9DB675;
     color: #93AC6B;
 }
 
-.jarvis.picker.metrics.on .metricswrapper .customadd.metric {
+.joolaio.picker.metrics.on .metricswrapper .customadd.metric {
     background-color: #8FACFC;
     border-color: #51649E;
     color: white;
@@ -2299,7 +2284,7 @@ i.icon-white {
     text-align: left;
 }
 
-.jarvis.picker.dimensions.on .dimensionswrapper .customadd.dimension {
+.joolaio.picker.dimensions.on .dimensionswrapper .customadd.dimension {
     background-color: #9BB47A;
     border-color: #6B7D4B;
     color: white;
@@ -2307,7 +2292,7 @@ i.icon-white {
     text-align: left;
 }
 
-.jarvis.picker.metrics .metricswrapper .customadd.metric .caret {
+.joolaio.picker.metrics .metricswrapper .customadd.metric .caret {
     float: right;
     margin-top: 7px;
     margin-right: 5px;
@@ -2318,7 +2303,7 @@ i.icon-white {
 
 }
 
-.jarvis.picker.dimensions .dimensionswrapper .customadd.dimension .caret {
+.joolaio.picker.dimensions .dimensionswrapper .customadd.dimension .caret {
     float: right;
     margin-top: 7px;
     margin-right: 5px;
@@ -2329,25 +2314,25 @@ i.icon-white {
 
 }
 
-.jarvis.picker.metrics.on .metricswrapper .customadd.metric .caret {
+.joolaio.picker.metrics.on .metricswrapper .customadd.metric .caret {
     border-top: 5px solid white;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent
 }
 
-.jarvis.picker.dimensions.on .dimensionswrapper .customadd.dimension .caret {
+.joolaio.picker.dimensions.on .dimensionswrapper .customadd.dimension .caret {
     border-top: 5px solid white;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent
 }
 
-.jarvis.picker.metrics .close {
+.joolaio.picker.metrics .close {
     margin-top: 5px;
     margin-right: 10px;
     margin-left: 6px;
 }
 
-.jarvis.picker.metrics.on .metricswrapper .customadd, .jarvis.picker.dimensions.on .dimensionswrapper .customadd {
+.joolaio.picker.metrics.on .metricswrapper .customadd, .joolaio.picker.dimensions.on .dimensionswrapper .customadd {
     border: 1px solid;
 }
 
@@ -2373,7 +2358,7 @@ i.icon-white {
 }
 
 .ui-state-default .ui-icon {
-    /*background-image: url(/jarvisapi/img/sort_sprite_washed.png);*/
+
 }
 
 .ui-icon-triangle-1-n {
@@ -2390,7 +2375,7 @@ background-position: -128px 0;
 }*/
 .ui-icon {
     width: 16px;
-    height: 16px; /*background-image: url(/jarvisapi/img/sort_sprite.png);*/
+    height: 16px;
 }
 
 .ui-icon {
@@ -2503,7 +2488,7 @@ table.piechart td {
     background-color: #AADFF3;
 }
 
-.jarvis.crumb.all {
+.joolaio.crumb.all {
     color: #08C;
     text-decoration: none;
     cursor: pointer;
@@ -2526,88 +2511,88 @@ table.piechart td {
     text-align: center !important;
 }
 
-.jarvis.report.jtable {
+.joolaio.report.jtable {
 
 }
 
-.jarvis.report.jtable .topheader {
+.joolaio.report.jtable .topheader {
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     text-align: center;
 }
 
-.jarvis.report.jtable .table th.dimension {
+.joolaio.report.jtable .table th.dimension {
     text-align: left;
 }
 
-.jarvis.report.jtable .table td {
+.joolaio.report.jtable .table td {
 }
 
-.jarvis.report.jtable .table th.check {
+.joolaio.report.jtable .table th.check {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table th.id {
+.joolaio.report.jtable .table th.id {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.check {
+.joolaio.report.jtable .table td.check {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.id {
+.joolaio.report.jtable .table td.id {
     text-align: center;
     width: 1%;
 }
 
-.jarvis.report.jtable .table td.dimensionvalue {
+.joolaio.report.jtable .table td.dimensionvalue {
     text-align: left;
     color: #08C;
 
     cursor: pointer;
 }
 
-.jarvis.report.jtable .tableex td.dimensionvalue {
+.joolaio.report.jtable .tableex td.dimensionvalue {
     text-align: left;
     color: inherit;
 
     cursor: default;
 }
 
-.jarvis.report.jtable .table td.dimensionvalue:hover {
+.joolaio.report.jtable .table td.dimensionvalue:hover {
     text-decoration: underline;
 }
 
-.jarvis.report.jtable .table td.metricvalue {
+.joolaio.report.jtable .table td.metricvalue {
     text-align: right;
 }
 
-.jarvis.report.jtable .table td.comparison.metricvalue {
+.joolaio.report.jtable .table td.comparison.metricvalue {
     color: #999;
 }
 
-.jarvis.report.jtable .table td.metricvalue.positive {
+.joolaio.report.jtable .table td.metricvalue.positive {
     color: #4B9525;
 }
 
-.jarvis.report.jtable .table td.metricvalue.negative {
+.joolaio.report.jtable .table td.metricvalue.negative {
     color: #932D22;
 }
 
-.jarvis.report.jtable .table td.comparison {
+.joolaio.report.jtable .table td.comparison {
     font-weight: bold;
 }
 
-.jarvis.report.jtable .table th.special {
+.joolaio.report.jtable .table th.special {
     width: 10%;
 }
 
-.jarvis.report.jtable .table td.special {
+.joolaio.report.jtable .table td.special {
     vertical-align: top;
     border-left: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
@@ -2615,29 +2600,29 @@ table.piechart td {
     width: 10%;
 }
 
-.jarvis.report.jtable .table td.special .highcharts-container {
+.joolaio.report.jtable .table td.special .highcharts-container {
     border-bottom: 0;
 }
 
-.jarvis.report.jtable .table th.special.pie {
+.joolaio.report.jtable .table th.special.pie {
     font-size: 11px;
 }
 
-.jarvis.report.jtable .table th.special.pie select {
+.joolaio.report.jtable .table th.special.pie select {
     /*margin-left: 5px;*/
 }
 
-.jarvis.report.jtable .table tr.emptyrowfiller td {
+.joolaio.report.jtable .table tr.emptyrowfiller td {
     border-top: 0;
     background-color: inherit;;
 }
 
-.jarvis.report.jtable .table tr.emptyrowfiller.first {
+.joolaio.report.jtable .table tr.emptyrowfiller.first {
     border-top: 1px solid #DDD;
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     cursor: pointer;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -2647,117 +2632,117 @@ table.piechart td {
 
 }
 
-.jarvis.report.jtable .table th:hover {
+.joolaio.report.jtable .table th:hover {
     background-color: #e0e0e0;
 }
 
-.jarvis.report.jtable .table th.id:hover,
-.jarvis.report.jtable .table th.check:hover,
-.jarvis.report.jtable .table th.special:hover {
+.joolaio.report.jtable .table th.id:hover,
+.joolaio.report.jtable .table th.check:hover,
+.joolaio.report.jtable .table th.special:hover {
     background-color: inherit;
     cursor: default;
 }
 
-.jarvis.report.jtable .table th.sortkey {
+.joolaio.report.jtable .table th.sortkey {
     padding-right: 15px;
 }
 
-.jarvis.report.jtable .table th.sortkey.DESC {
+.joolaio.report.jtable .table th.sortkey.DESC {
     background-image: url(/assets/img/sort_desc.gif);
     background-repeat: no-repeat;
     background-position: 98% 50%;
 }
 
-.jarvis.report.jtable .table th.sortkey.ASC {
+.joolaio.report.jtable .table th.sortkey.ASC {
     background-image: url(/assets/img/sort_asc.gif);
     background-repeat: no-repeat;
     background-position: 98% 50%;
 }
 
-.jarvis.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
+.joolaio.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
     background-color: #e0e0e0;
 }
 
-.jarvis.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
+.joolaio.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
     background-color: #ececec;
 }
 
-.jarvis.report.jtable .table td.sortkey {
+.joolaio.report.jtable .table td.sortkey {
     font-weight: bold;
 }
 
-.jarvis.report.jtable .topheader .headercontent {
+.joolaio.report.jtable .topheader .headercontent {
     float: right;
 
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol {
+.joolaio.report.jtable  .topheader .tablecontrol {
     padding-top: 5px;
     padding-bottom: 5px;
 
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .secondary {
+.joolaio.report.jtable  .topheader .tablecontrol .secondary {
     float: left;
     padding-left: 10px;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
     float: right;
 }
 
-.jarvis.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
+.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
     float: right;
     padding-right: 10px;
 }
 
-.jarvis.report.jtable .bottomfooter {
+.joolaio.report.jtable .bottomfooter {
     min-height: 30px;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent {
+.joolaio.report.jtable .bottomfooter .footercontent {
     vertical-align: middle;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pager {
+.joolaio.report.jtable .bottomfooter .footercontent .pager {
     float: right;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pageinfo {
+.joolaio.report.jtable .bottomfooter .footercontent .pageinfo {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 8px;
     float: right;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol {
     float: right;
     font-weight: bold;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol .button {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol .button {
     font-weight: bold;
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
     background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
     height: 29px;
     width: 10px;
 
 }
 
-.jarvis.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
+.joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
     background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
     height: 29px;
     width: 10px;
 
 }
 
-.jarvis.report.jtable .table th {
+.joolaio.report.jtable .table th {
     vertical-align: middle;
 }
 
-.jarvis.report.jtable .metricpicker {
+.joolaio.report.jtable .metricpicker {
     margin-bottom: 0;
 }
 
@@ -2789,11 +2774,11 @@ td.special.bar .percentagecaption {
     min-height: 146px;
 }
 
-.jarvis .nav {
+.joolaio .nav {
     margin-bottom: 0;
 }
 
-.jarvis.dashboard.widget .content {
+.joolaio.dashboard.widget .content {
     border: 0;
     border-top: 1px solid #ddd;
 
@@ -2802,7 +2787,7 @@ td.special.bar .percentagecaption {
     padding-bottom: 10px;
 }
 
-.jarvis.dashboard.widget .content .value {
+.joolaio.dashboard.widget .content .value {
     font-size: 19px;
     font-weight: bold;
     padding-top: 5px;
@@ -2811,7 +2796,7 @@ td.special.bar .percentagecaption {
     color: black;
 }
 
-.jarvis.dashboard.widget .content .daterange {
+.joolaio.dashboard.widget .content .daterange {
     color: #666;
     display: block;
     font-size: 13px;
@@ -2820,7 +2805,7 @@ td.special.bar .percentagecaption {
     display: none;
 }
 
-.jarvis.dashboard.widget .content .site {
+.joolaio.dashboard.widget .content .site {
     color: #999;
     display: inline;
     font-size: 12px;
@@ -2828,11 +2813,11 @@ td.special.bar .percentagecaption {
     padding: 0;
 }
 
-.jarvis.dashboard.widget .content .minichart {
+.joolaio.dashboard.widget .content .minichart {
     float: right;
 }
 
-.jarvis.dashboard.widget .content .compare .daterange {
+.joolaio.dashboard.widget .content .compare .daterange {
     margin-top: 10px;
 }
 
@@ -2865,7 +2850,7 @@ td.special.bar .percentagecaption {
     font-weight: bold;
 }
 
-.jarvis.dashboard.widget .content .highcharts-container {
+.joolaio.dashboard.widget .content .highcharts-container {
     border: 0;
     margin-right: auto;
     margin-left: auto;
@@ -2873,34 +2858,34 @@ td.special.bar .percentagecaption {
     margin-top: 20px;
 }
 
-.jarvis.dashboard.pie .content .legend {
+.joolaio.dashboard.pie .content .legend {
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
 
 }
 
-.jarvis.dashboard.pie .content table {
+.joolaio.dashboard.pie .content table {
     border: 0;
 }
 
-.jarvis.dashboard.pie .content table tr, .jarvis.dashboard.pie .content table td {
+.joolaio.dashboard.pie .content table tr, .joolaio.dashboard.pie .content table td {
     border: 0;
 
 }
 
-.jarvis.dashboard.pie .content .legenditem {
+.joolaio.dashboard.pie .content .legenditem {
     margin-bottom: 5px;
     width: auto;
 }
 
-.jarvis.dashboard.pie .content .legend .caption {
+.joolaio.dashboard.pie .content .legend .caption {
     font-size: 15px;
     font-weight: bold;
 
 }
 
-.jarvis.dashboard.pie .content .legend .colorbox {
+.joolaio.dashboard.pie .content .legend .colorbox {
     height: 13px;
     width: 13px;
     float: left;
@@ -2909,12 +2894,12 @@ td.special.bar .percentagecaption {
     margin-top: 2px;
 }
 
-.jarvis.dashboard.pie .content .legend .summary {
+.joolaio.dashboard.pie .content .legend .summary {
     font-size: 11px;
     padding-left: 20px;
 }
 
-.jarvis.picker.metrics .metricswrapper {
+.joolaio.picker.metrics .metricswrapper {
 }
 
 .secondary.btn-group {
@@ -2990,7 +2975,7 @@ td.special.bar .percentagecaption {
     display: none;
 }
 
-.report.editor .metricscollection .pickerwrapper .jarvis.picker.metrics.on + .close {
+.report.editor .metricscollection .pickerwrapper .joolaio.picker.metrics.on + .close {
     display: block;
 }
 
@@ -3035,7 +3020,7 @@ td.special.bar .percentagecaption {
     float: right;
 }
 
-.report.editor .dimensionscollection .pickerwrapper .jarvis.picker.dimensions.on + .close {
+.report.editor .dimensionscollection .pickerwrapper .joolaio.picker.dimensions.on + .close {
     display: block;
 }
 
@@ -3164,11 +3149,11 @@ td.special.bar .percentagecaption {
     margin: 0 0 0px 25px;
 }
 
-.jarvis.report.tabs .nav-tabs li {
+.joolaio.report.tabs .nav-tabs li {
     cursor: pointer;
 }
 
-.jarvis.report.tabs .nav-tabs li.active {
+.joolaio.report.tabs .nav-tabs li.active {
     cursor: default;
 }
 
@@ -3176,7 +3161,7 @@ td.special.bar .percentagecaption {
     font-size: inherit;
 }
 
-.jarvis.report.metricgroups .nav-pills {
+.joolaio.report.metricgroups .nav-pills {
     margin-bottom: 5px;
     border-bottom: 1px solid #CCC;
     padding-bottom: 3px;
@@ -3344,7 +3329,7 @@ td.special.bar .percentagecaption {
     width: 50%;
 }
 
-.jarvis.dashboard.widget.overviewpie .content {
+.joolaio.dashboard.widget.overviewpie .content {
     border: 0;
     padding: 0;
     margin-bottom: 0;
@@ -3352,11 +3337,11 @@ td.special.bar .percentagecaption {
     padding-bottom: 0;
 }
 
-.jarvis.dashboard.widget.overviewpie .caption {
+.joolaio.dashboard.widget.overviewpie .caption {
     padding: 0;
 }
 
-.jarvis.dashboard.overviewpie .content .legend {
+.joolaio.dashboard.overviewpie .content .legend {
     margin-top: 30px;
 }
 
@@ -3550,24 +3535,24 @@ th.nopaddingtop.metric {
     margin-top: 2px;
 }
 
-.jarvis.report.histogram .table th:hover {
+.joolaio.report.histogram .table th:hover {
     background-color: inherit;
     cursor: default;
 }
 
-.jarvis.report.histogram .table th {
+.joolaio.report.histogram .table th {
     vertical-align: top;
 }
 
-.jarvis.report.histogram .table-striped tbody td.values {
+.joolaio.report.histogram .table-striped tbody td.values {
     font-weight: bold;
 }
 
-.jarvis.report.histogram .table-striped tbody tr:nth-child(even) td.values {
+.joolaio.report.histogram .table-striped tbody tr:nth-child(even) td.values {
     background-color: #E0E0E0;
 }
 
-.jarvis.report.histogram .table-striped tbody tr:nth-child(odd) td.values {
+.joolaio.report.histogram .table-striped tbody tr:nth-child(odd) td.values {
     background-color: #ECECEC;
 }
 
@@ -3615,7 +3600,7 @@ th.nopaddingtop.metric {
     border-top: 1px solid #E5E5E5;
 }
 
-.jarvis.report.jtable .topheader .tablecontrol .toolbar .advancedcaption {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .advancedcaption {
     margin-left: 10px;
     margin-right: 30px;
 
@@ -3751,25 +3736,25 @@ th.nopaddingtop.metric {
     height: 19px;
 }
 
-.jarvis.dashboard.bartable .tablebar {
+.joolaio.dashboard.bartable .tablebar {
     height: 40px;
     float: left;
 }
 
-.jarvis.dashboard.bartable .barcaption {
+.joolaio.dashboard.bartable .barcaption {
     height: 40px;
     float: left;
 
     margin-left: 10px;
 }
 
-.jarvis.dashboard.bartable .barcaption .caption {
+.joolaio.dashboard.bartable .barcaption .caption {
     color: #666;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.jarvis.dashboard.bartable .barcaption .subcaption {
+.joolaio.dashboard.bartable .barcaption .subcaption {
     color: #999;
     font-size: 12px;
 }
@@ -3812,7 +3797,7 @@ th.nopaddingtop.metric {
 
 
 
-.jarvis.breadcrumbs {
+.joolaio.breadcrumbs {
     margin-top:5px;
               padding-bottom:5px;
     font-size: 14px;
@@ -3821,33 +3806,33 @@ th.nopaddingtop.metric {
     overflow: auto;
 }
 
-.jarvis.breadcrumbs .crumb {
+.joolaio.breadcrumbs .crumb {
     float: left;
 }
 
-.jarvis.breadcrumbs .crumb .caption {
+.joolaio.breadcrumbs .crumb .caption {
 
 }
 
-.jarvis.breadcrumbs .crumb .value {
+.joolaio.breadcrumbs .crumb .value {
     color: #08C;
 }
 
-.jarvis.breadcrumbs .crumb .value:hover {
+.joolaio.breadcrumbs .crumb .value:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.jarvis.breadcrumbs .crumb .value:last-of-type {
+.joolaio.breadcrumbs .crumb .value:last-of-type {
     color: inherit;
 }
 
-.jarvis.breadcrumbs .crumb .value:last-of-type:hover {
+.joolaio.breadcrumbs .crumb .value:last-of-type:hover {
     cursor: default;
     text-decoration: none;
 }
 
-.jarvis.breadcrumbs .crumb .sep {
+.joolaio.breadcrumbs .crumb .sep {
     padding-left: 5px;
     background-color:transparent;
     padding-right: 5px;

@@ -16,7 +16,7 @@ exports.index = function (req, res) {
         });
     }
     else
-        res.render('index', { jarvisToken: req.session.token, sampleData: configFile.configData.general.sampleData });
+        res.render('index', { joolaioToken: req.session.token, sampleData: configFile.configData.general.sampleData });
 };
 
 exports.index2 = function (req, res) {
@@ -27,12 +27,12 @@ exports.index2 = function (req, res) {
             }
             else {
                 req.session.token = '123';
-                res.render('index', { jarvisToken: req.session.token, sampleData: configFile.configData.general.sampleData });
+                res.render('index', { joolaioToken: req.session.token, sampleData: configFile.configData.general.sampleData });
             }
         });
     }
     else
-        res.render('index', { jarvisToken: req.session.token, sampleData: configFile.configData.general.sampleData });
+        res.render('index', {joolaioToken: req.session.token, sampleData: configFile.configData.general.sampleData });
 };
 
 exports.homepage = function (req, res) {
