@@ -36,18 +36,6 @@ catch (ex) {
 }
 var app = global.app = express();
 
-// all environments
-//app.set('port', joola.config.general.port || 80);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(express.favicon('public/assets/ico/favicon.ico'));
-app.use(express.compress());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
-app.use(express.session({expires: new Date(Date.now() + 1200000)}));
-
 var winstonStream = {
   write: function (message, encoding) {
     logger.info(message);
@@ -56,6 +44,19 @@ var winstonStream = {
 
 app.use(express.logger((global.test ? function (req, res) {
 } : {stream: winstonStream})));
+
+
+// all environments
+//app.set('port', joola.config.general.port || 80);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(express.favicon('public/assets/ico/favicon.ico'));
+app.use(express.compress());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.cookieParser('your secret here'));
+app.use(express.session({expires: new Date(Date.now() + 1200000)}));
+
 
 process.env.JOOLA_CONFIG_ANALYTICS_HOMEPAGE = 'c:\\dev\\joola-analytics\\public\\homepage.html';
 
