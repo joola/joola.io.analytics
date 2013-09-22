@@ -12,7 +12,6 @@ var express = require('express'),
 
 
 //TODO: Remove this
-
 var configFile = './config/joola.analytics.sample.js';
 if (process.env.JOOLA_CONFIG_ANALYTICS && process.env.JOOLA_CONFIG_ANALYTICS !== '') {
   logger.info('Loading configuration file from [' + process.env.JOOLA_CONFIG_ANALYTICS + ']');
@@ -48,9 +47,11 @@ var winstonStream = {
   }
 };
 
-app.use(express.logger({stream: winstonStream}));
+app.use(express.logger((global.test ? function (req, res) {
+} : {stream: winstonStream})));
 
 process.env.JOOLA_CONFIG_ANALYTICS_HOMEPAGE = 'c:\\dev\\joola-analytics\\public\\homepage.html';
+
 
 /*
  app.all('/', function (req, res, next) {
@@ -234,4 +235,4 @@ cp_endpoints.push({
   }
 });
 
-cp.start(42101,cp_endpoints);
+cp.start(42101, cp_endpoints);

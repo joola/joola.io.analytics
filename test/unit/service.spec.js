@@ -1,5 +1,5 @@
 var
-  app = require('../../app.js');
+  app = require('../../joola.io.analytics.js');
 
 "use strict";
 describe("services", function () {
