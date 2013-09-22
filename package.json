@@ -21,7 +21,7 @@
       "email": "or@joo.la",
       "url": "http://joo.la"
     }
-  ], 
+  ],
   "scripts": {
     "test": "make test",
     "start": "node joola.io.analytics.js",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "joola.io.sdk": "3.x",
-
+ 
     "node-controlport":"0.x",
 
     "express": "3.2.6",
