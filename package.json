@@ -20,9 +20,9 @@
       "name": "Or Weinberger",
       "email": "or@joo.la",
       "url": "http://joo.la"
-    }
+    } 
   ],
-  "scripts": { 
+  "scripts": {
     "test": "make test",
     "start": "node joola.io.analytics.js",
     "debug": "npm-inspector && npm start && open \"http://http://127.0.0.1:8080/debug?port=5858\"",
