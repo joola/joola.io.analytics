@@ -1,7 +1,7 @@
 .ortest {
 }
 
-.jarvis.logo {
+.joolaio.logo {
     margin-top: 5px;
 
     float: right;
@@ -10,7 +10,7 @@
     width: 175px;
 }
 
-.jarvis.container .panel {
+.joolaio.container .panel {
     padding-top: 0;
     min-height: 600px;
     padding-left: 20px;
@@ -25,7 +25,7 @@
     height: 20px;
 }
 
-.jarvis.realtime.status {
+.joolaio.realtime.status {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -64,11 +64,11 @@ body {
     border-radius: 0px;
 }
 
-.jarvis.realtime.timeline {
+.joolaio.realtime.timeline {
     margin-bottom: 20px;
 }
 
-.jarvis.report.datebox {
+.joolaio.report.datebox {
     margin-top: -20px;
 }
 
@@ -678,7 +678,7 @@ body.on .container.fade {
     min-height: 650px;
 }
 
-.jarvis.container {
+.joolaio.container {
     margin-top: 0;
     min-height: 810px;
     width: 100% !important;
@@ -766,7 +766,7 @@ table {
     border-bottom: 1px solid #CACACA;
 }
 
-.jarvis.report.tabs {
+.joolaio.report.tabs {
     margin-bottom: 0 !important;
 }
 
@@ -796,7 +796,7 @@ table {
 }
 
 /*
-.jarvis.datebox .container .datetable .dropdownmarker {
+.joolaio.datebox .container .datetable .dropdownmarker {
     background: #EBEBEB url(/assets/img/date_control_down.gif) no-repeat 50% 50% !important;
 }
 */
@@ -811,7 +811,7 @@ table {
 
 }
 
-.jarvis .nav {
+.joolaio .nav {
     background-color: whiteSmoke;
 }
 
@@ -917,7 +917,7 @@ table {
     margin-top: 0;
 }
 
-.jarvis .nav {
+.joolaio .nav {
     background: transparent;
 }
 
@@ -928,7 +928,7 @@ table {
     right: 0;
 }
 
-.jarvis.container .dashboard.panel {
+.joolaio.container .dashboard.panel {
     padding-top: 20px;
 }
 
@@ -936,7 +936,7 @@ table {
     text-decoration: none;
 }
 
-.jarvis.dashboard.panel {
+.joolaio.dashboard.panel {
     padding-top: 0;
     padding-left: 0;
 }
@@ -1146,29 +1146,29 @@ table {
     padding-left: 5px;
 }
 
-.jarvis.dashboard .row {
+.joolaio.dashboard .row {
     margin-left: 0;
 }
 
-.jarvis.dashboard.column-left {
+.joolaio.dashboard.column-left {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.jarvis.dashboard.column-mid {
+.joolaio.dashboard.column-mid {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.jarvis.dashboard.column-right {
+.joolaio.dashboard.column-right {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.jarvis.dashboard .widget {
+.joolaio.dashboard .widget {
     margin-left: 15px;
 }
 
@@ -1178,7 +1178,7 @@ table {
     margin-top: 15px;
 }
 
-.jarvis.panel {
+.joolaio.panel {
     margin-left: 0px;
     margin-right: 15px;
 
@@ -1189,11 +1189,11 @@ table {
     padding-left: 50px;
 }
 
-.jarvis.dashboard.widget .header {
+.joolaio.dashboard.widget .header {
 
 }
 
-.jarvis.dashboard.widget .header h3 {
+.joolaio.dashboard.widget .header h3 {
     line-height: 1;
     margin-top: 0;
     padding-top: 5px;
@@ -1201,29 +1201,29 @@ table {
     padding-bottom: 10px;
 }
 
-.jarvis.dashboard.widget .content {
+.joolaio.dashboard.widget .content {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
 
-.jarvis.dashboard .widget .header:hover {
+.joolaio.dashboard .widget .header:hover {
     cursor: move;
 }
 
-.jarvis.dashboard .widget .header .move {
+.joolaio.dashboard .widget .header .move {
     display: none
 }
 
-.jarvis.dashboard.jtable.widget .content {
+.joolaio.dashboard.jtable.widget .content {
     padding: 0;
 }
 
-.jarvis.dashboard.panel {
+.joolaio.dashboard.panel {
     margin-top: 0;
     padding-top: 0;
 }
 
-.jarvis.description.lead {
+.joolaio.description.lead {
     display: none;;
 }
 
@@ -1443,12 +1443,12 @@ ul.subtopiclist_container.active {
     font-size: 13px;
 }
 
-.helpblock .reporthelp .jarvis.caption {
+.helpblock .reporthelp .joolaio.caption {
     font-weight: bold;
     padding-bottom: 6px;
 }
 
-.helpblock .reporthelp .jarvis.description {
+.helpblock .reporthelp .joolaio.description {
 }
 
 .helpblock .resources {
