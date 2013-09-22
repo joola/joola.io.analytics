@@ -20,7 +20,7 @@
       "name": "Or Weinberger",
       "email": "or@joo.la",
       "url": "http://joo.la"
-    } 
+    }
   ],
   "scripts": {
     "test": "make test",
@@ -35,7 +35,7 @@
     "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
-    "joola.io.sdk": "3.x",
+    "joola.io.sdk": "3.x",  
 
     "node-controlport":"0.x",
 
