@@ -20,7 +20,7 @@
       "name": "Or Weinberger",
       "email": "or@joo.la",
       "url": "http://joo.la"
-    } 
+    }  
   ],
   "scripts": {
     "test": "make test",
