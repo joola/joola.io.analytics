@@ -13,7 +13,7 @@ logger.info('Target path: ' + targetDirectory);
 
 logger.info('Copying files...');
 
-ncp.limit = 10;
+//ncp.limit = 10;
 var options = {
     filter: function (filename) {
         return filename.indexOf('git') == -1 && filename.indexOf('.idea') == -1;
