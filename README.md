@@ -25,8 +25,8 @@ npm test
 
 [1]: https://coveralls.io/repos/joola/joola.io.analytics/badge.png
 [2]: https://coveralls.io/r/joola/joola.io.analytics
-[3]: https://travis-ci.org/joola/joola.io.analytics.png
-[4]: https://travis-ci.org/joola/joola.io.analytics
+[3]: http://ci.joo.la/buildStatus/icon?job=ci-joola.io.analytics-nightly
+[4]: http://ci.joo.la/view/joola.io.analytics/job/ci-joola.io.analytics-nightly/
 [5]: https://david-dm.org/joola/joola.io.analytics.png
 [6]: https://david-dm.org/joola/joola.io.analytics
 [7]: https://david-dm.org/joola/joola.io.analytics/dev-status.png
