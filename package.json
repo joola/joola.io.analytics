@@ -43,7 +43,6 @@
     "node-controlport":"0.x",
 
     "optimist":"*",
-    "nconf":"*",
     "express": "3.2.6",
     "jade": "*",
     "async": "*",
@@ -52,7 +51,10 @@
     "request": "*",
     "process": "*",
     "path": "*",
-    "ncp": "*"
+    "ncp": "*",
+
+    "nconf":"*",
+    "nconf-http":"*"
   },
   "devDependencies": {
     "closurecompiler": "*",

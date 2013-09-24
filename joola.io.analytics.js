@@ -7,6 +7,8 @@ var express = require('express'),
   logger = require('joola.io.logger'),
   app;
 
+require('nconf-http');
+
 var status = '';
 var httpServer, httpsServer;
 var joola = app = global.app = express();
@@ -20,17 +22,19 @@ var loadConfig = function (callback) {
   joola.config.argv()
     .env();
 
-  joola.config.web('web', { web: joola.config.get('wconf') || 'http://localhost:40001/conf/joola.io.analytics' }, function () {
-    joola.config.file({ file: joola.config.get('conf') || './config/joola.io.analytics.json' });
-    //Configuration loaded
+  nconf.use('http', { url: 'http://localhost:40001/conf/joola.io.analytics',
+    callback: function () {
+      joola.config.file({ file: joola.config.get('conf') || './config/joola.io.analytics.json' });
+      //Configuration loaded
 
-    //Validate config
-    if (!joola.config.get('version'))
-      throw new Error('Failed to load configuration file');
+      //Validate config
+      if (!joola.config.get('version'))
+        throw new Error('Failed to load configuration file');
 
-    console.log(joola.config.get('loglevel'));
-    joola.logger.setLevel(joola.config.get('loglevel'));
-    callback();
+      console.log(joola.config.get('loglevel'));
+      joola.logger.setLevel(joola.config.get('loglevel'));
+      callback();
+    }
   });
 };
 
@@ -244,3 +248,5 @@ loadConfig(function () {
     });
   });
 });
+
+

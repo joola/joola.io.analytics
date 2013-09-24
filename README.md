@@ -1,6 +1,5 @@
 # joola.io.analytics
-The open-source data visualization framework
-Analytics website
+joola.io built-in Analytics website
 
 [![Build Status][3]][4] [![dependency status][5]][6] [![dev dependency status][7]][8] [![Coverage Status][1]][2]
 [![NPM](https://nodei.co/npm/joola.io.analytics.png)](https://nodei.co/npm/joola.io.analytics/)
@@ -12,7 +11,7 @@ Installing
 npm install -g joola.io.analytics
 npm start
 
-navigate to http://localhost:8000
+navigate to http://localhost
 ```
 
 
