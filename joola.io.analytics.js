@@ -1,3 +1,15 @@
+/**
+ *  joola.io
+ *
+ *  Copyright Joola Smart Solutions, Ltd. <info@joo.la>
+ *
+ *  Licensed under GNU General Public License 3.0 or later.
+ *  Some rights reserved. See LICENSE, AUTHORS.
+ *
+ *  @license GPL-3.0+ <http://spdx.org/licenses/GPL-3.0+>
+ */
+
+
 var express = require('express'),
   http = require('http'),
   https = require('https'),
@@ -11,8 +23,9 @@ require('nconf-http');
 
 var status = '';
 var httpServer, httpsServer;
-var joola = app = global.app = express();
+var app = global.app = express();
 
+var joola = {};
 global.joola = joola;
 joola.config = nconf;
 joola.logger = logger;
@@ -65,7 +78,7 @@ var setupRoutes = function (callback) {
   var
     login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
-    index = require('./routes/index')
+    index = require('./routes/index');
 
   app.get('/', index.index);
   app.get('/index', index.index2);
@@ -239,7 +252,7 @@ loadConfig(function () {
               joola.logger.debug('HTTPS running');
 
               done();
-            })
+            });
           }
           else
             done();
