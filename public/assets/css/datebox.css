@@ -31,17 +31,6 @@
     font-size: 145%;
 }
 
-/*
-.jarvis.datebox .container .datetable .dropdownmarker
-{
-    background: #F7F7F7 url(/assets/img/date_control_down.gif) no-repeat 50% 50%;
-    padding-left: 18px;
-    border-radius: 0 5px 5px 0;
-    -moz-border-radius: 0 5px 5px 0;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-}
-*/
 .japi.datebox {
     margin-top: 10px;
     float: right;

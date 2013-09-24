@@ -16,3 +16,4 @@ npm-debug.log
 .idea
 node_modules
 atlassian-ide-plugin.xml
+test-reports.xml
