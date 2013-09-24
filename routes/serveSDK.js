@@ -11,16 +11,16 @@ var loadSDK = function (req, res, next) {
         etag: null
     };
 
-    delete require.cache[require.resolve('../node_modules/joola-sdk/package.json')]
-    result.version = require('../node_modules/joola-sdk/package.json').version;
+    delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')]
+    result.version = require('../node_modules/joola.io.sdk/package.json').version;
 
-    fs.readFile('node_modules/joola-sdk/bin/joola.js', function (err, data) {
+    fs.readFile('node_modules/joola.io.sdk/bin/joolaio.js', function (err, data) {
         if (err) {
             result.success = false;
             throw new Error('Failed to load SDK file: ' + err);
         }
         else {
-            fs.stat('node_modules/joola-sdk/bin/joola.js', function (err, stat) {
+            fs.stat('node_modules/joola.io.sdk/bin/joolaio.js', function (err, stat) {
                 if (err) {
                     result.success = false;
                     throw new Error('Failed to load SDK file: ' + err);
@@ -45,7 +45,8 @@ var parseRequest = function (req) {
         token: query.token,
         host: '',
         port: 0,
-        user: null
+        user: null,
+        req: req
     };
 
     return request;
@@ -53,15 +54,15 @@ var parseRequest = function (req) {
 
 var processSDK = function (sdk, request) {
     var _sdk = sdk.sdk.toString();
-    _sdk = _sdk.replace(/\[\[JARVIS-VERSION\]\]/g, sdk.version);
-    _sdk = _sdk.replace(/\[\[JARVIS-TOKEN\]\]/g, request.token);
-    _sdk = _sdk.replace(/\[\[JARVIS-BOOTSTRAP\]\]/g, joola.config.joolaServer.bootstrap || 'true');
-    _sdk = _sdk.replace(/\[\[JARVIS-HOST\]\]/g, (joola.config.joolaServer.secure ? 'https://' : 'http://') + joola.config.joolaServer.host + ':' + joola.config.joolaServer.port);
-    _sdk = _sdk.replace(/\[\[JARVIS-CONTENTHOST\]\]/g, joola.config.joolaServer.contentHost);
-    _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-CONTENT\]\]/g, '');
-    _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-QUERY\]\]/g, '');
-    _sdk = _sdk.replace(/\[\[JARVIS-ENDPOINT-API\]\]/g, '');
-    _sdk = _sdk.replace(/\[\[JARVIS-LOGINREDIRECTURL\]\]/g, joola.config.joolaServer.loginRedirectUrl || null);
+    _sdk = _sdk.replace(/\[\[JOOLAIO-VERSION\]\]/g, sdk.version);
+    _sdk = _sdk.replace(/\[\[JOOLAIO-TOKEN\]\]/g, request.token);
+    _sdk = _sdk.replace(/\[\[JOOLAIO-BOOTSTRAP\]\]/g, joola.config.joolaServer.bootstrap || 'true');
+    _sdk = _sdk.replace(/\[\[JOOLAIO-HOST\]\]/g, (joola.config.joolaServer.secure ? 'https://' : 'http://') + joola.config.joolaServer.host + ':' + joola.config.joolaServer.port);
+    _sdk = _sdk.replace(/\[\[JOOLAIO-CONTENTHOST\]\]/g, joola.config.joolaServer.contentHost || request.req.headers.host);
+    _sdk = _sdk.replace(/\[\[JOOLAIO-ENDPOINT-CONTENT\]\]/g, '');
+    _sdk = _sdk.replace(/\[\[JOOLAIO-ENDPOINT-QUERY\]\]/g, '');
+    _sdk = _sdk.replace(/\[\[JOOLAIO-ENDPOINT-API\]\]/g, '');
+    _sdk = _sdk.replace(/\[\[JOOLAIO-LOGINREDIRECTURL\]\]/g, joola.config.joolaServer.loginRedirectUrl || null);
 
     return _sdk;
 };

@@ -4,14 +4,14 @@ function buildContentMenus() {
     buildContentMenu_Reports();
 
     /*
-     jarvis.objects.Dimensions.List(null, null, function () {
+     joolaio.objects.Dimensions.List(null, null, function () {
      });
-     jarvis.objects.Metrics.List(null, null, function () {
+     joolaio.objects.Metrics.List(null, null, function () {
      });*/
 }
 
 function buildContentMenu_Realtime() {
-    jarvis.objects.RealtimePanels.List(this, null, function (sender, data) {
+    joolaio.objects.RealtimePanels.List(this, null, function (sender, data) {
         var $panellist = $('body').find('.panel-list');
         if ($panellist.length > 0) {
             var container = $panellist;
@@ -24,7 +24,7 @@ function buildContentMenu_Realtime() {
                 var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                 $item.off('click');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('realtimepanelchange', item.id);
+                    $(joolaio).trigger('realtimepanelchange', item.id);
                 });
                 $(container).append($item);
             });
@@ -32,9 +32,9 @@ function buildContentMenu_Realtime() {
             var $item = $('<li class="add-panel defaultnav"><a>+ Add Panel</a></li>');
             $item.off('click');
             $item.on('click', function (e) {
-                var matchedContainers = $('.jarvis.container.realtime');
+                var matchedContainers = $('.joolaio.container.realtime');
                 //sender._this.showEdit({container:matchedContainers, addNew:true, _this:sender._this});
-                jarvis.getRealtimePanel().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getRealtimePanel()});
+                joolaio.getRealtimePanel().showEdit({container: matchedContainers, addNew: true, _this: joolaio.getRealtimePanel()});
             });
             $(container).append($item);
 
@@ -46,7 +46,7 @@ function buildContentMenu_Realtime() {
 }
 
 function buildContentMenu_Dashboards() {
-    jarvis.objects.Dashboards.List(this, null, function (sender, data) {
+    joolaio.objects.Dashboards.List(this, null, function (sender, data) {
         var $panellist = $('body').find('.dashboard-list');
         if ($panellist.length > 0) {
             var container = $panellist;
@@ -59,7 +59,7 @@ function buildContentMenu_Dashboards() {
                 var $item = $('<li class="defaultnav"><a data-id="' + item.id + '">' + item.name + '</a></li>');
                 $item.off('click');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('dashboardchange', item.id);
+                    $(joolaio).trigger('dashboardchange', item.id);
                 });
                 $(container).append($item);
             });
@@ -67,9 +67,9 @@ function buildContentMenu_Dashboards() {
             var $item = $('<li class="add-panel defaultnav"><a>+ Add Dashboard</a></li>');
             $item.off('click');
             $item.on('click', function (e) {
-                var matchedContainers = $('.jarvis.container.realtime');
-                //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
-                jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
+                var matchedContainers = $('.joolaio.container.realtime');
+                //new joolaio.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new joolaio.dashboard.visualisation.Panel()});
+                joolaio.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: joolaio.getDashboard()});
             });
             $(container).append($item);
 
@@ -81,7 +81,7 @@ function buildContentMenu_Dashboards() {
 }
 
 function buildContentMenu_Reports() {
-    jarvis.objects.Reports.List(this, null, function (sender, data) {
+    joolaio.objects.Reports.List(this, null, function (sender, data) {
         var $panellist = $('body').find('.report-list');
         $panellist.empty();
         if ($panellist.length > 0) {
@@ -122,7 +122,7 @@ function buildContentMenu_Reports() {
 
                     $item.on('click', function (e) {
 
-                        $(jarvis).trigger('reportchange', item.id);
+                        $(joolaio).trigger('reportchange', item.id);
                     });
                     $(container).append($item);
                 });
@@ -131,15 +131,15 @@ function buildContentMenu_Reports() {
             var $item = $('<li class="add-report defaultnav"><a>+ Add Report</a></li>');
             $item.off('click');
             $item.on('click', function (e) {
-                //var matchedContainers = $('.jarvis.container.report');
-                //$(jarvis).trigger('reportchange', $(this).attr('data-id'));
+                //var matchedContainers = $('.joolaio.container.report');
+                //$(joolaio).trigger('reportchange', $(this).attr('data-id'));
 
-                $(jarvis).trigger('reportchange', -1);
-                var matchedContainers = $('.jarvis.report.panel');
-                var o = new jarvis.visualisation.report.Editor();
+                $(joolaio).trigger('reportchange', -1);
+                var matchedContainers = $('.joolaio.report.panel');
+                var o = new joolaio.visualisation.report.Editor();
                 o.init(o, {container: matchedContainers, reportID: -1});
 
-                //jarvis.visualisation.setDisplay('report');
+                //joolaio.visualisation.setDisplay('report');
             });
             $(container).append($item);
 
@@ -238,7 +238,7 @@ function validateForm(frm) {
 function registerLaunchHook() {
     try {
         $('.launchlink').on('click', function () {
-            $(jarvis).trigger('dashboardchange', parseInt(-1));
+            $(joolaio).trigger('dashboardchange', parseInt(-1));
         });
 
     }
@@ -252,10 +252,10 @@ function getParameterByName(name) {
 }
 
 function setupLeftNavContents() {
-    jarvis.objects.Dashboards.List(null, null, function () {
+    joolaio.objects.Dashboards.List(null, null, function () {
         var $dashboards = $('.nav-dashboards');
         $dashboards.empty();
-        $(jarvis.objects.Dashboards).each(function (index, dashboard) {
+        $(joolaio.objects.Dashboards).each(function (index, dashboard) {
 
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
             var $a = $('<a class="topiclink" title="' + dashboard.name + '" data-id="' + dashboard.id + '"></a>');
@@ -263,7 +263,7 @@ function setupLeftNavContents() {
             $a.append($caption);
             $li.append($a);
             $li.on('click', function (e) {
-                $(jarvis).trigger('dashboardchange', dashboard.id);
+                $(joolaio).trigger('dashboardchange', dashboard.id);
             });
             $dashboards.append($li);
         });
@@ -278,19 +278,19 @@ function setupLeftNavContents() {
 
          $li.off('click');
          $li.on('click', function (e) {
-         var matchedContainers = $('.jarvis.container.realtime');
-         //new jarvis.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new jarvis.dashboard.visualisation.Panel()});
-         jarvis.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: jarvis.getDashboard()});
+         var matchedContainers = $('.joolaio.container.realtime');
+         //new joolaio.dashboard.visualisation.Panel().showEdit({container:matchedContainers, addNew:true, _this:new joolaio.dashboard.visualisation.Panel()});
+         joolaio.getDashboard().showEdit({container: matchedContainers, addNew: true, _this: joolaio.getDashboard()});
          });
 
          $dashboards.append($li);
          */
     });
 
-    jarvis.objects.RealtimePanels.List(null, null, function () {
+    joolaio.objects.RealtimePanels.List(null, null, function () {
         var $panels = $('.nav-panels');
         $panels.empty();
-        $(jarvis.objects.RealtimePanels).each(function (index, panel) {
+        $(joolaio.objects.RealtimePanels).each(function (index, panel) {
 
             var $li = $('<li class="subtopicheader subtopicheader_wrapper"></li>');
             var $a = $('<a class="topiclink" title="' + panel.name + '"></a>');
@@ -299,7 +299,7 @@ function setupLeftNavContents() {
             $li.append($a);
             $li.off('click');
             $li.on('click', function (e) {
-                $(jarvis).trigger('realtimepanelchange', panel.id);
+                $(joolaio).trigger('realtimepanelchange', panel.id);
             });
             $panels.append($li);
         });
@@ -313,16 +313,16 @@ function setupLeftNavContents() {
 
         $li.off('click');
         $li.on('click', function (e) {
-            var matchedContainers = $('.jarvis.container.realtime');
+            var matchedContainers = $('.joolaio.container.realtime');
             //sender._this.showEdit({container:matchedContainers, addNew:true, _this:sender._this});
             $('#modal-notimplemented').modal('show');
-            //jarvis.getRealtimePanel().showEdit({container:matchedContainers, addNew:true, _this:jarvis.getRealtimePanel()});
+            //joolaio.getRealtimePanel().showEdit({container:matchedContainers, addNew:true, _this:joolaio.getRealtimePanel()});
         });
 
         $panels.append($li);
     });
 
-    jarvis.objects.Reports.List(null, null, function (sender, data) {
+    joolaio.objects.Reports.List(null, null, function (sender, data) {
         var $reports = $('.nav-reports');
         $reports.empty();
 
@@ -372,7 +372,7 @@ function setupLeftNavContents() {
 
                     $li.on('click', function (e) {
 
-                        $(jarvis).trigger('reportchange', report.id);
+                        $(joolaio).trigger('reportchange', report.id);
                     });
 
                     $ul.append($li);
@@ -390,7 +390,7 @@ function setupLeftNavContents() {
 
                     $li.on('click', function (e) {
 
-                        $(jarvis).trigger('reportchange', report.id);
+                        $(joolaio).trigger('reportchange', report.id);
                     });
 
                     $container.append($li);
@@ -408,9 +408,9 @@ function setupLeftNavContents() {
 
          $li.off('click');
          $li.on('click', function (e) {
-         $(jarvis).trigger('reportchange', -1);
-         var matchedContainers = $('.jarvis.report.panel');
-         var o = new jarvis.visualisation.report.Editor();
+         $(joolaio).trigger('reportchange', -1);
+         var matchedContainers = $('.joolaio.report.panel');
+         var o = new joolaio.visualisation.report.Editor();
          o.init(o, {container: matchedContainers, reportID: -1});
          });
          $reports.append($li);
@@ -470,7 +470,7 @@ function setupLeftNavEvents() {
             $('.leftnav').show();
             $(this).removeClass('collapsed');
         }
-        $(jarvis).trigger('wrapper_resize');
+        $(joolaio).trigger('wrapper_resize');
     });
 
     setupRecent();
@@ -485,9 +485,9 @@ function collapseAll() {
     $('ul.subtopic').removeClass('active');
 
 }
-$(window).bind('jarvis-initialized', function () {
+$(window).bind('joolaio-initialized', function () {
 
-    $(jarvis).bind('setreport', function (e, reportID) {
+    $(joolaio).bind('setreport', function (e, reportID) {
 
         collapseAll();
 
@@ -507,12 +507,12 @@ $(window).bind('jarvis-initialized', function () {
             $thetopic.parentsUntil('div.topic').parent().addClass('active');
         }
 
-        jarvis.objects.Reports.Get(null, {id: reportID}, function (sender, data) {
+        joolaio.objects.Reports.Get(null, {id: reportID}, function (sender, data) {
             pushRecent({type: 'report', id: data.id, data: data});
         });
     });
 
-    $(jarvis).bind('setdashboard', function (e, dashboardID) {
+    $(joolaio).bind('setdashboard', function (e, dashboardID) {
 
 
         collapseAll();
@@ -530,7 +530,7 @@ $(window).bind('jarvis-initialized', function () {
             $thetopic.parentsUntil('div.topic').parent().addClass('active');
         }
 
-        jarvis.objects.Dashboards.Get(null, {id: dashboardID}, function (sender, data) {
+        joolaio.objects.Dashboards.Get(null, {id: dashboardID}, function (sender, data) {
             pushRecent({type: 'dashboard', id: data.id, data: data});
         });
 
@@ -538,17 +538,17 @@ $(window).bind('jarvis-initialized', function () {
 })
 
 
-$('.helpblock .reporthelp .jarvis.caption').bind('contentchange', function () {
+$('.helpblock .reporthelp .joolaio.caption').bind('contentchange', function () {
     var $helpblock = $($('.helpblock .resources')[0]);
     $helpblock.empty();
     var resources = [];
-    if (jarvis.state.view == 'dashboard') {
+    if (joolaio.state.view == 'dashboard') {
         $(this).text('The ' + $(this).text() + ' dashboard');
         resources.push({title: 'About dashboards', url: 'http://'});
         resources.push({title: 'Create/edit/delete dashboards', url: 'http://'});
         resources.push({title: 'Add widgets to your dashboard', url: 'http://'});
     }
-    else if (jarvis.state.view == 'report') {
+    else if (joolaio.state.view == 'report') {
         $(this).text('The ' + $(this).text() + ' report');
         var resource = {title: 'Test', url: 'http://'};
         resources.push({title: 'About reports', url: 'http://'});
@@ -615,7 +615,7 @@ function setupRecent() {
                 var $item = $('<div class="recentitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + item.data.name + '</span></div>');
 
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('dashboardchange', item.data.id);
+                    $(joolaio).trigger('dashboardchange', item.data.id);
                     $('.leftnav .popup_wrapper').hide();
                 });
 
@@ -630,7 +630,7 @@ function setupRecent() {
                 else
                     var $item = $('<div class="recentitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + item.data.name + '</span></div>');
                 $item.on('click', function (e) {
-                    $(jarvis).trigger('reportchange', item.data.id);
+                    $(joolaio).trigger('reportchange', item.data.id);
                     $('.leftnav .popup_wrapper').hide();
                 });
 
@@ -659,7 +659,7 @@ function setupRecent() {
         else {
             $('.searchresultitem').remove();
 
-            $(jarvis.objects.Dashboards).each(function (item, dashboard) {
+            $(joolaio.objects.Dashboards).each(function (item, dashboard) {
                 if (dashboard.name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
 
                     var reg = new RegExp(term, 'gi');
@@ -669,7 +669,7 @@ function setupRecent() {
 
                     var $item = $('<div class="searchresultitem"><span class="topic">Dashboards</span><span class="seperator">›</span><span class="subtopic">' + final_dashboard_name + '</span></div>');
                     $item.on('click', function (e) {
-                        $(jarvis).trigger('dashboardchange', dashboard.id);
+                        $(joolaio).trigger('dashboardchange', dashboard.id);
                         $('.leftnav .results_wrapper').hide();
                     });
 
@@ -677,7 +677,7 @@ function setupRecent() {
                 }
             });
 
-            $(jarvis.objects.Reports).each(function (item, report) {
+            $(joolaio.objects.Reports).each(function (item, report) {
                 if (report.name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
                     var category = report.Category.name;
                     if (category == '(not set)')
@@ -693,7 +693,7 @@ function setupRecent() {
                     else
                         var $item = $('<div class="searchresultitem"><span class="topic">Reports</span><span class="seperator">›</span><span class="topic">' + category + '</span><span class="seperator">›</span><span class="subtopic">' + final_report_name + '</span></div>');
                     $item.on('click', function (e) {
-                        $(jarvis).trigger('reportchange', report.id);
+                        $(joolaio).trigger('reportchange', report.id);
                         $('.leftnav .results_wrapper').hide();
                     });
 
@@ -710,8 +710,8 @@ function setupRecent() {
     });
 }
 
-$(window).bind('jarvis-initialized', function () {
-    $(jarvis).bind('jarvis-session-timeout', function () {
+$(window).bind('joolaio-initialized', function () {
+    $(joolaio).bind('joolaio-session-timeout', function () {
         location.href = '/login';
     })
 });

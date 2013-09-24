@@ -1,7 +1,7 @@
 {
   "name": "joola.io.analytics",
   "preferGlobal": false,
-  "version": "3.0.2",
+  "version": "3.0.5",
   "author": "Joola <info@joo.la>",
   "description": "joola.io's analytics website",
   "engine": "node >= 0.10.x",
@@ -29,13 +29,20 @@
     "monitor": "mocha --reporter min --watch",
     "debugtest": "mocha --debug-brk --reporter spec",
     "blanket": {
-      "pattern": "test",
+      "pattern": "lib",
       "data-cover-never": "node_modules"
     },
-    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js",
+    "citest": "mocha --reporter xunit > test-reports.xml"
   },
   "dependencies": {
+    "joola.io.logger":"3.x",
+    "joola.io.config":"3.x",
     "joola.io.sdk": "3.x",
+
+    "node-controlport":"0.x",
+
+    "optimist":"*",
     "express": "3.2.6",
     "jade": "*",
     "async": "*",
@@ -44,7 +51,10 @@
     "request": "*",
     "process": "*",
     "path": "*",
-    "ncp": "*"
+    "ncp": "*",
+
+    "nconf":"*",
+    "nconf-http":"*"
   },
   "devDependencies": {
     "closurecompiler": "*",
@@ -57,7 +67,8 @@
     "chai": "1.x",
     "sinon-chai": "2.x",
     "blanket": "1.x",
-    "jshint": "2.x"
+    "jshint": "2.x",
+    "supertest":"0.x"
   },
   "license": "GPL-3.0"
 }
