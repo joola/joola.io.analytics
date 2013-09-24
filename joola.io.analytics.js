@@ -11,8 +11,9 @@ require('nconf-http');
 
 var status = '';
 var httpServer, httpsServer;
-var joola = app = global.app = express();
+var app = global.app = express();
 
+var joola = {};
 global.joola = joola;
 joola.config = nconf;
 joola.logger = logger;
@@ -65,7 +66,7 @@ var setupRoutes = function (callback) {
   var
     login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
-    index = require('./routes/index')
+    index = require('./routes/index');
 
   app.get('/', index.index);
   app.get('/index', index.index2);
@@ -239,7 +240,7 @@ loadConfig(function () {
               joola.logger.debug('HTTPS running');
 
               done();
-            })
+            });
           }
           else
             done();
