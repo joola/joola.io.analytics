@@ -1,7 +1,7 @@
 .ortest {
 }
 
-.jarvis.logo {
+.joolaio.logo {
     margin-top: 5px;
 
     float: right;
@@ -10,7 +10,7 @@
     width: 175px;
 }
 
-.jarvis.container .panel {
+.joolaio.container .panel {
     padding-top: 0;
     min-height: 600px;
     padding-left: 20px;
@@ -25,7 +25,7 @@
     height: 20px;
 }
 
-.jarvis.realtime.status {
+.joolaio.realtime.status {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -64,11 +64,11 @@ body {
     border-radius: 0px;
 }
 
-.jarvis.realtime.timeline {
+.joolaio.realtime.timeline {
     margin-bottom: 20px;
 }
 
-.jarvis.report.datebox {
+.joolaio.report.datebox {
     margin-top: -20px;
 }
 
@@ -678,7 +678,7 @@ body.on .container.fade {
     min-height: 650px;
 }
 
-.jarvis.container {
+.joolaio.container {
     margin-top: 0;
     min-height: 810px;
     width: 100% !important;
@@ -766,7 +766,7 @@ table {
     border-bottom: 1px solid #CACACA;
 }
 
-.jarvis.report.tabs {
+.joolaio.report.tabs {
     margin-bottom: 0 !important;
 }
 
@@ -796,7 +796,7 @@ table {
 }
 
 /*
-.jarvis.datebox .container .datetable .dropdownmarker {
+.joolaio.datebox .container .datetable .dropdownmarker {
     background: #EBEBEB url(/assets/img/date_control_down.gif) no-repeat 50% 50% !important;
 }
 */
@@ -811,7 +811,7 @@ table {
 
 }
 
-.jarvis .nav {
+.joolaio .nav {
     background-color: whiteSmoke;
 }
 
@@ -917,7 +917,7 @@ table {
     margin-top: 0;
 }
 
-.jarvis .nav {
+.joolaio .nav {
     background: transparent;
 }
 
@@ -928,7 +928,7 @@ table {
     right: 0;
 }
 
-.jarvis.container .dashboard.panel {
+.joolaio.container .dashboard.panel {
     padding-top: 20px;
 }
 
@@ -936,7 +936,7 @@ table {
     text-decoration: none;
 }
 
-.jarvis.dashboard.panel {
+.joolaio.dashboard.panel {
     padding-top: 0;
     padding-left: 0;
 }
@@ -1146,30 +1146,30 @@ table {
     padding-left: 5px;
 }
 
-.jarvis.dashboard .row {
+.joolaio.dashboard .row {
     margin-left: 0;
 }
 
 /*
-.jarvis.dashboard.column-left {
+.joolaio.dashboard.column-left {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.jarvis.dashboard.column-mid {
+.joolaio.dashboard.column-mid {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.jarvis.dashboard.column-right {
+.joolaio.dashboard.column-right {
     width: 30%;
     margin: 0;
     padding: 0;
 }
 */
-.jarvis.dashboard .widget {
+.joolaio.dashboard .widget {
     margin-left: 15px;
 }
 
@@ -1179,7 +1179,7 @@ table {
     margin-top: 15px;
 }
 
-.jarvis.panel {
+.joolaio.panel {
     margin-left: 0px;
     margin-right: 15px;
 
@@ -1190,11 +1190,11 @@ table {
     padding-left: 30px;
 }
 
-.jarvis.dashboard.widget .header {
+.joolaio.dashboard.widget .header {
 
 }
 
-.jarvis.dashboard.widget .header h3 {
+.joolaio.dashboard.widget .header h3 {
     line-height: 1;
     margin-top: 0;
     padding-top: 5px;
@@ -1202,29 +1202,29 @@ table {
     padding-bottom: 10px;
 }
 
-.jarvis.dashboard.widget .content {
+.joolaio.dashboard.widget .content {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
 
-.jarvis.dashboard .widget .header:hover {
+.joolaio.dashboard .widget .header:hover {
     /*cursor: move;*/
 }
 
-.jarvis.dashboard .widget .header .move {
+.joolaio.dashboard .widget .header .move {
     display: none
 }
 
-.jarvis.dashboard.jtable.widget .content {
+.joolaio.dashboard.jtable.widget .content {
     padding: 0;
 }
 
-.jarvis.dashboard.panel {
+.joolaio.dashboard.panel {
     margin-top: 0;
     padding-top: 0;
 }
 
-.jarvis.description.lead {
+.joolaio.description.lead {
     display: none;;
 }
 
@@ -1444,12 +1444,12 @@ ul.subtopiclist_container.active {
     font-size: 13px;
 }
 
-.helpblock .reporthelp .jarvis.caption {
+.helpblock .reporthelp .joolaio.caption {
     font-weight: bold;
     padding-bottom: 6px;
 }
 
-.helpblock .reporthelp .jarvis.description {
+.helpblock .reporthelp .joolaio.description {
 }
 
 .helpblock .resources {
@@ -1562,7 +1562,7 @@ table .span5 {
     width: 45%
 }
 
-.jarvis.report.jtable .table td.dimensionvalue:hover {
+.joolaio.report.jtable .table td.dimensionvalue:hover {
     text-decoration: none;
 }
 
@@ -1581,7 +1581,7 @@ table .span5 {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.jarvis.dashboard.jtable.widget .content, .jarvis.dashboard.bartable.widget .content {
+.joolaio.dashboard.jtable.widget .content, .joolaio.dashboard.bartable.widget .content {
     min-height: 0;
 }
 
@@ -1595,15 +1595,15 @@ input[type=checkbox] {
     width: 100%
 }
 
-.jarvis.report.jtable td.compare-daterange {
+.joolaio.report.jtable td.compare-daterange {
     color: #777;
 }
 
-.jarvis.dashboard.bartable .tablebar {
+.joolaio.dashboard.bartable .tablebar {
 
 }
 
-.jarvis.dashboard.bartable .barcaption .subcaption {
+.joolaio.dashboard.bartable .barcaption .subcaption {
     font-weight: 400;
     line-height: 1;
 
@@ -1611,78 +1611,78 @@ input[type=checkbox] {
     margin-top: 2px;
 }
 
-.jarvis.dashboard.bartable .barcaption .positive,
-.jarvis.dashboard.bartable .barcaption .negative,
-.jarvis.dashboard.bartable .barcaption .neutral {
+.joolaio.dashboard.bartable .barcaption .positive,
+.joolaio.dashboard.bartable .barcaption .negative,
+.joolaio.dashboard.bartable .barcaption .neutral {
     font-weight: 400;
 }
 
 /*
-.jarvis.dashboard.bartable tr:first-of-type td {
+.joolaio.dashboard.bartable tr:first-of-type td {
     padding-top: 0;
 }
 */
 
-.jarvis.dashboard.bartable .tablebar {
+.joolaio.dashboard.bartable .tablebar {
     height: 30px;
 }
 
-.jarvis.dashboard.bartable .compareperiod .tablebar {
+.joolaio.dashboard.bartable .compareperiod .tablebar {
     height: 48px;
 }
 
-.jarvis.dashboard.bartable .compareperiod .tablebar.base_ratio {
+.joolaio.dashboard.bartable .compareperiod .tablebar.base_ratio {
     height: 15px;
     margin-bottom: 1px;
 }
 
-.jarvis.dashboard.bartable .compareperiod .tablebar.compare_ratio {
+.joolaio.dashboard.bartable .compareperiod .tablebar.compare_ratio {
     height: 14px;
 }
 
-.jarvis.dashboard.bartable .compareperiod .tablebarwrapper .tablebarcaption {
+.joolaio.dashboard.bartable .compareperiod .tablebarwrapper .tablebarcaption {
     font-size: 12px;
     color: #999999;
     float: left;
 }
 
-.jarvis.dashboard.bartable .barcaption .caption {
+.joolaio.dashboard.bartable .barcaption .caption {
     line-height: 17px;
 }
 
-.jarvis.dashboard.bartable tr td {
+.joolaio.dashboard.bartable tr td {
 
 }
 
-.jarvis.dashboard.bartable.widget .content table td {
+.joolaio.dashboard.bartable.widget .content table td {
     padding-top: 8px;
     padding-bottom: 5px;
 }
 
-.jarvis.dashboard.jtable.widget .content table td {
+.joolaio.dashboard.jtable.widget .content table td {
     padding: 9px;
     padding-top: 11px;
     padding-bottom: 11px;
 }
 
-.jarvis.dashboard.bartable.widget .content table tr:first-of-type td {
+.joolaio.dashboard.bartable.widget .content table tr:first-of-type td {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.jarvis.dashboard.jtable.widget .content table tr:nth-child(2) > td {
+.joolaio.dashboard.jtable.widget .content table tr:nth-child(2) > td {
     padding: 9px;
     padding-top: 9px;
     padding-bottom: 9px;
 }
 
-.jarvis.dashboard.bartable .barcaption {
+.joolaio.dashboard.bartable .barcaption {
     height: auto;
 }
 
 /*datebox*/
 
-.jarvis.picker.datebox .container .datetable .dates {
+.joolaio.picker.datebox .container .datetable .dates {
     /*background-color: #f5f5f5;*/
     padding-bottom: 2px;
     padding: 5px;
@@ -1693,11 +1693,11 @@ input[type=checkbox] {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
-.jarvis.picker.datebox .container .datetable .dates .datelabel {
+.joolaio.picker.datebox .container .datetable .dates .datelabel {
     /*font-size: 0.875em;*/
 }
 
-.jarvis.picker.datebox .container .datetable .dropdownmarker {
+.joolaio.picker.datebox .container .datetable .dropdownmarker {
     background: #f5f5f5 url("../img/arrow_down.png") center no-repeat;
     width: 25px;
     margin-right: 5px;
@@ -1706,11 +1706,11 @@ input[type=checkbox] {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
-.jarvis.datebox .container.expanded .datetable .dropdownmarker {
+.joolaio.datebox .container.expanded .datetable .dropdownmarker {
     background: #f5f5f5 url("../img/arrow_up.png") center no-repeat !important;
 }
 
-.jarvis.datebox select {
+.joolaio.datebox select {
     display: inline-block;
     float: none;
     height: auto;
@@ -1718,28 +1718,28 @@ input[type=checkbox] {
     width: auto;
 }
 
-.jarvis.datebox .daterange {
+.joolaio.datebox .daterange {
     padding-left: 0 !important;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption .checker {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption .checker {
     top: 4px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .compareoption {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption {
     font-weight: 300;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .customdate {
     font-weight: 300;
 }
 
-.jarvis.datebox .daycell {
+.joolaio.datebox .daycell {
     font-size: 11px;
     font-weight: 300 !important;
 }
 
-.jarvis.datebox .daycell a {
+.joolaio.datebox .daycell a {
 
     color: #0088cc;
     border-bottom: 0;
@@ -1749,28 +1749,28 @@ input[type=checkbox] {
     font-weight: 600;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .apply {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .apply {
     margin-top: -5px;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div, .jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div, .joolaio.datebox .picker .wrapper .calendars .datetable-next div {
     padding-top: 6px !important;
     padding-bottom: 0px !important;
     /*height: 28px;*/
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div {
     padding-left: 5px !important;
     padding-right: 0px !important;
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-next div {
+.joolaio.datebox .picker .wrapper .calendars .datetable-next div {
     padding-left: 5px !important;
     padding-right: 0px !important;
 
 }
 
-.jarvis.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .jarvis.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
+.joolaio.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .joolaio.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
     height: 11px;
     padding: 4px;
     width: 4px;
@@ -1779,21 +1779,21 @@ input[type=checkbox] {
     border: 0;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .customdate {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .customdate {
     display: none;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .divider {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .divider {
     display: none;
 }
 
-.jarvis.datebox ._buttons {
+.joolaio.datebox ._buttons {
     bottom: 15px;
     position: absolute;
     right: 25px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer input, .jarvis.datebox .picker .wrapper .control .optionscontainer textarea {
+.joolaio.datebox .picker .wrapper .control .optionscontainer input, .joolaio.datebox .picker .wrapper .control .optionscontainer textarea {
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
@@ -1801,20 +1801,20 @@ input[type=checkbox] {
     transition: none;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
     margin-left: 2px;
     margin-right: 2px;
 }
 
-.jarvis.datebox .picker .wrapper .control .optionscontainer .apply {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .apply {
 
 }
 
-.jarvis.datebox .picker .wrapper .calendars {
+.joolaio.datebox .picker .wrapper .calendars {
     padding-top: 5px;
 }
 
-.jarvis.datebox .ui-datepicker-title {
+.joolaio.datebox .ui-datepicker-title {
     /*height: 28px;*/
     color: #666 !important;
     padding-top: 3px;
@@ -1844,10 +1844,10 @@ input[type=checkbox] {
 }
 
 
-.jarvis.report.jtable .table td.dimensionvalue {
+.joolaio.report.jtable .table td.dimensionvalue {
     color: #222;
 }
 
-.jarvis.report.jtable .table td.dimensionvalue .drilldownlink {
+.joolaio.report.jtable .table td.dimensionvalue .drilldownlink {
     border-bottom: 1px dotted #222;
 }
