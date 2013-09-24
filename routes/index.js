@@ -1,6 +1,5 @@
 var
     http = require('http'),
-    logger = require('../lib/shared/logger'),
     login = require('./login'),
     configFile = require('../config/joola.analytics.sample.js');
 
