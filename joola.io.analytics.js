@@ -1,3 +1,15 @@
+/**
+ *  joola.io
+ *
+ *  Copyright Joola Smart Solutions, Ltd. <info@joo.la>
+ *
+ *  Licensed under GNU General Public License 3.0 or later.
+ *  Some rights reserved. See LICENSE, AUTHORS.
+ *
+ *  @license GPL-3.0+ <http://spdx.org/licenses/GPL-3.0+>
+ */
+
+
 var express = require('express'),
   http = require('http'),
   https = require('https'),
@@ -11,8 +23,9 @@ require('nconf-http');
 
 var status = '';
 var httpServer, httpsServer;
-var joola = app = global.app = express();
+var app = global.app = express();
 
+var joola = {};
 global.joola = joola;
 joola.config = nconf;
 joola.logger = logger;
@@ -22,20 +35,28 @@ var loadConfig = function (callback) {
   joola.config.argv()
     .env();
 
-  nconf.use('http', { url: 'http://localhost:40001/conf/joola.io.analytics',
-    callback: function () {
-      joola.config.file({ file: joola.config.get('conf') || './config/joola.io.analytics.json' });
-      //Configuration loaded
+  try {
+    nconf.use('http', { url: 'http://localhost:40001/conf/joola.io.analytics',
+      callback: function (err) {
+        if (err) {
+          console.log(err);
+        }
+        joola.config.file({ file: joola.config.get('conf') || './config/joola.io.analytics.json' });
+        //Configuration loaded
 
-      //Validate config
-      if (!joola.config.get('version'))
-        throw new Error('Failed to load configuration file');
+        //Validate config
+        if (!joola.config.get('version'))
+          throw new Error('Failed to load configuration file');
 
-      console.log(joola.config.get('loglevel'));
-      joola.logger.setLevel(joola.config.get('loglevel'));
-      callback();
-    }
-  });
+        console.log(joola.config.get('loglevel'));
+        joola.logger.setLevel(joola.config.get('loglevel'));
+        callback();
+      }
+    });
+  }
+  catch (ex) {
+    console.log(ex);
+  }
 };
 
 var setupApplication = function (callback) {
@@ -65,7 +86,7 @@ var setupRoutes = function (callback) {
   var
     login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
-    index = require('./routes/index')
+    index = require('./routes/index');
 
   app.get('/', index.index);
   app.get('/index', index.index2);
@@ -239,7 +260,7 @@ loadConfig(function () {
               joola.logger.debug('HTTPS running');
 
               done();
-            })
+            });
           }
           else
             done();
