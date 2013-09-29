@@ -1,21 +1,29 @@
 {
-  "general": {
+  "version": "0.0.1",
+
+  "loglevel": "silly",
+
+  "server": {
     "serverName": "joola-analytics",
     "id": "joola-analytics-server",
     "serverToken": "joola-analytics-server",
     "flatFileDirectory": "./public/",
     "developmentMode": true,
-    "port": 42113,
-    "securePort": 443,
+    "port": 40002,
+    "securePort": 50002,
     "secure": false,
     "keyFile": "/certs/key.pem",
     "certFile": "/certs/cert.pem",
-    "sampleData": true
+    "sampleData": true,
+    "controlPort": {
+      "enabled": true,
+      "port": 60002,
+      "secure": false,
+      "securePort": 70002,
+      "exitOnStop": true
+    }
   },
-  "cache": {
-
-  },
-  "joolaServer": {
+  "engine": {
     "host": "127.0.0.1",
     "port": 8080,
     "secure": true,
