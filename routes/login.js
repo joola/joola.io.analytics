@@ -5,11 +5,13 @@ exports.index = function (req, res) {
 exports.checkLoginNeeded = function (next) {
   joola.logger.info('Check login needed...');
 
-  var getter = (joola.config.joolaServer.secure ? require('https') : require('http'));
+  var getter = (joola.config.get('engine:secure') ? require('https') : require('http'));
+
+  console.log('test');
 
   var options = {
-    host: joola.config.joolaServer.host,
-    port: joola.config.joolaServer.port,
+    host: joola.config.get('engine:host'),
+    port: joola.config.get('engine:port'),
     path: '/loginNeeded',
     rejectUnauthorized: false
   };
@@ -42,12 +44,12 @@ exports.checkLoginNeeded = function (next) {
 exports.login = function (req, res) {
   joola.logger.info('Login request for username [' + req.body.username + ']');
 
-  var getter = (joola.config.joolaServer.secure ? require('https') : require('http'));
+  var getter = (joola.config.get('engine:secure') ? require('https') : require('http'));
 
   var options = {
-    host: joola.config.joolaServer.host,
-    port: joola.config.joolaServer.port,
-    path: '/loginSSO?authToken=' + joola.config.joolaServer.authToken + '&username=' + req.body.username + '&password=' + req.body.password,
+    host: joola.config.get('engine:host'),
+    port: joola.config.get('engine:port'),
+    path: '/loginSSO?authToken=' + joola.config.get('engine:authToken') + '&username=' + req.body.username + '&password=' + req.body.password,
     rejectUnauthorized: false
   };
 
