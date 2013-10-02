@@ -17,13 +17,12 @@ var express = require('express'),
   fs = require('fs'),
   nconf = require('nconf'),
   logger = require('joola.io.logger'),
-  app;
+  app = express();
 
 require('nconf-http');
 
 var status = '';
 var httpServer, httpsServer;
-var app = global.app = express();
 
 var joola = {};
 global.joola = joola;
@@ -36,23 +35,19 @@ var loadConfig = function (callback) {
     .env();
 
   try {
-    nconf.use('http', { url: 'http://localhost:40001/conf/joola.io.analytics',
-      callback: function (err) {
-        if (err) {
-          console.log(err);
-        }
-        joola.config.file({ file: joola.config.get('conf') || './config/joola.io.analytics.json' });
-        //Configuration loaded
-
-        //Validate config
-        if (!joola.config.get('version'))
-          throw new Error('Failed to load configuration file');
-
-        console.log(joola.config.get('loglevel'));
-        joola.logger.setLevel(joola.config.get('loglevel'));
-        callback();
+    joola.config.add('analytics', { type: 'http', url: 'http://localhost:40001/conf/joola.io.analytics', callback: function (err) {
+      if (err) {
+        //Fallback to file
+        joola.config.add('analytics', { type: 'file', file: joola.config.get('conf') || './config/' + 'joola.io.analytics' + '.json' });
       }
-    });
+
+      //Validate config
+      if (!joola.config.get('version'))
+        throw new Error('Failed to load configuration file');
+
+      joola.logger.setLevel(joola.config.get('loglevel'));
+      callback();
+    }});
   }
   catch (ex) {
     console.log(ex);
@@ -88,7 +83,7 @@ var setupRoutes = function (callback) {
     serveSDK = require('./routes/serveSDK'),
     index = require('./routes/index');
 
-  app.get('/', index.index);
+  app.get('/', index.index2);
   app.get('/index', index.index2);
   app.get('/homepage', index.homepage);
   app.get('/login', login.index);
