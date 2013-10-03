@@ -1787,7 +1787,7 @@ table.piechart td {
 
 .joolaio.report.jtable  .topheader {
     /*background-color: whiteSmoke;*/
-    background-color: white;
+    /*background-color: white;*/
     /*height: 38px;*/
 }
 
@@ -2903,7 +2903,7 @@ td.special.bar .percentagecaption {
 }
 
 .secondary.btn-group {
-    background-color: #efefef;
+    /*background-color: #efefef;*/
     top: 0px !important;
     height: auto;
 }
