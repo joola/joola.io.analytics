@@ -1,7 +1,7 @@
 {
   "name": "joola.io.analytics",
   "preferGlobal": false,
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "Joola <info@joo.la>",
   "description": "joola.io's analytics website",
   "engine": "node >= 0.10.x",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/joola/joola.io.analytics.git"
   },
+  "bugs": "https://joolatech.atlassian.net/browse/JARVIS",
   "contributors": [
     {
       "name": "Itay Weinberger",
