@@ -138,7 +138,7 @@ var startHTTP = function (callback) {
       joola.logger.info('Joola Analytics HTTP server listening on port ' + joola.config.get('server:port'));
       result.status = 'Success';
       httpServer = _httpServer;
-      return callback(result);
+      return callback(null, result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
         return callback(ex);
@@ -149,7 +149,7 @@ var startHTTP = function (callback) {
   }
   catch (ex) {
     result.status = 'Failed: ' + ex.message;
-    return callback(result);
+    return callback(ex);
   }
   return null;
 };
@@ -169,7 +169,7 @@ var startHTTPS = function (callback) {
       joola.logger.info('Joola Analytics HTTPS server listening on port ' + joola.config.get('server:securePort'));
       result.status = 'Success';
       httpsServer = _httpsServer;
-      return callback(result);
+      return callback(null, result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
         return callback(ex);
@@ -179,7 +179,7 @@ var startHTTPS = function (callback) {
   }
   catch (ex) {
     result.status = 'Failed: ' + ex.message;
-    return callback(result);
+    return callback(ex);
   }
   return null;
 };
