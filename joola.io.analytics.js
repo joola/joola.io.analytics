@@ -34,11 +34,15 @@ var loadConfig = function (callback) {
   joola.config.argv()
     .env();
 
+  joola.config.add('base-config', { type: 'file', file: joola.config.get('confurl') || './config/config.json' });
+  
   try {
-    joola.config.add('analytics', { type: 'http', url: 'http://localhost:40001/conf/joola.io.analytics', callback: function (err) {
+    joola.logger.debug('Fetching configuration from: ' + joola.config.get('config:url') + 'joola.io.analytics');
+    joola.config.add('analytics', { type: 'http', url: joola.config.get('config:url') + 'joola.io.analytics', callback: function (err) {
       if (err) {
         //Fallback to file
-        joola.config.add('analytics', { type: 'file', file: joola.config.get('conf') || './config/' + 'joola.io.analytics' + '.json' });
+        joola.logger.warn('Failed to fetch config, fallback to local FS: ' + joola.config.get('config:url') + 'joola.io.analytics');
+        joola.config.add('analytics', { type: 'file', file: joola.config.get('conf') || './config/joola.io.analytics.json' });
       }
 
       //Validate config
@@ -46,7 +50,7 @@ var loadConfig = function (callback) {
         throw new Error('Failed to load configuration file');
 
       joola.logger.setLevel(joola.config.get('loglevel'));
-      callback();
+      return callback();
     }});
   }
   catch (ex) {
