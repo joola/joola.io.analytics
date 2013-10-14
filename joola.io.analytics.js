@@ -35,7 +35,7 @@ var loadConfig = function (callback) {
     .env();
 
   joola.config.add('base-config', { type: 'file', file: joola.config.get('confurl') || './config/config.json' });
-  
+
   try {
     joola.logger.debug('Fetching configuration from: ' + joola.config.get('config:url') + 'joola.io.analytics');
     joola.config.add('analytics', { type: 'http', url: joola.config.get('config:url') + 'joola.io.analytics', callback: function (err) {
@@ -141,7 +141,7 @@ var startHTTP = function (callback) {
       return callback(result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
-        return callback(result);
+        return callback(ex);
       }).on('close', function () {
         status = 'Stopped';
         joola.logger.warn('Joola Analytics HTTP server listening on port ' + (joola.config.get('server:port')).toString() + ' received a CLOSE command.');
@@ -172,7 +172,7 @@ var startHTTPS = function (callback) {
       return callback(result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
-        return callback(result);
+        return callback(ex);
       }).on('close', function () {
         joola.logger.warn('Joola Analytics HTTPS server listening on port ' + joola.config.get('server:securePort').toString() + ' received a CLOSE command.');
       });
@@ -239,23 +239,35 @@ var done = function () {
   joola.logger.info('Initialization complete.');
 };
 
-loadConfig(function () {
+loadConfig(function (err) {
+  if (err)
+    throw err;
   joola.logger.debug('Configuration loaded, version: ' + joola.config.get('version'));
 
-  setupApplication(function () {
+  setupApplication(function (err) {
+    if (err)
+      throw err;
     joola.logger.debug('Application setup complete, running.');
 
-    setupRoutes(function () {
+    setupRoutes(function (err) {
+      if (err)
+        throw err;
       joola.logger.debug('Routes configured');
 
-      setupControlPort(function () {
+      setupControlPort(function (err) {
+        if (err)
+          throw err;
         joola.logger.info('Control port running on port ' + joola.config.get('server:controlPort:port'));
 
-        startHTTP(function () {
+        startHTTP(function (err) {
+          if (err)
+            throw err;
           joola.logger.debug('HTTP running');
 
           if (joola.config.get('server:secure') === true) {
-            startHTTPS(function () {
+            startHTTPS(function (err) {
+              if (err)
+                throw err;
               joola.logger.debug('HTTPS running');
 
               done();
