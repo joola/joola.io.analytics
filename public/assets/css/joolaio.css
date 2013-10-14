@@ -6,130 +6,136 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
 
 .logger {
-    font-weight: bold;
-    font-size: 13px;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #tblLogger {
-    border-left: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 #tblLogger tr {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 #tblLogger td, #tblLogger th {
-    padding: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 #tblLogger th {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 }
 
 .globalfilter {
-    display: none;
-    font-family: arial, sans-serif;
-    padding-bottom: 10px;
+  display: none;
+  font-family: arial, sans-serif;
+  padding-bottom: 10px;
 }
 
 .filtercontainer {
-    padding: 4px;
-    background: whiteSmoke;
-    background-image: -webkit-linear-gradient(top, white, whiteSmoke);
-    background-image: -moz-linear-gradient(top, white, whiteSmoke);
-    border-bottom: 1px solid #C8C8C8;
-    -webkit-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
+  padding: 4px;
+  background: whiteSmoke;
+  background-image: -webkit-linear-gradient(top, white, whiteSmoke);
+  background-image: -moz-linear-gradient(top, white, whiteSmoke);
+  border-bottom: 1px solid #C8C8C8;
+  -webkit-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
 
-    box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
+  box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
 }
 
 .filterouterwrapper {
-    vertical-align: top;
-    display: inline-block;
+  vertical-align: top;
+  display: inline-block;
 
-    width: auto;
-    white-space: nowrap;
+  width: auto;
+  white-space: nowrap;
 }
 
 .filterwrapper {
 
-    float: left;
-    width: auto;
-    margin: 0;
+  float: left;
+  width: auto;
+  margin: 0;
 }
 
 .filter {
-    margin: 0 3px 0 0;
-    padding: 7px 10px;
-    background-color: #4D90FE;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
+  margin: 0 3px 0 0;
+  padding: 7px 10px;
+  background-color: #4D90FE;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
 
-    color: white;
-    background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED);
-    background-image: -moz-linear-gradient(top, #4D90FE, #4787ED);
-    line-height: 1em;
-    white-space: nowrap;
+  color: white;
+  background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED);
+  background-image: -moz-linear-gradient(top, #4D90FE, #4787ED);
+  line-height: 1em;
+  white-space: nowrap;
 }
 
 .filter .title {
 
-    font-size: 11px;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: uppercase;
-    vertical-align: middle;
-    font-family: arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: arial, sans-serif;
 }
 
 .filter .value {
-    padding: 0 5px;
-    vertical-align: middle;
-    font-family: arial, sans-serif;
+  padding: 0 5px;
+  vertical-align: middle;
+  font-family: arial, sans-serif;
 }
 
 .filter .remove {
-    padding: 0 0 0 10px;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: bolder;
-    vertical-align: middle;
-    font-family: arial, sans-serif;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bolder;
+  vertical-align: middle;
+  font-family: arial, sans-serif;
 
 }
 
 .modal.fade {
-    top: -90%;
+  top: -90%;
 }
 
 .contentWrapper {
-    min-height: 580px;
+  min-height: 580px;
 }
 
 .showloading {
-    padding-left: 25%;
-    padding-right: 25%;
+  padding-left: 25%;
+  padding-right: 25%;
 
 }
 
 .showloading .progresswrapper {
-    width: 100%;
-    min-height: 150px;
-    padding-top: 100px;
+  width: 100%;
+  min-height: 150px;
+  padding-top: 100px;
 }
 
 .showloading .progress {
@@ -137,101 +143,101 @@
 }
 
 .realtimestatus {
-    margin-left: 20%;
-    margin-right: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
 
-    display: none;
+  display: none;
 }
 
 .timechoice {
-    float: right;
-    position: relative;
-    top: -50px;
+  float: right;
+  position: relative;
+  top: -50px;
 }
 
 #overlay {
-    display: none;
-    position: absolute;
-    background: gray;
-    z-index: 100;
+  display: none;
+  position: absolute;
+  background: gray;
+  z-index: 100;
 }
 
 #img-load {
-    position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
 .joolaio.realtime.datepicker .datebox {
-    font-size: 14px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .joolaio.realtime.datebox .datebox {
-    font-size: 14px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 tr {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .highcharts-container {
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 
 }
 
 .charttick {
-    display: none !important;
+  display: none !important;
 }
 
 @media (min-width: 1200px) {
-    .span3.charttick {
-        font-family: Arial;
-        font-size: 10px;
-        color: #1a87d5;
-        display: block !important;
+  .span3.charttick {
+    font-family: Arial;
+    font-size: 10px;
+    color: #1a87d5;
+    display: block !important;
 
-        text-align: right;
-        padding-right: 20px;
-    }
+    text-align: right;
+    padding-right: 20px;
+  }
 
-    .span2.charttick {
-        font-family: Arial;
-        font-size: 10px;
-        color: #1a87d5;
-        display: block !important;
+  .span2.charttick {
+    font-family: Arial;
+    font-size: 10px;
+    color: #1a87d5;
+    display: block !important;
 
-    }
+  }
 
 }
 
 .joolaio.realtime.metricbox .caption {
-    font-size: 200%;
-    line-height: normal;
-    text-align: center;
+  font-size: 200%;
+  line-height: normal;
+  text-align: center;
 }
 
 .joolaio.realtime.metricbox .value {
-    text-shadow: rgb(255, 255, 255) 0px 0px 100px;
-    font-size: 600%;
-    border-radius: 8px;
-    line-height: normal;
-    text-align: center;
+  text-shadow: rgb(255, 255, 255) 0px 0px 100px;
+  font-size: 600%;
+  border-radius: 8px;
+  line-height: normal;
+  text-align: center;
 }
 
 .joolaio.realtime.metricbox .subcaption {
-    font-size: 120%;
-    line-height: normal;
-    text-align: center;
+  font-size: 120%;
+  line-height: normal;
+  text-align: center;
 }
 
 .joolaio.realtime.table th {
-    border-right: 0;
-    border-left: 0;
+  border-right: 0;
+  border-left: 0;
 
-    text-align: center;
+  text-align: center;
 }
 
 .joolaio.realtime.table td {
@@ -239,33 +245,33 @@ tr {
 }
 
 .joolaio.realtime.table td.index {
-    width: 5%;
-    text-align: center;
+  width: 5%;
+  text-align: center;
 }
 
 .joolaio.realtime.table th.metric {
-    background-image: url(/assets/img/img/sort_desc.gif);
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
+  background-image: url(/assets/img/img/sort_desc.gif);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 .joolaio.realtime.table td.dimension {
-    cursor: pointer;
-    color: #08C;
-    text-decoration: none;
+  cursor: pointer;
+  color: #08C;
+  text-decoration: none;
 }
 
 .joolaio.realtime.table td.metric {
-    text-align: right;
+  text-align: right;
 }
 
 .joolaio.realtime.table th:first-of-type {
-    border-right: 0;
-    border-left: 1px solid #DDD;
+  border-right: 0;
+  border-left: 1px solid #DDD;
 }
 
 .joolaio.realtime.table tr.empty td {
-    text-align: center;
+  text-align: center;
 }
 
 .joolaio.container {
@@ -273,175 +279,175 @@ tr {
 }
 
 .joolaio.container .panel {
-    min-height: 620px;
+  min-height: 620px;
 
 }
 
 .panel-modal,
 .widget-modal {
-    width: auto;
+  width: auto;
 }
 
 .panel-modal .form-horizontal label,
 .widget-modal .form-horizontal label {
-    text-align: left;
-    font-size: 13px;
-    font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
 
-    width: auto;
+  width: auto;
 }
 
 .panel-modal .form-horizontal .controls {
-    margin-left: 95px;
+  margin-left: 95px;
 }
 
 .widget-modal .form-horizontal .controls {
-    margin-left: 135px;
+  margin-left: 135px;
 }
 
 .joolaio.realtime.table .header,
 .joolaio.realtime.geo .header,
 .joolaio.dashboard.widget .header {
-    cursor: default;
+  cursor: default;
 }
 
 .joolaio.realtime.geo {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 
 }
 
 .joolaio.realtime.geo .innercontainer {
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 .joolaio.realtime.table .header .move,
 .joolaio.realtime.geo .header .move,
 .joolaio.dashboard.widget .header .move {
-    float: right;
-    /*cursor: move;*/
-    /*background: url('../img/glyphicons_186_move.png');*/
-    background-size: 15px 15px;
-    background-position: 0 0;
+  float: right;
+  /*cursor: move;*/
+  /*background: url('../img/glyphicons_186_move.png');*/
+  background-size: 15px 15px;
+  background-position: 0 0;
 
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 
-    margin-top: 5px;
+  margin-top: 5px;
 
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
 }
 
 .joolaio.realtime.table .header .settings,
 .joolaio.realtime.geo .header .settings,
 .joolaio.dashboard.widget .header .settings {
 
-    float: right;
-    cursor: pointer;
-    /*background: url('../img/glyphicons_119_adjust.png');*/
-    background-size: 15px 15px;
-    background-position: 0 0;
+  float: right;
+  cursor: pointer;
+  /*background: url('../img/glyphicons_119_adjust.png');*/
+  background-size: 15px 15px;
+  background-position: 0 0;
 
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 
-    margin-top: 5px;
-    margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
 
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
 }
 
 .joolaio.realtime.geo:hover .header .settings {
-    display: none;
+  display: none;
 
 }
 
 .joolaio.realtime.geo .header .globe {
-    float: right;
-    cursor: pointer;
-    background: url('../img/glyphicons_340_globe.png');
-    background-size: 15px 15px;
-    background-position: 0 0;
+  float: right;
+  cursor: pointer;
+  background: url('../img/glyphicons_340_globe.png');
+  background-size: 15px 15px;
+  background-position: 0 0;
 
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 
-    margin-top: 5px;
+  margin-top: 5px;
 
-    margin-right: 5px;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
+  margin-right: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
 }
 
 .joolaio.realtime.table:hover .header .settings,
 .joolaio.realtime.geo:hover .header .settings,
 .joolaio.dashboard.widget:hover .header .settings {
-    opacity: 0.5;
-    -webkit-transition: opacity 0.4s;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s;
 }
 
 .joolaio.realtime.geo:hover .header .globe {
-    opacity: 0.5;
-    -webkit-transition: opacity 0.4s;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s;
 }
 
 .joolaio.realtime.table .header .settings:hover,
 .joolaio.realtime.geo .header .settings:hover,
 .joolaio.dashboard.widget .settings:hover {
-    opacity: 1;
-    -webkit-transition: opacity 0.4s;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
 }
 
 .joolaio.realtime.geo .header .globe:hover {
-    opacity: 1;
-    -webkit-transition: opacity 0.4s;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
 }
 
 .joolaio.realtime.table:hover .header .move,
 .joolaio.realtime.geo:hover .header .move,
 .joolaio.dashboard.widget:hover .header .move {
-    opacity: 0.5;
-    -webkit-transition: opacity 0.4s;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s;
 }
 
 .joolaio.realtime.table .header .move:hover,
 .joolaio.realtime.geo .header .move:hover,
 .joolaio.dashboard.widget .header .move:hover {
-    opacity: 1;
-    -webkit-transition: opacity 0.4s;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
 }
 
 .droptarget {
-    margin-top: 20px;
+  margin-top: 20px;
 
-    background-color: #e4fbeb;
-    border: 3px solid #91e391;
+  background-color: #e4fbeb;
+  border: 3px solid #91e391;
 
-    vertical-align: middle;
-    text-align: center;
-    padding: 20px;
-    font-size: 120%;
-    font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px;
+  font-size: 120%;
+  font-weight: bold;
 
-    color: #666;
+  color: #666;
 
-    border-radius: 15px 15px 15px 15px;
-    -moz-border-radius: 15px 15px 15px 15px;
-    -webkit-border-radius: 15px;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px;
 
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .mini-layout {
-    height: 150px;
+  height: 150px;
 }
 
 .mini-layout .mini-layout-body {
-    background-color: #dceaf4;
-    margin: 0 auto;
-    width: 70%;
-    height: 150px;
+  background-color: #dceaf4;
+  margin: 0 auto;
+  width: 70%;
+  height: 150px;
 }
 
 .mini-layout.fluid .mini-layout-sidebar,
@@ -449,161 +455,161 @@ tr {
 .mini-layout.fluid .mini-layout-column-fiftyfifty,
 .mini-layout.fluid .mini-layout-column-thirty,
 .mini-layout.fluid .mini-layout-body {
-    float: left;
+  float: left;
 }
 
 .mini-layout.fluid .mini-layout-header {
-    background-color: #bbd8e9;
-    margin-bottom: 2.5%;
-    width: 100%;
-    height: 30%;
+  background-color: #bbd8e9;
+  margin-bottom: 2.5%;
+  width: 100%;
+  height: 30%;
 }
 
 .mini-layout.fluid .mini-layout-sidebar {
-    background-color: #bbd8e9;
-    width: 20%;
-    height: 67.5%;
+  background-color: #bbd8e9;
+  width: 20%;
+  height: 67.5%;
 }
 
 .mini-layout.fluid .mini-layout-column-fiftyfifty {
-    background-color: #bbd8e9;
-    width: 48.75%;
-    height: 67.5%;
+  background-color: #bbd8e9;
+  width: 48.75%;
+  height: 67.5%;
 }
 
 .mini-layout.fluid .mini-layout-column-thirty {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    background-color: #bbd8e9;
-    width: 30%;
-    height: 67.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  background-color: #bbd8e9;
+  width: 30%;
+  height: 67.5%;
 }
 
 .mini-layout.fluid .mini-layout-column-thirty:first-of-type {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mini-layout.fluid .mini-layout-column-thirty:last-of-type {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mini-layout.fluid .mini-layout-column-fiftyfifty:last-of-type {
-    background-color: #bbd8e9;
-    width: 48.75%;
-    margin-left: 2.5%;
-    height: 67.5%;
+  background-color: #bbd8e9;
+  width: 48.75%;
+  margin-left: 2.5%;
+  height: 67.5%;
 }
 
 .mini-layout.fluid .mini-layout-body {
-    background-color: #bbd8e9;
-    width: 77.5%;
-    height: 67.5%;
-    margin-left: 2.5%;
+  background-color: #bbd8e9;
+  width: 77.5%;
+  height: 67.5%;
+  margin-left: 2.5%;
 }
 
 .filtersWrapper {
 
-    margin-left: 0;
-    padding: 4px;
-    padding-top: 1px;
-    background: whiteSmoke;
-    background-image: -webkit-linear-gradient(top, white, whiteSmoke);
-    background-image: -moz-linear-gradient(top, white, whiteSmoke);
-    border-bottom: 1px solid #C8C8C8;
-    -webkit-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
-    box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
+  margin-left: 0;
+  padding: 4px;
+  padding-top: 1px;
+  background: whiteSmoke;
+  background-image: -webkit-linear-gradient(top, white, whiteSmoke);
+  background-image: -moz-linear-gradient(top, white, whiteSmoke);
+  border-bottom: 1px solid #C8C8C8;
+  -webkit-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
+  box-shadow: 0px 0 5px rgba(0, 0, 0, .3);
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .filterWrapper {
-    float: left;
-    width: auto;
-    margin: 0;
-    margin-top: 3px;
+  float: left;
+  width: auto;
+  margin: 0;
+  margin-top: 3px;
 }
 
 .filterContainer {
-    cursor: default;
+  cursor: default;
 
-    margin: 0 3px 0 0;
-    padding: 7px 10px;
-    background-color: #4D90FE;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    color: white;
-    background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED);
-    background-image: -moz-linear-gradient(top, #4D90FE, #4787ED);
-    line-height: 1em;
-    white-space: nowrap;
+  margin: 0 3px 0 0;
+  padding: 7px 10px;
+  background-color: #4D90FE;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  color: white;
+  background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED);
+  background-image: -moz-linear-gradient(top, #4D90FE, #4787ED);
+  line-height: 1em;
+  white-space: nowrap;
 }
 
 .filterContainer .caption {
-    font-size: 87%;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: uppercase;
-    vertical-align: middle;
+  font-size: 87%;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .filterContainer .value {
-    font-size: 104%;
-    margin-left: 5px;
-    padding: 0 0;
-    vertical-align: middle;
+  font-size: 104%;
+  margin-left: 5px;
+  padding: 0 0;
+  vertical-align: middle;
 }
 
-.filterContainer .close {
-    margin-left: 5px;
-    float: none;
+.filterContainer .jio-close {
+  margin-left: 5px;
+  float: none;
 }
 
 .simpleloading {
-    padding: 3px 16px;
-    font-weight: bold;
-    border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  padding: 3px 16px;
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
 
-    background: #FFF1A8 -webkit-gradient(linear, left top, left bottom, from(#FFE090), to(#FFF2B0));
-    background-color: #FFF1A8;
-    color: black;
-    left: 48%;
-    padding: 3px 6px;
-    position: fixed;
-    top: 0;
-    z-index: 500;
+  background: #FFF1A8 -webkit-gradient(linear, left top, left bottom, from(#FFE090), to(#FFF2B0));
+  background-color: #FFF1A8;
+  color: black;
+  left: 48%;
+  padding: 3px 6px;
+  position: fixed;
+  top: 0;
+  z-index: 500;
 }
 
 .simpleerror {
-    padding: 3px 16px;
-    font-weight: bold;
-    border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  padding: 3px 16px;
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
 
-    background: #B94A48 -webkit-gradient(linear, left top, left bottom, from(#B94A48), to(#B94A48));
-    background-color: #B94A48;
-    color: white;
-    left: 39%;
-    padding: 3px 6px;
-    position: fixed;
-    top: 0;
-    z-index: 10005;
+  background: #B94A48 -webkit-gradient(linear, left top, left bottom, from(#B94A48), to(#B94A48));
+  background-color: #B94A48;
+  color: white;
+  left: 39%;
+  padding: 3px 6px;
+  position: fixed;
+  top: 0;
+  z-index: 10005;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*
@@ -632,32 +638,32 @@ body.WideScreen .subnav .nav .dropdown
 */
 
 .joolaio.datebox {
-    /*margin-top: -5px;*/
-    float: right;
+  /*margin-top: -5px;*/
+  float: right;
 }
 
 .joolaio.datebox .container {
-    background-color: white;
-    border: 1px solid #EFEFEF;
-    cursor: pointer;
-    position: relative;
-    z-index: 19;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+  background-color: white;
+  border: 1px solid #EFEFEF;
+  cursor: pointer;
+  position: relative;
+  z-index: 19;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .joolaio.datebox .container .datetable {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .joolaio.datebox .container .datetable .dates {
-    padding: 3px;
+  padding: 3px;
 }
 
 .joolaio.datebox .container .datetable .dates .datelabel {
-    color: #1C2E3D;
-    font-size: 145%;
+  color: #1C2E3D;
+  font-size: 145%;
 }
 
 /*
@@ -671,378 +677,378 @@ body.WideScreen .subnav .nav .dropdown
 }
 */
 .joolaio.datebox .container {
-    background-color: white;
-    border: 1px solid #EFEFEF;
-    cursor: pointer;
-    position: relative;
-    z-index: 19;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+  background-color: white;
+  border: 1px solid #EFEFEF;
+  cursor: pointer;
+  position: relative;
+  z-index: 19;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 
-    width: auto;
+  width: auto;
 }
 
 .joolaio.datebox .container:hover {
-    border: 1px solid #CCC;
+  border: 1px solid #CCC;
 }
 
 .joolaio.datebox .container.expanded {
-    border: 1px solid #CCC;
-    border-bottom: 1px solid white;
-    border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 0;
-    -webkit-border-bottom-right-radius: 0;
+  border: 1px solid #CCC;
+  border-bottom: 1px solid white;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
 }
 
 .joolaio.datebox .picker.compare {
-    margin-top: 17px;
+  margin-top: 17px;
 }
 
 .joolaio.datebox .container .datetable {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .joolaio.datebox .container .datetable .dates {
-    padding: 5px;
+  padding: 5px;
 }
 
 .joolaio.datebox .container .datetable .dates .datelabel {
-    color: #1C2E3D;
-    font-size: 145%;
+  color: #1C2E3D;
+  font-size: 145%;
 }
 
 .joolaio.datebox .container .datetable .dates .compare {
-    color: #999;
-    font-size: 13px;
+  color: #999;
+  font-size: 13px;
 }
 
 .joolaio.datebox .container .datetable .dates .compare .datelabel.fromdate, .joolaio.datebox .container .datetable .dates .compare .datelabel.todate {
-    font-size: 13px;
-    color: #333;
+  font-size: 13px;
+  color: #333;
 }
 
 .joolaio.datebox .container .datetable .dropdownmarker {
-    background: #F7F7F7 url(/assets/img/date_control_down.gif) no-repeat 50% 50%;
-    padding-left: 18px;
-    border-radius: 0 5px 5px 0;
-    -moz-border-radius: 0 5px 5px 0;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+  background: #F7F7F7 url(/assets/img/date_control_down.gif) no-repeat 50% 50%;
+  padding-left: 18px;
+  border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
 }
 
 .joolaio.datebox .container.expanded .datetable .dropdownmarker {
-    background: #F7F7F7 url(/assets/img/date_control_up.gif) no-repeat 50% 50%;
+  background: #F7F7F7 url(/assets/img/date_control_up.gif) no-repeat 50% 50%;
 }
 
 .joolaio.datebox .picker {
-    position: absolute;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    margin-left: 1px;
-    margin-top: -1px;
-    padding: 10px;
-    white-space: nowrap;
-    z-index: 1000;
-    border-radius: 5px 0 5px 5px;
-    -moz-border-radius: 5px 0 5px 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+  position: absolute;
+  background-color: #F7F7F7;
+  border: 1px solid #CCC;
+  margin-left: 1px;
+  margin-top: -1px;
+  padding: 10px;
+  white-space: nowrap;
+  z-index: 1000;
+  border-radius: 5px 0 5px 5px;
+  -moz-border-radius: 5px 0 5px 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
 
-    /*right: 0px;*/
+  /*right: 0px;*/
 }
 
 .joolaio.datebox .picker .wrapper .control {
-    padding: 0 10px;
-    white-space: nowrap;
-    vertical-align: top;
+  padding: 0 10px;
+  white-space: nowrap;
+  vertical-align: top;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer {
-    display: block;
-    clear: both;
-    padding: 5px;
+  display: block;
+  clear: both;
+  padding: 5px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .customdate {
-    /*font-size: 75%;*/
-    font-weight: bold;
-    margin-bottom: 3px;
+  /*font-size: 75%;*/
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .customdate select {
-    border: #9A9A9A solid 1px;
-    background-color: white;
-    color: black;
-    /*font-size: 100%;*/
+  border: #9A9A9A solid 1px;
+  background-color: white;
+  color: black;
+  /*font-size: 100%;*/
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .customdate select.selector {
-    width: auto;
-    height: auto;
-    padding: 1px;
-    margin-bottom: 5px;
-    margin-left: 6px;
+  width: auto;
+  height: auto;
+  padding: 1px;
+  margin-bottom: 5px;
+  margin-left: 6px;
 
-    width: 120px;
+  width: 120px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption {
-    border: #CCC solid 1px;
-    cursor: pointer;
-    /*font-size: 70%;*/
-    width: 7em;
-    padding: 2px;
-    padding-left: 5px;
-    margin-bottom: 6px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 2px;
+  border: #CCC solid 1px;
+  cursor: pointer;
+  /*font-size: 70%;*/
+  width: 7em;
+  padding: 2px;
+  padding-left: 5px;
+  margin-bottom: 6px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.active {
-    border: #07C solid 3px;
-    margin-top: 0;
+  border: #07C solid 3px;
+  margin-top: 0;
 
-    margin-bottom: 4px;
-    margin-left: 0;
-    margin-right: 0;
+  margin-bottom: 4px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .comparerange .dateoption.active {
-    border: #86BE2B solid 3px;
+  border: #86BE2B solid 3px;
 
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .daterange .dateoption.invalid {
-    border: #B00 solid 3px;
+  border: #B00 solid 3px;
 
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption {
-    padding: 3px;
-    white-space: nowrap;
-    padding-right: 22px;
-    display: none;
+  padding: 3px;
+  white-space: nowrap;
+  padding-right: 22px;
+  display: none;
 
-    /*font-size: 75%;*/
-    font-weight: bold;
-    margin-bottom: 3px;
+  /*font-size: 75%;*/
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 
-.joolaio.datebox .picker .wrapper .control .optionscontainer  .compareoption .checker {
-    /*vertical-align: bottom;*/
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption .checker {
+  /*vertical-align: bottom;*/
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption.visible {
-    display: block;
+  display: block;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .divider {
-    border-top: #666 dotted 1px;
-    margin-top: 3px;
+  border-top: #666 dotted 1px;
+  margin-top: 3px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .buttons {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .apply {
-    margin-top: -15px;
+  margin-top: -15px;
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer .cancel {
-    text-decoration: underline;
-    color: #24B;
-    cursor: pointer;
+  text-decoration: underline;
+  color: #24B;
+  cursor: pointer;
 
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .joolaio.datebox .picker .wrapper .calendars {
-    white-space: nowrap;
-    margin: 2px;
+  white-space: nowrap;
+  margin: 2px;
 
-    width: 405px;
+  width: 405px;
 }
 
 .joolaio.datebox .picker .wrapper .calendars table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-prev, .joolaio.datebox .picker .wrapper .calendars .datetable-next {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-prev div, .joolaio.datebox .picker .wrapper .calendars .datetable-next div {
-    border: #CCC solid 1px;
-    background-color: #DDD;
-    cursor: pointer;
-    padding: 3px 5px;
+  border: #CCC solid 1px;
+  background-color: #DDD;
+  cursor: pointer;
+  padding: 3px 5px;
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-prev div {
-    border-radius: 3px 0 0 3px;
-    -moz-border-radius: 3px 0 0 3px;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 0;
-    -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-bottom-right-radius: 0;
+  border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 0;
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-next div {
-    border-radius: 0 3px 3px 0;
-    -moz-border-radius: 0 3px 3px 0;
-    -webkit-border-top-left-radius: 0;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 0;
-    -webkit-border-bottom-right-radius: 3px;
+  border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 3px;
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block, .joolaio.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
-    height: 9px;
-    padding: 0;
-    width: 4px;
+  height: 9px;
+  padding: 0;
+  width: 4px;
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-prev div div.inline-block {
-    background: url(/assets/img/button_arrow_prev_ltr.gif) no-repeat
+  background: url(/assets/img/button_arrow_prev_ltr.gif) no-repeat
 }
 
 .joolaio.datebox .picker .wrapper .calendars .datetable-next div div.inline-block {
-    background: url(/assets/img/button_arrow_next_ltr.gif) no-repeat
+  background: url(/assets/img/button_arrow_next_ltr.gif) no-repeat
 }
 
 .joolaio.datebox .picker .wrapper .control .optionscontainer input,
 .joolaio.datebox .picker .wrapper .control .optionscontainer textarea {
 
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: none; /*border linear 0.1s, box-shadow linear 0.1s;*/
-    -moz-transition: border linear 0.1s, box-shadow linear 0.1s;
-    -ms-transition: border linear 0.1s, box-shadow linear 0.1s;
-    -o-transition: border linear 0.1s, box-shadow linear 0.1s;
-    transition: border linear 0.1s, box-shadow linear 0.1s;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: none; /*border linear 0.1s, box-shadow linear 0.1s;*/
+  -moz-transition: border linear 0.1s, box-shadow linear 0.1s;
+  -ms-transition: border linear 0.1s, box-shadow linear 0.1s;
+  -o-transition: border linear 0.1s, box-shadow linear 0.1s;
+  transition: border linear 0.1s, box-shadow linear 0.1s;
 
 }
 
 .joolaio.datebox .picker .wrapper .calendars .ui-datepicker-prev, .joolaio.datebox .picker .wrapper .calendars .ui-datepicker-next {
-    display: none;
+  display: none;
 }
 
 .joolaio.datebox .ui-datepicker-calendar td {
 
-    border-bottom: #F7F7F7 solid 1px;
-    border-right: #F7F7F7 solid 1px;
-    background-color: white;
+  border-bottom: #F7F7F7 solid 1px;
+  border-right: #F7F7F7 solid 1px;
+  background-color: white;
 }
 
 .joolaio.datebox .ui-datepicker-title {
-    text-align: center;
-    background-color: #DDD;
-    font-size: 85%;
-    color: #07C;
-    cursor: default;
-    border-bottom: #CCC solid 1px;
+  text-align: center;
+  background-color: #DDD;
+  font-size: 85%;
+  color: #07C;
+  cursor: default;
+  border-bottom: #CCC solid 1px;
 }
 
 .joolaio.datebox .daycell {
-    text-align: center;
-    padding: 2px 3px;
-    vertical-align: middle;
-    font-size: 80%;
+  text-align: center;
+  padding: 2px 3px;
+  vertical-align: middle;
+  font-size: 80%;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .joolaio.datebox .daycell a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .joolaio.datebox .daycell:hover {
-    background-color: #FC3;
+  background-color: #FC3;
 }
 
 .joolaio.datebox .daycell.disabled, .joolaio.datebox .daycell.ui-state-disabled {
-    cursor: default;
+  cursor: default;
 
-    color: #DDD;
-    font-weight: normal;
-    background-color: white;
+  color: #DDD;
+  font-weight: normal;
+  background-color: white;
 }
 
 .joolaio.datebox .daycell.inrange {
-    background-color: #07C;
+  background-color: #07C;
 }
 
 .joolaio.datebox .daycell.inrange:hover {
-    background-color: #FC3;
+  background-color: #FC3;
 }
 
 .joolaio.datebox .daycell.inrange a {
-    color: white;
+  color: white;
 }
 
 .joolaio.datebox .daycell.compare.disabled {
-    cursor: default;
+  cursor: default;
 
-    color: #DDD;
-    font-weight: normal;
-    background-color: white;
+  color: #DDD;
+  font-weight: normal;
+  background-color: white;
 }
 
 .joolaio.datebox .daycell.compare.inrange {
-    background-color: #86BE2B;
+  background-color: #86BE2B;
 }
 
 .joolaio.datebox .daycell.basencompare.inrange {
-    background-color: #00B1AB;;
+  background-color: #00B1AB;;
 }
 
 .joolaio.datebox .daycell.compare.inrange:hover {
-    background-color: #FC3;
+  background-color: #FC3;
 }
 
 .ui-datepicker-calendar th {
-    text-align: center;
-    padding: 2px 3px;
-    vertical-align: middle;
-    font-size: 80%;
-    border-bottom: #F7F7F7 solid 1px;
-    border-right: #F7F7F7 solid 1px;
-    background-color: white;
+  text-align: center;
+  padding: 2px 3px;
+  vertical-align: middle;
+  font-size: 80%;
+  border-bottom: #F7F7F7 solid 1px;
+  border-right: #F7F7F7 solid 1px;
+  background-color: white;
 
-    cursor: default;
+  cursor: default;
 
-    border-bottom: #CCC solid 1px;
+  border-bottom: #CCC solid 1px;
 }
 
 .unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .chartcontrol tr {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .chartcontrol .btn-group > a.dropdown-toggle {
-    margin-left: 1px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+  margin-left: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 
-    -moz-box-shadow: none;
-    box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 /*.chartcontrol .btn-group > a.dropdown-toggle:hover {
@@ -1072,13 +1078,13 @@ body.WideScreen .subnav .nav .dropdown
 }*/
 
 .chartcontrol .table .details {
-    padding: 0;
-    border-collapse: collapse;
-    border-top: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-top: 0;
 }
 
 .comparisontable td.value {
-    border-right: 0 !important;
+  border-right: 0 !important;
 }
 
 /*
@@ -1091,35 +1097,35 @@ body.WideScreen .subnav .nav .dropdown
 */
 
 .jmetricbox {
-    min-height: 50px;
-    border-left: 0px solid #ddd;
-    border-right: 1px solid #ddd;
-    margin-right: -1px;
-    float: left;
-    padding-bottom: 3px;
+  min-height: 50px;
+  border-left: 0px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin-right: -1px;
+  float: left;
+  padding-bottom: 3px;
 
-    text-align: center;
-    color: #444;
-    font: normal 13px Arial;
-    padding: 0;
-    transition: background-color 250ms linear, ease-in;
-    -webkit-transition: background-color 250ms linear, ease-in;
-    -moz-transition: background-color 250ms linear, ease-in;
-    cursor: pointer;
+  text-align: center;
+  color: #444;
+  font: normal 13px Arial;
+  padding: 0;
+  transition: background-color 250ms linear, ease-in;
+  -webkit-transition: background-color 250ms linear, ease-in;
+  -moz-transition: background-color 250ms linear, ease-in;
+  cursor: pointer;
 }
 
 .jmetricbox:hover {
-    /*
-    background: rgba(5, 141, 199, 0.15);
+  /*
+  background: rgba(5, 141, 199, 0.15);
 
-    transition: background 150ms linear, ease-in;
-    -webkit-transition: background 150ms linear, ease-in;
-    -moz-transition: background 150ms linear, ease-in;
-    */
+  transition: background 150ms linear, ease-in;
+  -webkit-transition: background 150ms linear, ease-in;
+  -moz-transition: background 150ms linear, ease-in;
+  */
 }
 
 .jmetricbox:last-of-type {
-    border-right: 0px solid #ddd;
+  border-right: 0px solid #ddd;
 }
 
 .metricswrapper .metricbox {
@@ -1127,242 +1133,242 @@ body.WideScreen .subnav .nav .dropdown
 }
 
 .metricswrapper .jmetricbox.active {
-    /*
-    background-color: #ededed;
-    transition: background-color 250ms linear, ease-in;
-    -webkit-transition: background-color 250ms linear, ease-in;
-    -moz-transition: background-color 250ms linear, ease-in;
-    background-image: linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
-    background-image: -o-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
-    background-image: -moz-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
-    background-image: -webkit-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
-    background-image: -ms-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.50, rgb(237, 237, 237)), color-stop(1.00, rgb(255, 255, 255)));
-    */
+  /*
+  background-color: #ededed;
+  transition: background-color 250ms linear, ease-in;
+  -webkit-transition: background-color 250ms linear, ease-in;
+  -moz-transition: background-color 250ms linear, ease-in;
+  background-image: linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(237, 237, 237) 50%, rgb(255, 255, 255) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.50, rgb(237, 237, 237)), color-stop(1.00, rgb(255, 255, 255)));
+  */
 }
 
 .metricswrapper .metricbox:last-child {
-    border-right: 0;
+  border-right: 0;
 }
 
 .metricswrapper .metricbox .caption {
-    padding-top: 3px;
-    padding-bottom: 10px;
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 
 .metricswrapper .metricbox .value {
-    color: black;
-    font-size: 130%;
-    font-weight: bold;
-    margin-bottom: 3px;
+  color: black;
+  font-size: 130%;
+  font-weight: bold;
+  margin-bottom: 3px;
 
-    display: inline-block;
+  display: inline-block;
 }
 
 .metricswrapper .metricbox .summary {
-    color: #999;
-    font-size: 85%;
-    display: inline;
-    margin: 0;
-    padding: 0;
+  color: #999;
+  font-size: 85%;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 .metricswrapper .metricbox .summaryvalue {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 .positive {
-    color: #4B9525 !important;
+  color: #4B9525 !important;
 }
 
 .negative {
-    color: #932D22 !important;
+  color: #932D22 !important;
 }
 
 .neutral {
-    color: #999 !important;
+  color: #999 !important;
 }
 
 .metricswrapper .metricbox .percentage {
-    margin-top: -5px;
-    color: #999;
-    font-size: 80%;
-    display: inline;
-    margin: 0;
-    padding: 0;
-    padding-right: 3px;
+  margin-top: -5px;
+  color: #999;
+  font-size: 80%;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  padding-right: 3px;
 }
 
 .metricswrapper .metricbox .percentage.percentagevalue {
-    font-weight: bold;
-    color: #666;
+  font-weight: bold;
+  color: #666;
 }
 
 .metricswrapper .metricbox .indicatorwrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .metricswrapper .metricbox .indicatorwrapper .indicator {
-    padding-top: 2px;
-    border: 0px;
-    height: 9px;
-    position: relative;
-    bottom: 0px;
+  padding-top: 2px;
+  border: 0px;
+  height: 9px;
+  position: relative;
+  bottom: 0px;
 }
 
 .metricswrapper .metricbox.active .indicatorwrapper .indicator {
-    border: 0px;
-    background: transparent url(/content/images/indicator-large.png) no-repeat 50% 101%;
-    height: 9px;
-    position: relative;
-    bottom: -1px;
+  border: 0px;
+  background: transparent url(/content/images/indicator-large.png) no-repeat 50% 101%;
+  height: 9px;
+  position: relative;
+  bottom: -1px;
 }
 
 .metricswrapper .nav {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .metricswrapper .nav .nav-pills > .active > a, .nav-pills {
-    text-decoration: none;
-    cursor: default;
+  text-decoration: none;
+  cursor: default;
 }
 
 .metricswrapper .nav > li > a:hover {
-    background-color: inherit; /*text-decoration: underline;*/
-    cursor: pointer;
+  background-color: inherit; /*text-decoration: underline;*/
+  cursor: pointer;
 }
 
 .metricswrapper .nav-pills > .active > a, .metricswrapper .nav-pills > .active > a:hover {
-    background-color: inherit;
-    color: Black;
-    text-decoration: none;
-    cursor: default;
+  background-color: inherit;
+  color: Black;
+  text-decoration: none;
+  cursor: default;
 }
 
-.joolaio.container .btn {
-    /*height: 29px;*/
+.joolaio.container .jio-btn {
+  /*height: 29px;*/
 }
 
-.joolaio.container a.btn {
-    /*height: auto;
-    padding-bottom: 5px;
-    border: 0;
-    background: 0;*/
+.joolaio.container a.jio-btn {
+  /*height: auto;
+  padding-bottom: 5px;
+  border: 0;
+  background: 0;*/
 
 }
 
 .joolaio.container a.btn:hover {
-    /* border: 1px solid #CCC;
-     background-color: whiteSmoke;
-     padding-left: 8px;*/
+  /* border: 1px solid #CCC;
+   background-color: whiteSmoke;
+   padding-left: 8px;*/
 }
 
-.joolaio.container a.btn.selected:hover {
-    /*  border: 1px solid #CCC;
-      background-color: whiteSmoke;
-      padding-left: 9px;*/
+.joolaio.container a.jio-btn.selected:hover {
+  /*  border: 1px solid #CCC;
+    background-color: whiteSmoke;
+    padding-left: 9px;*/
 }
 
-.charttype .btn {
-    padding: 3px;
+.charttype .jio-btn {
+  padding: 3px;
 }
 
 .reporttable {
-    width: 100%;
+  width: 100%;
 }
 
 div.dataTables_paginate {
-    float: right;
-    margin: 0;
+  float: right;
+  margin: 0;
 }
 
 div.dataTables_info {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .pagination ul {
-    float: left;
+  float: left;
 }
 
 .span8 {
-    /*width: auto;*/
+  /*width: auto;*/
 }
 
 .span8.pagination {
-    margin: 0;
-    float: right;
-    margin-right: 5px;
+  margin: 0;
+  float: right;
+  margin-right: 5px;
 }
 
 .span8.pagerange {
-    float: right;
-    margin-right: 20px;
-    margin-left: 0px;
+  float: right;
+  margin-right: 20px;
+  margin-left: 0px;
 }
 
 .span8.pageselector {
-    margin: 0;
-    float: right;
+  margin: 0;
+  float: right;
 }
 
 .span8.search {
-    margin: 0;
-    float: right;
+  margin: 0;
+  float: right;
 }
 
 .span8.pageselector select {
-    width: 60px;
-    margin-right: 20px;
+  width: 60px;
+  margin-right: 20px;
 }
 
 .span8 a {
-    color: #333;
+  color: #333;
 }
 
 .span8.search {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .reporttable th {
-    white-space: nowrap;
-    padding-top: 0;
-    padding-right: 0px;
+  white-space: nowrap;
+  padding-top: 0;
+  padding-right: 0px;
 }
 
 .reporttable th.dimension {
-    text-align: left;
-    cursor: pointer;
+  text-align: left;
+  cursor: pointer;
 }
 
 .reporttable th.metric {
-    text-align: center;
-    margin-right: 100px;
-    cursor: pointer;
+  text-align: center;
+  margin-right: 100px;
+  cursor: pointer;
 }
 
 .reporttable td.check {
-    text-align: center;
+  text-align: center;
 }
 
 .reporttable td.key {
-    text-align: left;
-    white-space: nowrap;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .reporttable td.key.selectable {
-    color: #08C;
-    text-decoration: none;
-    cursor: pointer;
+  color: #08C;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .reporttable td.value {
-    text-align: right;
+  text-align: right;
 }
 
 table .header {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*
@@ -1377,113 +1383,113 @@ table .header:after {
 }
 */
 table .headerSortUp, table .headerSortDown {
-    background-color: rgba(141, 192, 219, 0.25);
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: rgba(141, 192, 219, 0.25);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
 table .header:hover:after {
-    visibility: hidden;
-    display: none;
+  visibility: hidden;
+  display: none;
 }
 
 table .headerSortDown:after, table .headerSortDown:hover:after {
-    visibility: visible;
-    filter: alpha(opacity=60);
-    -khtml-opacity: 0.6;
-    -moz-opacity: 0.6;
-    opacity: 0.6;
+  visibility: visible;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
 }
 
 table .headerSortUp:after {
-    border-bottom: none;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #000;
-    visibility: visible;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    filter: alpha(opacity=60);
-    -khtml-opacity: 0.6;
-    -moz-opacity: 0.6;
-    opacity: 0.6;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000;
+  visibility: visible;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
 }
 
 table .blue {
-    color: #049cdb;
-    border-bottom-color: #049cdb;
+  color: #049cdb;
+  border-bottom-color: #049cdb;
 }
 
 table .headerSortUp.blue, table .headerSortDown.blue {
-    background-color: #ade6fe;
+  background-color: #ade6fe;
 }
 
 table .green {
-    color: #46a546;
-    border-bottom-color: #46a546;
+  color: #46a546;
+  border-bottom-color: #46a546;
 }
 
 table .headerSortUp.green, table .headerSortDown.green {
-    background-color: #cdeacd;
+  background-color: #cdeacd;
 }
 
 table .red {
-    color: #9d261d;
-    border-bottom-color: #9d261d;
+  color: #9d261d;
+  border-bottom-color: #9d261d;
 }
 
 table .headerSortUp.red, table .headerSortDown.red {
-    background-color: #f4c8c5;
+  background-color: #f4c8c5;
 }
 
 table .yellow {
-    color: #ffc40d;
-    border-bottom-color: #ffc40d;
+  color: #ffc40d;
+  border-bottom-color: #ffc40d;
 }
 
 table .headerSortUp.yellow, table .headerSortDown.yellow {
-    background-color: #fff6d9;
+  background-color: #fff6d9;
 }
 
 table .orange {
-    color: #f89406;
-    border-bottom-color: #f89406;
+  color: #f89406;
+  border-bottom-color: #f89406;
 }
 
 table .headerSortUp.orange, table .headerSortDown.orange {
-    background-color: #fee9cc;
+  background-color: #fee9cc;
 }
 
 table .purple {
-    color: #7a43b6;
-    border-bottom-color: #7a43b6;
+  color: #7a43b6;
+  border-bottom-color: #7a43b6;
 }
 
 table .headerSortUp.purple, table .headerSortDown.purple {
-    background-color: #e2d5f0;
+  background-color: #e2d5f0;
 }
 
 label input, label textarea, label select {
-    display: inline;
+  display: inline;
 }
 
 .pagination a {
-    line-height: 27px;
+  line-height: 27px;
 }
 
 table.display thead th div.DataTables_sort_wrapper span {
-    position: absolute;
-    top: 50%;
-    margin-top: -8px;
-    right: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
 }
 
 .ui-icon-triangle-1-n {
-    background-image: url(/assets/img/sort_asc.gif); /*background-position: 0 -16px;*/
+  background-image: url(/assets/img/sort_asc.gif); /*background-position: 0 -16px;*/
 }
 
 .ui-icon-triangle-1-s {
-    background-image: url(/assets/img/sort_desc.gif); /*background-position: -64px -16px;*/
+  background-image: url(/assets/img/sort_desc.gif); /*background-position: -64px -16px;*/
 }
 
 /*
@@ -1491,129 +1497,129 @@ table.display thead th div.DataTables_sort_wrapper span {
 background-position: -128px 0;
 }*/
 .ui-icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 5px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
 }
 
 .pietable .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 3px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
 }
 
 .pietable .picker .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 10px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .css_right {
-    float: right;
+  float: right;
 }
 
 .table .odd td.sorting_1 {
-    background-color: #EAEAEA !important;
+  background-color: #EAEAEA !important;
 }
 
 .table .even td.sorting_1 {
-    background-color: #F3F3F3;
+  background-color: #F3F3F3;
 }
 
 .table {
-    margin-top: 0px;
-    margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .table .row {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .tablerow {
-    background: whiteSmoke;
-    border-bottom: 1px solid #E5E5E5;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid #E5E5E5;
-    height: 28px;
-    min-width: 600px;
-    padding: 4px 10px;
-    margin-bottom: 10px;
+  background: whiteSmoke;
+  border-bottom: 1px solid #E5E5E5;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #E5E5E5;
+  height: 28px;
+  min-width: 600px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
 }
 
 .table tbody tr:last-of-type {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .table li {
-    line-height: inherit;
+  line-height: inherit;
 }
 
 .icon-piechart {
-    background-image: url("assets/img/glyphicons_042_pie_chart.png");
+  background-image: url("assets/img/glyphicons_042_pie_chart.png");
 }
 
 .piechart {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 table.piechart td {
-    padding-top: 9px;
-    padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 10px;
 }
 
 .dropdown-menu .nav-header {
-    display: block;
-    padding: 3px 15px;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 18px;
-    color: #999;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    cursor: default;
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .dropdown-menu a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dropdown-menu .active a {
-    cursor: default;
+  cursor: default;
 }
 
 .metriclink.compare > a:hover {
-    color: #333;
-    text-decoration: none;
-    background-color: #AADFF3;
+  color: #333;
+  text-decoration: none;
+  background-color: #AADFF3;
 }
 
 .joolaio.crumb.all {
-    color: #08C;
-    text-decoration: none;
-    cursor: pointer;
+  color: #08C;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .tablerow .search {
-    float: right;
-    margin-right: 30px;
+  float: right;
+  margin-right: 30px;
 }
 
 .searchicon {
@@ -1621,15 +1627,15 @@ table.piechart td {
 }
 
 .search .add-on {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dataTables_empty {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .joolaio.report.tabs {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .joolaio.report.metricgroups {
@@ -1645,257 +1651,257 @@ table.piechart td {
 }
 
 .joolaio.report.jtable .table th {
-    text-align: center;
+  text-align: center;
 }
 
 .joolaio.report.jtable .table th.dimension {
-    text-align: left;
+  text-align: left;
 }
 
 .joolaio.report.jtable .table td {
 }
 
 .joolaio.report.jtable .table th.check {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table th.id {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.check {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.id {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.dimensionvalue {
-    text-align: left;
-    color: #08C;
+  text-align: left;
+  color: #08C;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .joolaio.report.jtable .table td.dimensionvalue:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .joolaio.report.jtable .table td.metricvalue {
-    text-align: right;
+  text-align: right;
 }
 
 .joolaio.report.jtable .table td.comparison.metricvalue {
-    color: #999;
+  color: #999;
 }
 
 .joolaio.report.jtable .table td.metricvalue.positive {
-    color: #4B9525;
+  color: #4B9525;
 }
 
 .joolaio.report.jtable .table td.metricvalue.negative {
-    color: #932D22;
+  color: #932D22;
 }
 
 .joolaio.report.jtable .table td.comparison {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .table th.special {
-    width: 10%;
+  width: 10%;
 }
 
 .joolaio.report.jtable .table td.special {
-    vertical-align: top;
-    border-left: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
+  vertical-align: top;
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 
-    width: 10%;
+  width: 10%;
 }
 
 .joolaio.report.jtable .table td.special .highcharts-container {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .joolaio.report.jtable .table th.special.pie {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .joolaio.report.jtable .table th.special.pie select {
-    /*margin-left: 5px;*/
+  /*margin-left: 5px;*/
 }
 
 .joolaio.report.jtable .table tr.emptyrowfiller td {
-    border-top: 0;
-    background-color: inherit;;
+  border-top: 0;
+  background-color: inherit;;
 }
 
 .joolaio.report.jtable .table tr.emptyrowfiller.first {
-    border-top: 1px solid #DDD;
+  border-top: 1px solid #DDD;
 
 }
 
 .joolaio.report.jtable .table th {
-    cursor: pointer;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 
 }
 
 .joolaio.report.jtable .table th:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .joolaio.report.jtable .table th.id:hover,
 .joolaio.report.jtable .table th.check:hover,
 .joolaio.report.jtable .table th.special:hover {
-    background-color: inherit;
-    cursor: default;
+  background-color: inherit;
+  cursor: default;
 }
 
 .joolaio.report.jtable .table th.sortkey.DESC {
-    background-image: url(/assets/img/sort_desc.gif);
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
+  background-image: url(/assets/img/sort_desc.gif);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 .joolaio.report.jtable .table th.sortkey.ASC {
-    background-image: url(/assets/img/sort_asc.gif);
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
+  background-image: url(/assets/img/sort_asc.gif);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 .joolaio.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .joolaio.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
-    background-color: #ececec;
+  background-color: #ececec;
 }
 
 .joolaio.report.jtable .table td.sortkey {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.joolaio.report.jtable  .topheader {
-    /*background-color: whiteSmoke;*/
-    /*background-color: white;*/
-    /*height: 38px;*/
+.joolaio.report.jtable .topheader {
+  /*background-color: whiteSmoke;*/
+  /*background-color: white;*/
+  /*height: 38px;*/
 }
 
 .joolaio.report.jtable .topheader .headercontent {
-    float: right;
+  float: right;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    min-height: 30px;
+.joolaio.report.jtable .topheader .tablecontrol {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-height: 30px;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .secondary {
-    float: left;
-    padding-left: 10px;
+.joolaio.report.jtable .topheader .tablecontrol .secondary {
+  float: left;
+  padding-left: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
-    float: right;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar {
+  float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .search {
-    float: left;
-    /* margin-right: 30px;*/
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .search {
+  float: left;
+  /* margin-right: 30px;*/
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
-    float: right;
-    padding-right: 10px;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype {
+  float: right;
+  padding-right: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
-    float: right;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
+  float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
-    height: 17px;
-    width: 17px;
-    margin-top: -3px;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
+  height: 17px;
+  width: 17px;
+  margin-top: -3px;
 }
 
 .joolaio.report.jtable .bottomfooter {
-    min-height: 30px;
+  min-height: 30px;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pager {
-    float: right;
+  float: right;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pageinfo {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 8px;
-    float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 8px;
+  float: right;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol {
-    float: right;
-    font-weight: bold;
+  float: right;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol .button {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
-    background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
-    height: 29px;
-    width: 10px;
+  background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
+  height: 29px;
+  width: 10px;
 
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
-    background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
-    height: 29px;
-    width: 10px;
+  background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
+  height: 29px;
+  width: 10px;
 
 }
 
 .joolaio.report.jtable .table th {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .joolaio.report.jtable .metricpicker {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 td.special.bar {
-    vertical-align: middle !important;
-    border-bottom: 0 !important;
+  vertical-align: middle !important;
+  border-bottom: 0 !important;
 }
 
 td.special.bar .percentagebar {
-    float: left;
-    height: 15px;
-    background-color: #058DC7;
-    border-bottom: 0 !important;
-    min-width: 0px;
-    max-width: 100px;
+  float: left;
+  height: 15px;
+  background-color: #058DC7;
+  border-bottom: 0 !important;
+  min-width: 0px;
+  max-width: 100px;
 
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 td.special.bar .percentagecaption {
@@ -1903,65 +1909,65 @@ td.special.bar .percentagecaption {
 }
 
 .secondarybutton {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .jumbotron.subhead {
-    min-height: 146px;
+  min-height: 146px;
 }
 
 .joolaio .nav {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .joolaio.dashboard.widget .content {
-    border: 1px solid #ddd;
-    padding: 5px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .joolaio.dashboard.widget .content .value {
-    font-size: 19px;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
-    color: black;
+  color: black;
 }
 
 .joolaio.dashboard.widget .content .daterange {
-    color: #666;
-    display: block;
-    font-size: 13px;
-    font-weight: normal;
+  color: #666;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
 
-    display: none;
+  display: none;
 }
 
 .joolaio.dashboard.widget .content .site {
-    color: #999;
-    display: inline;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
+  color: #999;
+  display: inline;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 .joolaio.dashboard.widget .content .minichart {
-    float: right;
+  float: right;
 }
 
 .joolaio.dashboard.widget .content .compare .daterange {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .widgettable {
-    border: 0;
+  border: 0;
 }
 
 .widgettable th {
-    text-align: center;
-    border-top: 0;
+  text-align: center;
+  border-top: 0;
 }
 
 .widgettable th.dimension {
@@ -1977,190 +1983,190 @@ td.special.bar .percentagecaption {
 }
 
 .widgettable td.metric {
-    text-align: right;
+  text-align: right;
 }
 
 .strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.dashboard.widget .content .highcharts-container {
-    border: 0;
-    margin-right: auto;
-    margin-left: auto;
+  border: 0;
+  margin-right: auto;
+  margin-left: auto;
 
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .joolaio.dashboard.pie .content .legend {
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
 
 }
 
 .joolaio.dashboard.pie .content table {
-    border: 0;
+  border: 0;
 }
 
 .joolaio.dashboard.pie .content table tr, .joolaio.dashboard.pie .content table td {
-    border: 0;
+  border: 0;
 
 }
 
 .joolaio.dashboard.pie .content .legenditem {
-    margin-bottom: 5px;
-    width: auto;
+  margin-bottom: 5px;
+  width: auto;
 }
 
 .joolaio.dashboard.pie .content .legend .caption {
-    font-size: 15px;
-    font-weight: bold;
+  font-size: 15px;
+  font-weight: bold;
 
 }
 
 .joolaio.dashboard.pie .content .legend .colorbox {
-    height: 13px;
-    width: 13px;
-    float: left;
-    margin-right: 5px;
+  height: 13px;
+  width: 13px;
+  float: left;
+  margin-right: 5px;
 
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .joolaio.dashboard.pie .content .legend .summary {
-    font-size: 11px;
-    padding-left: 20px;
+  font-size: 11px;
+  padding-left: 20px;
 }
 
 .footer .span8 a, .footer .span8 a:hover {
-    color: #5D95FA;
+  color: #5D95FA;
 }
 
 .joolaio.picker.metrics, .joolaio.picker.dimensions {
-    min-height: 30px;;
+  min-height: 30px;;
 }
 
 .chartcontrol {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
 
 }
 
 .chartcontrol .metricpickers {
-    float: left;
+  float: left;
 }
 
 .chartcontrol .resolutionpicker {
-    float: right;
+  float: right;
 }
 
 .chartlegend {
-    margin-bottom: 5px;
-    /* padding-top: 5px;*/
+  margin-bottom: 5px;
+  /* padding-top: 5px;*/
 }
 
 .chartlegend .legend {
-    display: inline-block;
-    margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .chartlegend .legend .legendmark {
-    border: 5px solid white;
-    border-radius: 5px;
-    height: 0px;
-    display: inline-block;
-    width: 0px;
-    margin-left: 10px;
+  border: 5px solid white;
+  border-radius: 5px;
+  height: 0px;
+  display: inline-block;
+  width: 0px;
+  margin-left: 10px;
 }
 
 .joolaio.picker.metrics .metricswrapper, .joolaio.picker.dimensions .dimensionswrapper {
-    float: left;
-    clear: both;
+  float: left;
+  clear: both;
 }
 
 .joolaio.picker.metrics .metricswrapper .metricscontainer, .joolaio.picker.dimensions .dimensionswrapper .dimensionscontainer {
-    display: none;
-    position: absolute;
+  display: none;
+  position: absolute;
 
-    min-height: 200px;
-    max-height: 300px;
-    width: 210px;
+  min-height: 200px;
+  max-height: 300px;
+  width: 210px;
 
-    border: 2px solid #ababab;
-    background-color: #f5f5f5;
-    padding: 10px;
+  border: 2px solid #ababab;
+  background-color: #f5f5f5;
+  padding: 10px;
 
-    overflow-y: auto;
+  overflow-y: auto;
 
-    margin-top: -2px;
+  margin-top: -2px;
 
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .categorylist {
-    margin: 0;
-    margin-left: 0;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+  margin: 0;
+  margin-left: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .categorylist ul.jcontainer {
-    display: none;
-    margin: 0;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+  display: none;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .categorylist li:not(.leaf) {
-    cursor: pointer;
-    list-style-type: none;
-    background: url('/assets/img/expand.png') no-repeat 0px 8px;
+  cursor: pointer;
+  list-style-type: none;
+  background: url('/assets/img/expand.png') no-repeat 0px 8px;
 }
 
 .categorylist li {
-    padding-left: 10px;
-    cursor: default;
+  padding-left: 10px;
+  cursor: default;
 }
 
 .categorylist li.node.leaf.level_1 {
-    padding-left: 0;
-    cursor: default;
+  padding-left: 0;
+  cursor: default;
 }
 
 .categorylist li .category {
-    font-weight: bold;
-    padding: 3px;
-    padding-left: 1px;
+  font-weight: bold;
+  padding: 3px;
+  padding-left: 1px;
 }
 
 .metricswrapper .categorylist li .category {
-    color: #2F67B4;
+  color: #2F67B4;
 }
 
 .dimensionswrapper .categorylist li .category {
-    color: #738D68;
+  color: #738D68;
 }
 
 .categorylist li .value {
-    color: inherit;
+  color: inherit;
 }
 
 .categorylist li.on:not(.leaf) {
-    cursor: pointer;
-    list-style-type: none;
-    background: url('/assets/img/collapse.png') no-repeat 0px 8px;
+  cursor: pointer;
+  list-style-type: none;
+  background: url('/assets/img/collapse.png') no-repeat 0px 8px;
 }
 
 .categorylist ul.jcontainer.on {
-    display: block;
+  display: block;
 }
 
 .categorylist li .box {
@@ -2168,193 +2174,193 @@ td.special.bar .percentagecaption {
 }
 
 .categorylist li .box .keyvaluepair {
-    cursor: pointer;
-    display: block;
-    font-size: 0.9em;
-    font-weight: bold;
-    padding: 4px 3px 4px 5px;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 4px 3px 4px 5px;
 
-    margin: 1px 1px 1px 3px;
+  margin: 1px 1px 1px 3px;
 }
 
 .metricswrapper .categorylist li .box .keyvaluepair {
-    border: 1px solid #2F67B4;
-    background-color: #C5DCFE;
-    color: #2F67B4;
+  border: 1px solid #2F67B4;
+  background-color: #C5DCFE;
+  color: #2F67B4;
 }
 
 .metricswrapper .categorylist li .box .keyvaluepair:hover {
-    background-color: #6FAEFD;
-    color: white;
+  background-color: #6FAEFD;
+  color: white;
 }
 
 .dimensionswrapper .categorylist li .box .keyvaluepair {
-    border: 1px solid #738D68;
-    background-color: #DAE2CB;
-    color: #738D68;
+  border: 1px solid #738D68;
+  background-color: #DAE2CB;
+  color: #738D68;
 }
 
 .dimensionswrapper .categorylist li .box .keyvaluepair:hover {
-    background-color: #9BB47A;
-    color: white;
+  background-color: #9BB47A;
+  color: white;
 }
 
 .metricscontainer .categorylist li.level_1.on .box .keyvaluepair {
-    background-color: #6FAEFD;
-    color: white;
+  background-color: #6FAEFD;
+  color: white;
 }
 
 .dimensionscontainer .categorylist li.level_1.on .box .keyvaluepair {
-    background-color: #9BB47A;
-    color: white;
+  background-color: #9BB47A;
+  color: white;
 }
 
 .categorylist li .key {
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
 .categorylist li .key {
-    display: inline-block;
-    width: 90%;
-    word-wrap: break-word;
+  display: inline-block;
+  width: 90%;
+  word-wrap: break-word;
 }
 
 .categorylist li .help {
-    display: inline-block;
+  display: inline-block;
 }
 
 .categorylist li i {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    background-image: url("../../assets/img/glyphicons-halflings.png");
+  background-image: url("../../assets/img/glyphicons-halflings.png");
 }
 
 i.icon-white {
-    background-image: url("../../assets/img/glyphicons-halflings-white.png");
+  background-image: url("../../assets/img/glyphicons-halflings-white.png");
 }
 
 .popover.right {
-    text-align: left !important;
-    line-height: normal;
+  text-align: left !important;
+  line-height: normal;
 }
 
 .popover-inner {
-    text-align: left;
+  text-align: left;
 }
 
 .joolaio.picker.metrics .metricswrapper .customadd, .joolaio.picker.dimensions .dimensionswrapper .customadd {
-    border: 1px dashed;
-    border-radius: 3px 3px 3px 3px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    height: 18px;
-    margin: 3px 10px 2px 0;
-    padding: 5px;
-    text-align: center;
-    width: 174px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
+  border: 1px dashed;
+  border-radius: 3px 3px 3px 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  height: 18px;
+  margin: 3px 10px 2px 0;
+  padding: 5px;
+  text-align: center;
+  width: 174px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
 }
 
 .joolaio.picker.metrics .metricswrapper .customadd.metric {
-    background: #F2F6FF;
-    border-color: #7B98E8;
-    color: #7B98E8;
+  background: #F2F6FF;
+  border-color: #7B98E8;
+  color: #7B98E8;
 }
 
 .joolaio.picker.dimensions .dimensionswrapper .customadd.dimension {
-    background: #F4FFE6;
-    border-color: #9DB675;
-    color: #93AC6B;
+  background: #F4FFE6;
+  border-color: #9DB675;
+  color: #93AC6B;
 }
 
 .joolaio.picker.metrics.on .metricswrapper .customadd.metric {
-    background-color: #8FACFC;
-    border-color: #51649E;
-    color: white;
+  background-color: #8FACFC;
+  border-color: #51649E;
+  color: white;
 
-    text-align: left;
+  text-align: left;
 }
 
 .joolaio.picker.dimensions.on .dimensionswrapper .customadd.dimension {
-    background-color: #9BB47A;
-    border-color: #6B7D4B;
-    color: white;
+  background-color: #9BB47A;
+  border-color: #6B7D4B;
+  color: white;
 
-    text-align: left;
+  text-align: left;
 }
 
-.joolaio.picker.metrics .metricswrapper .customadd.metric .caret {
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
+.joolaio.picker.metrics .metricswrapper .customadd.metric .jio-caret {
+  float: right;
+  margin-top: 7px;
+  margin-right: 5px;
 
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-
-}
-
-.joolaio.picker.dimensions .dimensionswrapper .customadd.dimension .caret {
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
-
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
 
 }
 
-.joolaio.picker.metrics.on .metricswrapper .customadd.metric .caret {
-    border-top: 5px solid white;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent
+.joolaio.picker.dimensions .dimensionswrapper .customadd.dimension .jio-caret {
+  float: right;
+  margin-top: 7px;
+  margin-right: 5px;
+
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+
 }
 
-.joolaio.picker.dimensions.on .dimensionswrapper .customadd.dimension .caret {
-    border-top: 5px solid white;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent
+.joolaio.picker.metrics.on .metricswrapper .customadd.metric .jio-caret {
+  border-top: 5px solid white;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent
 }
 
-.joolaio.picker.metrics .close {
-    margin-top: 5px;
-    margin-right: 10px;
-    margin-left: 6px;
+.joolaio.picker.dimensions.on .dimensionswrapper .customadd.dimension .jio-caret {
+  border-top: 5px solid white;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent
+}
+
+.joolaio.picker.metrics .jio-close {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 6px;
 }
 
 .joolaio.picker.metrics.on .metricswrapper .customadd, .joolaio.picker.dimensions.on .dimensionswrapper .customadd {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .grip {
-    float: left;
-    background: no-repeat url(../../assets/img/grip.png);
-    height: 14px;
-    width: 6px;
+  float: left;
+  background: no-repeat url(../../assets/img/grip.png);
+  height: 14px;
+  width: 6px;
 
-    margin-top: 11px;
-    margin-right: 5px;
-    margin-left: 5px;
+  margin-top: 11px;
+  margin-right: 5px;
+  margin-left: 5px;
 
-    /*cursor: move;*/
+  /*cursor: move;*/
 }
 
 .grip.invert {
-    background: no-repeat url(../../assets/img/grip-invert.png);
+  background: no-repeat url(../../assets/img/grip-invert.png);
 }
 
-.jbtn .caret {
-    margin-left: 10px;
+.jbtn .jio-caret {
+  margin-left: 10px;
 }
 
 .ui-state-default .ui-icon {
@@ -2362,11 +2368,11 @@ i.icon-white {
 }
 
 .ui-icon-triangle-1-n {
-    background-image: url(/assets/img/sort_asc.gif); /*background-position: 0 -16px;*/
+  background-image: url(/assets/img/sort_asc.gif); /*background-position: 0 -16px;*/
 }
 
 .ui-icon-triangle-1-s {
-    background-image: url(/assets/img/sort_desc.gif); /*background-position: -64px -16px;*/
+  background-image: url(/assets/img/sort_desc.gif); /*background-position: -64px -16px;*/
 }
 
 /*
@@ -2374,129 +2380,129 @@ i.icon-white {
 background-position: -128px 0;
 }*/
 .ui-icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 5px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
 }
 
 .pietable .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 3px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
 }
 
 .pietable .picker .ui-icon {
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    position: relative;
-    top: 10px;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .css_right {
-    float: right;
+  float: right;
 }
 
 .table .odd td.sorting_1 {
-    background-color: #EAEAEA !important;
+  background-color: #EAEAEA !important;
 }
 
 .table .even td.sorting_1 {
-    background-color: #F3F3F3;
+  background-color: #F3F3F3;
 }
 
 .table {
-    margin-top: 0px;
-    margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .table .row {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .tablerow {
-    background: whiteSmoke;
-    border-bottom: 1px solid #E5E5E5;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid #E5E5E5;
-    height: 28px;
-    min-width: 600px;
-    padding: 4px 10px;
-    margin-bottom: 10px;
+  background: whiteSmoke;
+  border-bottom: 1px solid #E5E5E5;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #E5E5E5;
+  height: 28px;
+  min-width: 600px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
 }
 
 .table tbody tr:last-of-type {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .table li {
-    line-height: inherit;
+  line-height: inherit;
 }
 
 .icon-piechart {
-    background-image: url("assets/img/glyphicons_042_pie_chart.png");
+  background-image: url("assets/img/glyphicons_042_pie_chart.png");
 }
 
 .piechart {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 table.piechart td {
-    padding-top: 9px;
-    padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 10px;
 }
 
 .dropdown-menu .nav-header {
-    display: block;
-    padding: 3px 15px;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 18px;
-    color: #999;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    cursor: default;
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .dropdown-menu a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dropdown-menu .active a {
-    cursor: default;
+  cursor: default;
 }
 
 .metriclink.compare > a:hover {
-    color: #333;
-    text-decoration: none;
-    background-color: #AADFF3;
+  color: #333;
+  text-decoration: none;
+  background-color: #AADFF3;
 }
 
 .joolaio.crumb.all {
-    color: #08C;
-    text-decoration: none;
-    cursor: pointer;
+  color: #08C;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .tablerow .search {
-    float: right;
-    margin-right: 30px;
+  float: right;
+  margin-right: 30px;
 }
 
 .searchicon {
@@ -2504,11 +2510,11 @@ table.piechart td {
 }
 
 .search .add-on {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dataTables_empty {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .joolaio.report.jtable {
@@ -2520,246 +2526,246 @@ table.piechart td {
 }
 
 .joolaio.report.jtable .table th {
-    text-align: center;
+  text-align: center;
 }
 
 .joolaio.report.jtable .table th.dimension {
-    text-align: left;
+  text-align: left;
 }
 
 .joolaio.report.jtable .table td {
 }
 
 .joolaio.report.jtable .table th.check {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table th.id {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.check {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.id {
-    text-align: center;
-    width: 1%;
+  text-align: center;
+  width: 1%;
 }
 
 .joolaio.report.jtable .table td.dimensionvalue {
-    text-align: left;
-    color: #08C;
+  text-align: left;
+  color: #08C;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .joolaio.report.jtable .tableex td.dimensionvalue {
-    text-align: left;
-    color: inherit;
+  text-align: left;
+  color: inherit;
 
-    cursor: default;
+  cursor: default;
 }
 
 .joolaio.report.jtable .table td.dimensionvalue:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .joolaio.report.jtable .table td.metricvalue {
-    text-align: right;
+  text-align: right;
 }
 
 .joolaio.report.jtable .table td.comparison.metricvalue {
-    color: #999;
+  color: #999;
 }
 
 .joolaio.report.jtable .table td.metricvalue.positive {
-    color: #4B9525;
+  color: #4B9525;
 }
 
 .joolaio.report.jtable .table td.metricvalue.negative {
-    color: #932D22;
+  color: #932D22;
 }
 
 .joolaio.report.jtable .table td.comparison {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .table th.special {
-    width: 10%;
+  width: 10%;
 }
 
 .joolaio.report.jtable .table td.special {
-    vertical-align: top;
-    border-left: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
+  vertical-align: top;
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 
-    width: 10%;
+  width: 10%;
 }
 
 .joolaio.report.jtable .table td.special .highcharts-container {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .joolaio.report.jtable .table th.special.pie {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .joolaio.report.jtable .table th.special.pie select {
-    /*margin-left: 5px;*/
+  /*margin-left: 5px;*/
 }
 
 .joolaio.report.jtable .table tr.emptyrowfiller td {
-    border-top: 0;
-    background-color: inherit;;
+  border-top: 0;
+  background-color: inherit;;
 }
 
 .joolaio.report.jtable .table tr.emptyrowfiller.first {
-    border-top: 1px solid #DDD;
+  border-top: 1px solid #DDD;
 
 }
 
 .joolaio.report.jtable .table th {
-    cursor: pointer;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 
 }
 
 .joolaio.report.jtable .table th:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .joolaio.report.jtable .table th.id:hover,
 .joolaio.report.jtable .table th.check:hover,
 .joolaio.report.jtable .table th.special:hover {
-    background-color: inherit;
-    cursor: default;
+  background-color: inherit;
+  cursor: default;
 }
 
 .joolaio.report.jtable .table th.sortkey {
-    padding-right: 15px;
+  padding-right: 15px;
 }
 
 .joolaio.report.jtable .table th.sortkey.DESC {
-    background-image: url(/assets/img/sort_desc.gif);
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
+  background-image: url(/assets/img/sort_desc.gif);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 .joolaio.report.jtable .table th.sortkey.ASC {
-    background-image: url(/assets/img/sort_asc.gif);
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
+  background-image: url(/assets/img/sort_asc.gif);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 .joolaio.report.jtable .table-striped tbody tr:nth-child(even) td.sortkey {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .joolaio.report.jtable .table-striped tbody tr:nth-child(odd) td.sortkey {
-    background-color: #ececec;
+  background-color: #ececec;
 }
 
 .joolaio.report.jtable .table td.sortkey {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .topheader .headercontent {
-    float: right;
+  float: right;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.joolaio.report.jtable .topheader .tablecontrol {
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .secondary {
-    float: left;
-    padding-left: 10px;
+.joolaio.report.jtable .topheader .tablecontrol .secondary {
+  float: left;
+  padding-left: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
-    float: right;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar {
+  float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
-    float: right;
-    padding-right: 10px;
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype {
+  float: right;
+  padding-right: 10px;
 }
 
 .joolaio.report.jtable .bottomfooter {
-    min-height: 30px;
+  min-height: 30px;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pager {
-    float: right;
+  float: right;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pageinfo {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 8px;
-    float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 8px;
+  float: right;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol {
-    float: right;
-    font-weight: bold;
+  float: right;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol .button {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.prev {
-    background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
-    height: 29px;
-    width: 10px;
+  background: url('../img/prevArrow_ltr.gif') 50% no-repeat;
+  height: 29px;
+  width: 10px;
 
 }
 
 .joolaio.report.jtable .bottomfooter .footercontent .pagecontrol button.next {
-    background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
-    height: 29px;
-    width: 10px;
+  background: url('../img/nextArrow_ltr.gif') 50% no-repeat;
+  height: 29px;
+  width: 10px;
 
 }
 
 .joolaio.report.jtable .table th {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .joolaio.report.jtable .metricpicker {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 td.special.bar {
-    vertical-align: middle !important;
-    border-bottom: 0 !important;
+  vertical-align: middle !important;
+  border-bottom: 0 !important;
 }
 
 td.special.bar .percentagebar {
-    float: left;
-    height: 15px;
-    background-color: #058DC7;
-    border-bottom: 0 !important;
-    min-width: 0px;
-    max-width: 100px;
+  float: left;
+  height: 15px;
+  background-color: #058DC7;
+  border-bottom: 0 !important;
+  min-width: 0px;
+  max-width: 100px;
 
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 td.special.bar .percentagecaption {
@@ -2767,67 +2773,67 @@ td.special.bar .percentagecaption {
 }
 
 .secondarybutton {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .jumbotron.subhead {
-    min-height: 146px;
+  min-height: 146px;
 }
 
 .joolaio .nav {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .joolaio.dashboard.widget .content {
-    border: 0;
-    border-top: 1px solid #ddd;
+  border: 0;
+  border-top: 1px solid #ddd;
 
-    padding: 5px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .joolaio.dashboard.widget .content .value {
-    font-size: 19px;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
-    color: black;
+  color: black;
 }
 
 .joolaio.dashboard.widget .content .daterange {
-    color: #666;
-    display: block;
-    font-size: 13px;
-    font-weight: normal;
+  color: #666;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
 
-    display: none;
+  display: none;
 }
 
 .joolaio.dashboard.widget .content .site {
-    color: #999;
-    display: inline;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
+  color: #999;
+  display: inline;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 .joolaio.dashboard.widget .content .minichart {
-    float: right;
+  float: right;
 }
 
 .joolaio.dashboard.widget .content .compare .daterange {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .widgettable {
-    border: 0;
+  border: 0;
 }
 
 .widgettable th {
-    text-align: center;
-    border-top: 0;
+  text-align: center;
+  border-top: 0;
 }
 
 .widgettable th.dimension {
@@ -2843,77 +2849,77 @@ td.special.bar .percentagecaption {
 }
 
 .widgettable td.metric {
-    text-align: right;
+  text-align: right;
 }
 
 .strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.dashboard.widget .content .highcharts-container {
-    border: 0;
-    margin-right: auto;
-    margin-left: auto;
+  border: 0;
+  margin-right: auto;
+  margin-left: auto;
 
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .joolaio.dashboard.pie .content .legend {
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
 
 }
 
 .joolaio.dashboard.pie .content table {
-    border: 0;
+  border: 0;
 }
 
 .joolaio.dashboard.pie .content table tr, .joolaio.dashboard.pie .content table td {
-    border: 0;
+  border: 0;
 
 }
 
 .joolaio.dashboard.pie .content .legenditem {
-    margin-bottom: 5px;
-    width: auto;
+  margin-bottom: 5px;
+  width: auto;
 }
 
 .joolaio.dashboard.pie .content .legend .caption {
-    font-size: 15px;
-    font-weight: bold;
+  font-size: 15px;
+  font-weight: bold;
 
 }
 
 .joolaio.dashboard.pie .content .legend .colorbox {
-    height: 13px;
-    width: 13px;
-    float: left;
-    margin-right: 5px;
+  height: 13px;
+  width: 13px;
+  float: left;
+  margin-right: 5px;
 
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .joolaio.dashboard.pie .content .legend .summary {
-    font-size: 11px;
-    padding-left: 20px;
+  font-size: 11px;
+  padding-left: 20px;
 }
 
 .joolaio.picker.metrics .metricswrapper {
 }
 
 .secondary.btn-group {
-    /*background-color: #efefef;*/
-    top: 0px !important;
-    height: auto;
+  /*background-color: #efefef;*/
+  top: 0px !important;
+  height: auto;
 }
 
-.btn.btn_table, .btn.btn_pie, .btn.btn_perf {
-    height: 29px;
+.jio-btn.btn_table, .jio-btn.btn_pie, .jio-btn.btn_perf {
+  height: 29px;
 }
 
 .pager {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .wrapper_title {
@@ -2921,29 +2927,29 @@ td.special.bar .percentagecaption {
 }
 
 .wrapper_title .caption {
-    font-size: 16px;
-    color: #666;
-    font-weight: 400;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
 
 }
 
 .wrapper_title .input_title {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .wrapper_description {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .wrapper_description .caption {
-    font-size: 16px;
-    color: #666;
-    font-weight: 400;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
 
 }
 
 .wrapper_description .input_description {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .report.editor .buttons {
@@ -2951,117 +2957,117 @@ td.special.bar .percentagecaption {
 }
 
 .wrapper_tabs li a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.wrapper_tabs li .close {
-    margin-top: 10px;
-    margin-right: 6px;
+.wrapper_tabs li .jio-close {
+  margin-top: 10px;
+  margin-right: 6px;
 }
 
 .report.editor .metricscollection .pickerwrapper, .report.editor .metricscollection .newpickerwrapper {
-    float: left;
-    padding-right: 10px;
+  float: left;
+  padding-right: 10px;
 }
 
 .report.editor .metricscollection .pickerwrapper .picker, .report.editor .metricscollection .newpickerwrapper .picker {
-    float: left;
+  float: left;
 }
 
-.report.editor .metricscollection .pickerwrapper .close, .report.editor .metricscollection .newpickerwrapper .close {
-    float: right;
-    padding-top: 8px;
-    margin-left: -5px;
-    display: none;
+.report.editor .metricscollection .pickerwrapper .jio-close, .report.editor .metricscollection .newpickerwrapper .jio-close {
+  float: right;
+  padding-top: 8px;
+  margin-left: -5px;
+  display: none;
 }
 
-.report.editor .metricscollection .pickerwrapper .joolaio.picker.metrics.on + .close {
-    display: block;
+.report.editor .metricscollection .pickerwrapper .joolaio.picker.metrics.on + .jio-close {
+  display: block;
 }
 
 .report.editor .metricscontainer input[type="text"] {
-    width: 155px;
-    margin-bottom: 7px;
+  width: 155px;
+  margin-bottom: 7px;
 }
 
 .report.editor .metricscollection {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .report.editor .dimensionscollection {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .report.editor .dimensionscollection .pickerwrapper, .report.editor .dimensionscollection .newpickerwrapper {
-    float: none;
-    clear: both;
+  float: none;
+  clear: both;
 
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper, .report.editor .dimensionscollection .newpickerwrapper {
-    float: left;
-    clear: none;
+  float: left;
+  clear: none;
 }
 
 .report.editor .dimensionscollection .pickerwrapper .picker, .report.editor .dimensionscollection .newpickerwrapper .picker {
-    float: left;
+  float: left;
 }
 
-.report.editor .dimensionscollection .pickerwrapper .close, .report.editor .dimensionscollection .newpickerwrapper .close {
-    float: none;
-    /*float:right;*/
-    padding-top: 8px;
-    margin-left: -5px;
-    display: none;
+.report.editor .dimensionscollection .pickerwrapper .jio-close, .report.editor .dimensionscollection .newpickerwrapper .jio-close {
+  float: none;
+  /*float:right;*/
+  padding-top: 8px;
+  margin-left: -5px;
+  display: none;
 }
 
-.report.editor .fortable .dimensionscollection .pickerwrapper .close, .report.editor .dimensionscollection .newpickerwrapper .close {
-    float: right;
+.report.editor .fortable .dimensionscollection .pickerwrapper .jio-close, .report.editor .dimensionscollection .newpickerwrapper .jio-close {
+  float: right;
 }
 
-.report.editor .dimensionscollection .pickerwrapper .joolaio.picker.dimensions.on + .close {
-    display: block;
+.report.editor .dimensionscollection .pickerwrapper .joolaio.picker.dimensions.on + .jio-close {
+  display: block;
 }
 
 .report.editor .dimensionscollection .pickerwrapper:nth-child(1) {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .report.editor .dimensionscollection .pickerwrapper:nth-child(2) {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .report.editor .dimensionscollection .pickerwrapper:nth-child(3) {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .report.editor .dimensionscollection .pickerwrapper:nth-child(4) {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 
 .report.editor .dimensionscollection .pickerwrapper:nth-child(5) {
-    margin-left: 80px;
+  margin-left: 80px;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper:nth-child(1) {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper:nth-child(2) {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper:nth-child(3) {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper:nth-child(4) {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .report.editor .fortable .dimensionscollection .pickerwrapper:nth-child(5) {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .report.editor div {
@@ -3069,188 +3075,192 @@ td.special.bar .percentagecaption {
 }
 
 .report.editor .well {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .report.editor .tab {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .report.editor .nav-tabs > li > a, .report.editor .nav-pills > li > a {
-    padding-right: 20px;
+  padding-right: 20px;
 
 }
 
 .report.editor .nav.nav-tabs {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .report.editor .wrapper_add_metric {
-    padding: 10px;
-    border: 1px dashed #ccc;
+  padding: 10px;
+  border: 1px dashed #ccc;
 }
 
 .report.editor .tab:first-of-type {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .report.editor .header {
-    font-size: 18px;
-    font-weight: bold;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    margin-top: 50px;
-    border-bottom: 0px solid #DDD;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  border-bottom: 0px solid #DDD;
 }
 
 .report.editor .header:first-of-type {
-    margin-bottom: 20px;
-    margin-top: 0px;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .report.editor .header .sectiontitle {
-    margin-left: 90px;
+  margin-left: 90px;
 
 }
 
-.report.editor a.btn.cancel, .report.editor a.btn.delete {
-    border: 0;
-    background: none;
-    color: #08C;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.report.editor a.jio-btn.cancel, .report.editor a.jio-btn.delete {
+  border: 0;
+  background: none;
+  color: #08C;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-.report.editor a.btn.cancel:hover, .report.editor a.btn.delete:hover {
-    text-decoration: underline;
+.report.editor a.jio-btn.cancel:hover, .report.editor a.jio-btn.delete:hover {
+  text-decoration: underline;
 }
 
-.report.editor a.btn.cancel:active, .report.editor a.btn.delete:active {
-    border: 0;
-    background: none;
-    color: #08C;
+.report.editor a.jio-btn.cancel:active, .report.editor a.jio-btn.delete:active {
+  border: 0;
+  background: none;
+  color: #08C;
 }
 
-.report.editor a.btn.delete {
-    float: right;
+.report.editor a.jio-btn.delete {
+  float: right;
 }
 
 .save-error {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    clear: both;
-    width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  clear: both;
+  width: 50%;
 }
 
 .save-error ul {
-    padding: 0;
-    margin: 0 0 0px 25px;
+  padding: 0;
+  margin: 0 0 0px 25px;
 }
 
 .joolaio.report.tabs .nav-tabs li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .joolaio.report.tabs .nav-tabs li.active {
-    cursor: default;
+  cursor: default;
 }
 
 .btn-group {
-    font-size: inherit;
+  font-size: inherit;
+  position: relative;
+  /*font-size: 0;*/
+  white-space: nowrap;
+
 }
 
 .joolaio.report.metricgroups .nav-pills {
-    margin-bottom: 5px;
-    border-bottom: 1px solid #CCC;
-    padding-bottom: 3px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 3px;
 }
 
 .drilldownwrapper {
-    padding-left: 10px;
-    border-bottom: 1px solid #ddd;
-    vertical-align: middle;
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
 }
 
 .japi.primarydimension {
-    font-size: 12px;
-    cursor: pointer;
-    display: inline-block;
-    height: 22px;
-    margin: 0px 8px;
-    vertical-align: middle;
-    color: #08C;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  margin: 0px 8px;
+  vertical-align: middle;
+  color: #08C;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    line-height: 18px;
+  line-height: 18px;
 }
 
 .japi.primarydimension.on {
-    color: #333;
-    font-weight: bold;
-    cursor: default;
+  color: #333;
+  font-weight: bold;
+  cursor: default;
 }
 
 .japi.primarydimension.on, .japi.other.picker.dropdown.on {
-    background: transparent url(/assets/img/primary_dimension_selected.png) no-repeat 50% 101%;
+  background: transparent url(/assets/img/primary_dimension_selected.png) no-repeat 50% 101%;
 }
 
 .japi.other.picker.dropdown {
-    /*font-size: 12px;*/
+  /*font-size: 12px;*/
 
 }
 
 .japi.other.picker.dropdown.on {
-    font-weight: bold;
-    color: #333;
+  font-weight: bold;
+  color: #333;
 }
 
 .japi.other.picker.dropdown .jbtn {
-    font-size: 12px;
-    line-height: 18px;
+  font-size: 12px;
+  line-height: 18px;
 
-    cursor: pointer;
-    display: inline-block;
-    height: 22px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
 
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .japi.other.picker.dropdown.on .jbtn {
-    color: #333;
+  color: #333;
 }
 
-.drilldownwrapper .caret {
-    margin-top: 6px;
-    margin-left: 4px;
+.drilldownwrapper .jio-caret {
+  margin-top: 6px;
+  margin-left: 4px;
 }
 
 .dimensionvalue .drilldownlink.disabled {
-    color: #333;
-    cursor: default;
+  color: #333;
+  cursor: default;
 }
 
 .dimensionvalue .drilldownlink.disabled:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .dimensionvalue.disabled:hover {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .container.tests {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .testlogger {
-    margin: 30px;
-    border: 1px solid #ddd;
-    padding: 10px;
+  margin: 30px;
+  border: 1px solid #ddd;
+  padding: 10px;
 
-    height: 400px;
-    overflow: overlay;
+  height: 400px;
+  overflow: overlay;
 }
 
 .testlogger .message {
@@ -3258,238 +3268,238 @@ td.special.bar .percentagecaption {
 }
 
 .testlogger .header.error {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .testlogger .message.error {
-    color: red;
+  color: red;
 }
 
 .testlogger .message.error a {
-    color: red;
+  color: red;
 }
 
 .tableex th {
-    white-space: nowrap;
+  white-space: nowrap;
 
 }
 
 .tableex td.dimensionvalue span {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .tableexwrapper {
-    overflow-x: scroll;
-    width: 100%;
-    height: 550px;
-    margin-bottom: 10px;
+  overflow-x: scroll;
+  width: 100%;
+  height: 550px;
+  margin-bottom: 10px;
 }
 
 .jmetricbox .legendmark {
-    border: 5px solid white;
-    border-radius: 5px;
-    height: 0;
-    display: inline-block;
-    width: 0;
-    margin-right: 5px;
-    margin-top: 0;
+  border: 5px solid white;
+  border-radius: 5px;
+  height: 0;
+  display: inline-block;
+  width: 0;
+  margin-right: 5px;
+  margin-top: 0;
 }
 
 .metricswrapper .jmetricbox .legendmark {
-    display: none;
+  display: none;
 }
 
 .metricswrapper .jmetricbox.primaryactive, .metricswrapper .jmetricbox.secondaryactive {
-    cursor: default;
+  cursor: default;
 }
 
 .metricswrapper .jmetricbox.primaryactive .legendmark, .metricswrapper .jmetricbox.secondaryactive .legendmark {
-    display: inline-block;
+  display: inline-block;
 }
 
 .metricswrapper .jmetricbox .valuewrapper {
-    display: inline-block;
+  display: inline-block;
 }
 
 .metricswrapper .jmetricbox .value {
-    display: inline-block;
+  display: inline-block;
 }
 
 .metricswrapper .jmetricbox .summary {
-    display: block;
+  display: block;
 }
 
 .overviewpie.widget {
-    border: 0;
-    box-shadow: none;
-    margin: 0;
-    padding: 5px;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 5px;
 
-    margin-top: 10px;
-    width: 50%;
+  margin-top: 10px;
+  width: 50%;
 }
 
 .joolaio.dashboard.widget.overviewpie .content {
-    border: 0;
-    padding: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .joolaio.dashboard.widget.overviewpie .caption {
-    padding: 0;
+  padding: 0;
 }
 
 .joolaio.dashboard.overviewpie .content .legend {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .overviewpie.widget .table td, .overviewpie.widget .table tbody tr:last-of-type {
-    border: 0;
+  border: 0;
 }
 
 .overviewpie.widget .highcharts-container {
-    border: 0;
+  border: 0;
 }
 
 .overviewmetricbox.widget {
-    border: 0;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    height: 45px;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
 }
 
 .overviewmetricbox .wrapper {
-    float: left;
-    border: 0;
-    box-shadow: none;
+  float: left;
+  border: 0;
+  box-shadow: none;
 
-    margin: 0;
-    cursor: default;
+  margin: 0;
+  cursor: default;
 }
 
 .overviewmetricbox .wrapper:hover {
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .overviewmetricbox .wrapper .minichart {
-    display: inline;
-    margin: 1px;
+  display: inline;
+  margin: 1px;
 }
 
 .overviewmetricbox .wrapper .metricname {
-    display: inline;
-    color: black;
-    font-weight: bold;
-    font-size: 17px;
-    margin-left: 10px;
-    top: 5px;
-    position: relative;
+  display: inline;
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
+  top: 5px;
+  position: relative;
 }
 
 .overviewmetricbox .wrapper:hover .metricname {
-    color: #058DC7;
+  color: #058DC7;
 }
 
 .overviewmetricbox .wrapper .value {
-    display: inline;
-    font-weight: bold;
-    font-size: 19px;
-    margin-left: 5px;
-    top: 5px;
-    position: relative;
+  display: inline;
+  font-weight: bold;
+  font-size: 19px;
+  margin-left: 5px;
+  top: 5px;
+  position: relative;
 
 }
 
 .overviewmetricbox .wrapper .site {
-    margin-left: 88px;
+  margin-left: 88px;
 }
 
 .overviewmetricbox .wrapper .site .summaryvalue {
-    color: #666;
-    font-size: 80%;
-    font-weight: bold;
+  color: #666;
+  font-size: 80%;
+  font-weight: bold;
 
 }
 
 .summarytable .reportlist {
-    float: left;
-    width: 49%;
+  float: left;
+  width: 49%;
 }
 
 .summarytable .reporttable {
-    float: right;
-    width: 49%;
+  float: right;
+  width: 49%;
 }
 
 .summarytable .thelist {
-    width: 100%;
-    font-size: 98%;
+  width: 100%;
+  font-size: 98%;
 }
 
 .summarytable .thelist th {
-    border-bottom: 1px solid #666;
-    padding: 12px 6px 3px;
-    text-align: left;
+  border-bottom: 1px solid #666;
+  padding: 12px 6px 3px;
+  text-align: left;
 }
 
 .summarytable .thelist td {
-    padding: 0;
+  padding: 0;
 }
 
 .summarytable .thelist ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .summarytable .thelist li {
-    color: #058DC7;
-    cursor: pointer;
-    list-style-type: none;
-    padding: 8px 6px;
+  color: #058DC7;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 8px 6px;
 }
 
 .summarytable .thelist li.active {
-    background: #E0EFF6;
-    color: black;
+  background: #E0EFF6;
+  color: black;
 }
 
 .summarytable .thelist li .name {
-    float: left;
+  float: left;
 }
 
 .summarytable .thelist li .name:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .summarytable .thelist li .expand {
-    background: url(/assets/img/summarylistexpand.gif) no-repeat;
-    float: right;
-    height: 7px;
-    width: 7px;
-    margin: 3px 4px;
+  background: url(/assets/img/summarylistexpand.gif) no-repeat;
+  float: right;
+  height: 7px;
+  width: 7px;
+  margin: 3px 4px;
 }
 
 .summarytable .thelist li .expand {
-    display: none;
+  display: none;
 }
 
 .summarytable .thelist li.active .expand {
-    display: block;
+  display: block;
 }
 
 .summarytable .table th {
-    border-bottom: 1px solid #666;
-    padding: 12px 6px 3px;
-    text-align: left;
+  border-bottom: 1px solid #666;
+  padding: 12px 6px 3px;
+  text-align: left;
 }
 
 .summarytable .table th:hover {
-    background: none !important;
-    cursor: default;
+  background: none !important;
+  cursor: default;
 
 }
 
@@ -3497,317 +3507,314 @@ td.special.bar .percentagecaption {
 }
 
 th.nopaddingtop {
-    padding: 0 6px 3px !important;
-    border-top: 0;
+  padding: 0 6px 3px !important;
+  border-top: 0;
 }
 
 th.nopaddingtop.metric {
-    text-align: right !important;
+  text-align: right !important;
 }
 
 .summarytable .table td.metric {
-    text-align: right;
+  text-align: right;
 }
 
 .seefullreport {
-    float: right;
-    color: #058DC7;
-    cursor: pointer;
+  float: right;
+  color: #058DC7;
+  cursor: pointer;
 }
 
 .histogram .barvalue {
-    float: left;
+  float: left;
 
-    width: 55px;
-    text-align: right;
-    font-weight: bold;
+  width: 55px;
+  text-align: right;
+  font-weight: bold;
 }
 
 .histogram .percentagebar {
-    float: left;
-    height: 15px;
-    background-color: #058DC7;
-    border-bottom: 0 !important;
-    min-width: 0;
-    max-width: 85%;
+  float: left;
+  height: 15px;
+  background-color: #058DC7;
+  border-bottom: 0 !important;
+  min-width: 0;
+  max-width: 85%;
 
-    margin-left: 5px;
-    margin-top: 2px;
+  margin-left: 5px;
+  margin-top: 2px;
 }
 
 .joolaio.report.histogram .table th:hover {
-    background-color: inherit;
-    cursor: default;
+  background-color: inherit;
+  cursor: default;
 }
 
 .joolaio.report.histogram .table th {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .joolaio.report.histogram .table-striped tbody td.values {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .joolaio.report.histogram .table-striped tbody tr:nth-child(even) td.values {
-    background-color: #E0E0E0;
+  background-color: #E0E0E0;
 }
 
 .joolaio.report.histogram .table-striped tbody tr:nth-child(odd) td.values {
-    background-color: #ECECEC;
+  background-color: #ECECEC;
 }
 
 .hlegend .legendmark {
-    border: 5px solid white;
-    height: 0;
-    display: inline-block;
-    width: 0;
-    margin-right: 5px;
-    margin-top: 0;
+  border: 5px solid white;
+  height: 0;
+  display: inline-block;
+  width: 0;
+  margin-right: 5px;
+  margin-top: 0;
 }
 
 .hlegend .legendcaption {
-    font-weight: normal;
-    font-size: 13px;
+  font-weight: normal;
+  font-size: 13px;
 }
 
 .daterange {
-    padding-left: 20px !important;
+  padding-left: 20px !important;
 }
 
 .summarytable .barvalue {
-    float: left;
+  float: left;
 
-    width: 55px;
-    text-align: right;
-    font-weight: normal;
+  width: 55px;
+  text-align: right;
+  font-weight: normal;
 }
 
 .summarytable .percentagebar {
-    float: left;
-    height: 15px;
-    background-color: #058DC7;
-    border-bottom: 0 !important;
-    min-width: 0;
-    max-width: 63%;
+  float: left;
+  height: 15px;
+  background-color: #058DC7;
+  border-bottom: 0 !important;
+  min-width: 0;
+  max-width: 63%;
 
-    margin-left: 5px;
-    margin-top: 2px;
+  margin-left: 5px;
+  margin-top: 2px;
 }
 
 .advancedsearch {
-    background-color: white;
-    min-height: 100px;;
-    border-top: 1px solid #E5E5E5;
+  background-color: white;
+  min-height: 100px;;
+  border-top: 1px solid #E5E5E5;
 }
 
 .joolaio.report.jtable .topheader .tablecontrol .toolbar .advancedcaption {
-    margin-left: 10px;
-    margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 30px;
 
-    font-size: 13px;
-    cursor: pointer;
-    color: #08C;
+  font-size: 13px;
+  cursor: pointer;
+  color: #08C;
 
-    position: relative;
-    top: 5px;
+  position: relative;
+  top: 5px;
 }
 
 .search_filter_wrapper {
-    padding: 10px;
+  padding: 10px;
 }
 
 .condition_wrapper {
-    min-width: 680px;
-    padding: 15px 10px;
-    position: relative;
+  min-width: 680px;
+  padding: 15px 10px;
+  position: relative;
 }
 
 .condition_group_wrapper {
-    background-color: #EFEFEF;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
 }
 
 .condition_group {
-    clear: both;
+  clear: both;
 }
 
 .conditions {
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    /*overflow: auto;*/
-    padding: 10px 0 10px 10px;
-    -moz-border-radius: 5px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  /*overflow: auto;*/
+  padding: 10px 0 10px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
 
-    min-height: 30px;
+  min-height: 30px;
 }
 
 .condition {
-    float: left;
+  float: left;
 }
 
 .condition_sep_and {
-    border-left: 1px solid #CCC;
-    border-right: 1px solid #CCC;
-    clear: both;
-    position: relative;
-    text-align: center;
-    margin: -1px 0;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  clear: both;
+  position: relative;
+  text-align: center;
+  margin: -1px 0;
 
-    background-color: #EFEFEF;
-    color: black;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-left: 80px;
-    padding: 5px 0 5px 0;
-    width: 100px;
+  background-color: #EFEFEF;
+  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-left: 80px;
+  padding: 5px 0 5px 0;
+  width: 100px;
 }
 
 .addnewconditionbutton {
-    border: 1px dashed #ACACAE;
-    border-radius: 3px 3px 3px 3px;
-    color: #5D5D5D;
-    cursor: pointer;
-    padding: 5px 0 5px 10px;
-    width: 140px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
+  border: 1px dashed #ACACAE;
+  border-radius: 3px 3px 3px 3px;
+  color: #5D5D5D;
+  cursor: pointer;
+  padding: 5px 0 5px 10px;
+  width: 140px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
 }
 
 .addnewconditionbutton:hover {
-    border: 1px solid #ACACAE;
+  border: 1px solid #ACACAE;
 }
 
 .addnewconditionbutton .pluscaption {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .addnewconditionbutton .dimensioncaption {
-    color: #738D68;
-    font-weight: bold;
+  color: #738D68;
+  font-weight: bold;
 }
 
 .addnewconditionbutton .metriccaption {
-    color: #2F67B4;
-    font-weight: bold;
+  color: #2F67B4;
+  font-weight: bold;
 }
 
 .condition_include {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .condition_type {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .conditions .dropdown-menu {
-    left: 0;
+  left: 0;
 }
 
-.conditions .btn .caret {
-    margin-left: 5px;
+.conditions .jio-btn .jio-caret {
+  margin-left: 5px;
 }
 
 .conditions .customadd.dimension.jbtn {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
-.conditions .close {
-    margin-right: 12px;
-    margin-top: 6px;
+.conditions .jio-close {
+  margin-right: 12px;
+  margin-top: 6px;
 }
 
 .filtersWrapper, .advancedsearch {
-    display: none;
+  display: none;
 }
 
 .input-append .add-on, .input-prepend .add-on {
-    height: 19px;
+  height: 19px;
 }
 
 .joolaio.dashboard.bartable .tablebar {
-    height: 40px;
-    float: left;
+  height: 40px;
+  float: left;
 }
 
 .joolaio.dashboard.bartable .barcaption {
-    height: 40px;
-    float: left;
+  height: 40px;
+  float: left;
 
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .joolaio.dashboard.bartable .barcaption .caption {
-    color: #666;
-    font-weight: 500;
-    text-transform: uppercase;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .joolaio.dashboard.bartable .barcaption .subcaption {
-    color: #999;
-    font-size: 12px;
+  color: #999;
+  font-size: 12px;
 }
 
 .disabled {
-    cursor: default !important;
-    opacity:0.6;
+  cursor: default !important;
+  opacity: 0.6;
 }
 
-
 .metricscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair {
-    cursor: default !important;
+  cursor: default !important;
 }
 
 .metricscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair:hover {
-    background-color: #C5DCFE !important;
-    color: #2F67B4 !important;
+  background-color: #C5DCFE !important;
+  color: #2F67B4 !important;
 }
 
 .dimensionscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair {
-    cursor: default !important;
+  cursor: default !important;
 }
 
 .dimensionscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair:hover {
-    background-color: #DAE2CB !important;
-    color: #738D68 !important;
+  background-color: #DAE2CB !important;
+  color: #738D68 !important;
 }
 
 .panel-edit {
-    display:none !important;
+  display: none !important;
 }
 
 .widget-add {
-    display:none !important;
+  display: none !important;
 }
 
 .settings {
-    display:none !important;
+  display: none !important;
 }
 
-
-
 .joolaio.breadcrumbs {
-    margin-top:5px;
-              padding-bottom:5px;
-    font-size: 14px;
-    font-weight: 300;
-                   float:left;
-    overflow: auto;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  float: left;
+  overflow: auto;
 }
 
 .joolaio.breadcrumbs .crumb {
-    float: left;
+  float: left;
 }
 
 .joolaio.breadcrumbs .crumb .caption {
@@ -3815,50 +3822,278 @@ th.nopaddingtop.metric {
 }
 
 .joolaio.breadcrumbs .crumb .value {
-    color: #08C;
+  color: #08C;
 }
 
 .joolaio.breadcrumbs .crumb .value:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .joolaio.breadcrumbs .crumb .value:last-of-type {
-    color: inherit;
+  color: inherit;
 }
 
 .joolaio.breadcrumbs .crumb .value:last-of-type:hover {
-    cursor: default;
-    text-decoration: none;
+  cursor: default;
+  text-decoration: none;
 }
 
 .joolaio.breadcrumbs .crumb .sep {
-    padding-left: 5px;
-    background-color:transparent;
-    padding-right: 5px;
+  padding-left: 5px;
+  background-color: transparent;
+  padding-right: 5px;
 }
 
 .demonoticebar {
-    top:0;
-    left:0;
-    width:100%;
-    height:30px;
-    line-height:18px;
-    background:#FFE16B;
-    color:#000000;
-    z-index:1000;
-    padding:10px;
-    font-weight:bold;
-    font-size:18px;
-    text-align:center;
-    opacity:0.8;
-    margin:auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 18px;
+  background: #FFE16B;
+  color: #000000;
+  z-index: 1000;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.8;
+  margin: auto;
 }
+
 .demonoticebar > a.dismiss {
-    font-size:12px;
+  font-size: 12px;
 }
 
 .demonoticebar > a.dismiss:hover {
-    font-size:12px;
-    text-decoration:none;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.jio-btn {
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  padding: 4px 14px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.jio-btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.jio-btn.active, .jio-btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group > .jio-btn:first-child {
+  margin-left: 0;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.btn-group > .jio-btn:last-child, .jio-btn-group > .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.btn-group > .jio-btn + .jio-btn {
+  margin-left: -1px;
+}
+.jio-btn.btn_table, .jio-btn.btn_pie, .jio-btn.btn_perf {
+  height: 29px;
+}
+.btn-group > .jio-btn, .btn-group > .jio-dropdown-menu {
+  font-size: 14px;
+}
+.btn-group > .jio-btn {
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.jio-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+}
+
+.jio-btn .jio-caret {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.input-append input, .input-prepend input, .input-append select, .input-prepend select, .input-append .uneditable-input, .input-prepend .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 14px;
+  vertical-align: top;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.jio-btn {
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  background-image: url("../../assets/img/glyphicons-halflings.png");
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+.icon-search {
+  background-position: -48px 0;
+}
+
+.input-append .add-on, .input-prepend .add-on {
+  display: inline-block;
+  width: auto;
+  height: 20px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+
+.input-append .add-on, .input-prepend .add-on, .input-append .jio-btn, .input-prepend .jio-btn {
+  margin-left: -1px;
+  vertical-align: top;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.input-prepend .add-on, .input-prepend .jio-btn {
+  margin-right: -1px;
+}
+
+.input-append, .input-prepend {
+  margin-bottom: 5px;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.icon-question-sign {
+  background-position: -96px -96px;
+}
+
+button.jio-close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.jio-close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.jio-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
 }
