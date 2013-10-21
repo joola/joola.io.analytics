@@ -10,6 +10,8 @@
  */
 
 
+global.logger_component = 'analytics';
+
 var express = require('express'),
   http = require('http'),
   https = require('https'),
@@ -17,6 +19,7 @@ var express = require('express'),
   fs = require('fs'),
   nconf = require('nconf'),
   logger = require('joola.io.logger'),
+  winston = require('winston'),
   app = express();
 
 require('nconf-http');
