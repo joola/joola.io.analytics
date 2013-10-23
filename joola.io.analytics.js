@@ -66,7 +66,7 @@ var setupApplication = function (callback) {
 
   var winstonStream = {
     write: function (message, encoding) {
-      joola.logger.info(message);
+     // joola.logger.info(message);
     }
   };
   app.use(express.logger((global.test ? function (req, res) {
@@ -78,32 +78,35 @@ var setupApplication = function (callback) {
   app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
-  app.use(express.session({expires: new Date(Date.now() + 1200000)}));
-
-  callback();
+  app.use(express.cookieParser());
+  app.use(express.session({
+    secret: 'what-should-be-the-secret?',
+    maxAge: new Date(Date.now() + 3600000), //1 Hour
+    expires: new Date(Date.now() + 3600000) //1 Hour
+  }));
+  app.use(require('joola.io.auth')(joola.config.get('server:auth')));
+  return callback(null);
 };
 
 var setupRoutes = function (callback) {
   var
-    login = require('./routes/login'),
+    //login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
     index = require('./routes/index');
 
   app.get('/', index.index2);
   app.get('/index', index.index2);
   app.get('/homepage', index.homepage);
-  app.get('/sdktest', index.sdktest);
-  app.get('/test', index.test);
-  app.get('/login', login.index);
-  app.get('/login.do', login.login);
-  app.post('/login.do', login.login);
+  //app.get('/login', login.index);
+  //app.get('/login.do', login.login);
+  //app.post('/login.do', login.login);
   app.get('/joola*.js', serveSDK.serveSDK);
 
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(app.router);
 
   app.use(function (error, req, res, next) {
+    joola.logger.warn(error);
     res.status(500);
     res.render('page500', { title: 'Page error - Joola Analytics', error: error });
   });
@@ -287,3 +290,12 @@ loadConfig(function (err) {
 });
 
 
+process.on('uncaughtException', function (exception) {
+  // handle or ignore error
+  console.log('FATAL EXCEPTION: ' + exception.message);
+  console.log(exception.stack);
+
+  joola.logger.error('FATAL EXCEPTION: ' + exception.message + '\n' + exception.stack, null, function () {
+    process.exit(1);
+  });
+});
