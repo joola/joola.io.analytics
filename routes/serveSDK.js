@@ -59,9 +59,7 @@ var processSDK = function (sdk, request) {
     if (host.indexOf(':') > -1)
       host = host.substring(0, host.indexOf(':'));
   }
-  console.log(host);
-  console.log((joola.config.get('engine:secure') ? 'https://' : 'http://') + host + ':' + joola.config.get('engine:port'));
-
+  
   var _sdk = sdk.sdk.toString();
   _sdk = _sdk.replace(/\[\[JOOLAIO-VERSION\]\]/g, sdk.version);
   _sdk = _sdk.replace(/\[\[JOOLAIO-TOKEN\]\]/g, request.token);
