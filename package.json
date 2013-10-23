@@ -37,6 +37,7 @@
     "citest": "mocha --reporter xunit > test-reports.xml"
   },
   "dependencies": {
+    "joola.io.auth":"x",
     "joola.io.logger":"3.x",
     "joola.io.config":"3.x",
     "joola.io.sdk": "3.x",
