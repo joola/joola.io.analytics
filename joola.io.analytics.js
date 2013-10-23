@@ -93,6 +93,8 @@ var setupRoutes = function (callback) {
   app.get('/', index.index2);
   app.get('/index', index.index2);
   app.get('/homepage', index.homepage);
+  app.get('/sdktest', index.sdktest);
+  app.get('/test', index.test);
   app.get('/login', login.index);
   app.get('/login.do', login.login);
   app.post('/login.do', login.login);
