@@ -30,14 +30,14 @@
       "endpoint": {
         "secure": false,
         "host": "127.0.0.1",
-        "port": "8080",
+        "port": "40004",
         "authToken": "d2ead440-eb12-11e2-91e2-0800200c9a66"
       }
     }
   },
   "engine": {
     "host": "127.0.0.1",
-    "port": 8080,
+    "port": 40004,
     "secure": false,
     "contentHost": "http://127.0.0.1:40002",
     "bootstrap": false,
