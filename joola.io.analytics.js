@@ -85,7 +85,7 @@ var setupApplication = function (callback) {
     expires: new Date(Date.now() + 3600000) //1 Hour
   }));
   app.use(require('joola.io.auth')(joola.config.get('server:auth')));
-  app.use(require('joola.io.status')({}));
+  app.use(require('joola.io.status')({baseDir:__dirname}));
   return callback(null);
 };
 
