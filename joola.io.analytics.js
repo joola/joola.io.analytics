@@ -85,6 +85,7 @@ var setupApplication = function (callback) {
     expires: new Date(Date.now() + 3600000) //1 Hour
   }));
   app.use(require('joola.io.auth')(joola.config.get('server:auth')));
+  app.use(require('joola.io.status')({}));
   return callback(null);
 };
 
@@ -108,7 +109,7 @@ var setupRoutes = function (callback) {
   app.use(function (error, req, res, next) {
     joola.logger.warn(error);
     res.status(500);
-    res.render('page500', { title: 'Page error - Joola Analytics', error: error });
+    res.render('page500', { title: 'Page error - Joola Analytics', error: error.replace('\n','<br/>') });
   });
 
   app.use(function (req, res, next) {
