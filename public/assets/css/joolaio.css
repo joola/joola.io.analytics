@@ -835,7 +835,7 @@ body.WideScreen .subnav .nav .dropdown
     margin-bottom: 3px;
 }
 
-.joolaio.datebox .picker .wrapper .control .optionscontainer  .compareoption .checker {
+.joolaio.datebox .picker .wrapper .control .optionscontainer .compareoption .checker {
     /*vertical-align: bottom;*/
 }
 
@@ -1785,7 +1785,7 @@ table.piechart td {
     font-weight: bold;
 }
 
-.joolaio.report.jtable  .topheader {
+.joolaio.report.jtable .topheader {
     /*background-color: whiteSmoke;*/
     /*background-color: white;*/
     /*height: 38px;*/
@@ -1796,37 +1796,37 @@ table.piechart td {
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol {
+.joolaio.report.jtable .topheader .tablecontrol {
     padding-top: 5px;
     padding-bottom: 5px;
     min-height: 30px;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .secondary {
+.joolaio.report.jtable .topheader .tablecontrol .secondary {
     float: left;
     padding-left: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar {
     float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .search {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .search {
     float: left;
     /* margin-right: 30px;*/
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype {
     float: right;
     padding-right: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype .toolbaroptions {
     float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype .toolbaroptions button img {
     height: 17px;
     width: 17px;
     margin-top: -3px;
@@ -2676,22 +2676,22 @@ table.piechart td {
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol {
+.joolaio.report.jtable .topheader .tablecontrol {
     padding-top: 5px;
     padding-bottom: 5px;
 
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .secondary {
+.joolaio.report.jtable .topheader .tablecontrol .secondary {
     float: left;
     padding-left: 10px;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar {
     float: right;
 }
 
-.joolaio.report.jtable  .topheader .tablecontrol .toolbar .tabletype {
+.joolaio.report.jtable .topheader .tablecontrol .toolbar .tabletype {
     float: right;
     padding-right: 10px;
 }
@@ -3761,9 +3761,8 @@ th.nopaddingtop.metric {
 
 .disabled {
     cursor: default !important;
-    opacity:0.6;
+    opacity: 0.6;
 }
-
 
 .metricscontainer > .categorylist > .node > .jcontainer > .disabled > .box > .keyvaluepair {
     cursor: default !important;
@@ -3784,25 +3783,23 @@ th.nopaddingtop.metric {
 }
 
 .panel-edit {
-    display:none !important;
+    display: none !important;
 }
 
 .widget-add {
-    display:none !important;
+    display: none !important;
 }
 
 .settings {
-    display:none !important;
+    display: none !important;
 }
 
-
-
 .joolaio.breadcrumbs {
-    margin-top:5px;
-              padding-bottom:5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
     font-size: 14px;
     font-weight: 300;
-                   float:left;
+    float: left;
     overflow: auto;
 }
 
@@ -3834,31 +3831,32 @@ th.nopaddingtop.metric {
 
 .joolaio.breadcrumbs .crumb .sep {
     padding-left: 5px;
-    background-color:transparent;
+    background-color: transparent;
     padding-right: 5px;
 }
 
 .demonoticebar {
-    top:0;
-    left:0;
-    width:100%;
-    height:30px;
-    line-height:18px;
-    background:#FFE16B;
-    color:#000000;
-    z-index:1000;
-    padding:10px;
-    font-weight:bold;
-    font-size:18px;
-    text-align:center;
-    opacity:0.8;
-    margin:auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 18px;
+    background: #FFE16B;
+    color: #000000;
+    z-index: 1000;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.8;
+    margin: auto;
 }
+
 .demonoticebar > a.dismiss {
-    font-size:12px;
+    font-size: 12px;
 }
 
 .demonoticebar > a.dismiss:hover {
-    font-size:12px;
-    text-decoration:none;
+    font-size: 12px;
+    text-decoration: none;
 }

@@ -1,7 +1,7 @@
 {
   "name": "joola.io.analytics",
   "preferGlobal": false,
-  "version": "3.1.1",
+  "version": "3.2.2",
   "author": "Joola <info@joo.la>",
   "description": "joola.io's analytics website",
   "engine": "node >= 0.10.x",
@@ -37,9 +37,11 @@
     "citest": "mocha --reporter xunit > test-reports.xml"
   },
   "dependencies": {
+    "joola.io.auth":"3.x",
     "joola.io.logger":"3.x",
     "joola.io.config":"3.x",
     "joola.io.sdk": "3.x",
+    "joola.io.status": "3.x",
 
     "node-controlport":"0.x",
 
