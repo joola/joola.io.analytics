@@ -20,6 +20,7 @@ var express = require('express'),
   nconf = require('nconf'),
   logger = require('joola.io.logger'),
   winston = require('winston'),
+  url = require("url"),
   app = express();
 
 require('nconf-http');
@@ -66,7 +67,7 @@ var setupApplication = function (callback) {
 
   var winstonStream = {
     write: function (message, encoding) {
-     // joola.logger.info(message);
+      // joola.logger.info(message);
     }
   };
   app.use(express.logger((global.test ? function (req, res) {
@@ -79,19 +80,39 @@ var setupApplication = function (callback) {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({
-    secret: 'what-should-be-the-secret?',
-    maxAge: new Date(Date.now() + 3600000), //1 Hour
-    expires: new Date(Date.now() + 3600000) //1 Hour
-  }));
+  /*app.use(express.session({
+   secret: 'what-should-be-the-secret?',
+   maxAge: new Date(Date.now() + 3600000), //1 Hour
+   expires: new Date(Date.now() + 3600000) //1 Hour
+   }));
+   */
+
+  var mwCache = Object.create(null);
+  function virtualHostSession(req, res, next) {
+    var host = req.get('referrer') || req.get('origin') || req.get('host'); 
+    if (host.indexOf('http') > -1) 
+      host = url.parse(host).hostname;
+
+    var hostSession = mwCache[host];
+    if (!hostSession) {
+      hostSession = mwCache[host] = express.session({
+        secret: 'what-should-be-the-secret?',
+        maxAge: new Date(Date.now() + 3600000), //1 Hour
+        expires: new Date(Date.now() + 3600000) //1 Hour
+      });
+    }
+    hostSession(req, res, next);
+  }
+  app.use(virtualHostSession);
+
   app.use(require('joola.io.auth')(joola.config.get('server:auth')));
-  app.use(require('joola.io.status')({baseDir:__dirname}));
+  app.use(require('joola.io.status')({baseDir: __dirname}));
   return callback(null);
 };
 
 var setupRoutes = function (callback) {
   var
-    //login = require('./routes/login'),
+  //login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
     index = require('./routes/index');
 
@@ -109,7 +130,7 @@ var setupRoutes = function (callback) {
   app.use(function (error, req, res, next) {
     joola.logger.warn(error);
     res.status(500);
-    res.render('page500', { title: 'Page error - Joola Analytics', error: error.replace('\n','<br/>') });
+    res.render('page500', { title: 'Page error - Joola Analytics', error: error.replace('\n', '<br/>') });
   });
 
   app.use(function (req, res, next) {
