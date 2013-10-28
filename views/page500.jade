@@ -1,14 +1,16 @@
 extends layout
 
 block content
-    div.hero-unit(style='text-align: center; background-color: white; border: 0;margin-bottom: 0;margin-top:70px;')
-        h1(style='text-align: center;') Uh oh! (500 Error)
-        div(style='font-size: 28px; line-height: 28px; text-align: center; padding-top: 20px;width: 60%; margin-right: auto; margin-left: auto;').
+  wrapper.error
+    div.caption
+        h1.error-header Uh oh! (500 Error)
+        div.error-intro.
             Not sure how this happend, but there's not much sense sticking around here for very long.
             <br/>
             Check out the top navigation where you'll be able to find your way back.
-        div(style='text-align: center;')
+        div.error-image
             img(src='/assets/img/404.jpg')
 
-        div
-            p #{error}
+        div.error-wrapper
+            h3.error-text-header Exception details
+            p.error-text #{error}

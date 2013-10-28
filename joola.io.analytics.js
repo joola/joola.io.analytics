@@ -10,6 +10,8 @@
  */
 
 
+global.logger_component = 'analytics';
+
 var express = require('express'),
   http = require('http'),
   https = require('https'),
@@ -17,6 +19,8 @@ var express = require('express'),
   fs = require('fs'),
   nconf = require('nconf'),
   logger = require('joola.io.logger'),
+  winston = require('winston'),
+  url = require("url"),
   app = express();
 
 require('nconf-http');
@@ -34,11 +38,15 @@ var loadConfig = function (callback) {
   joola.config.argv()
     .env();
 
+  joola.config.add('base-config', { type: 'file', file: joola.config.get('confurl') || './config/config.json' });
+
   try {
-    joola.config.add('analytics', { type: 'http', url: 'http://localhost:40001/conf/joola.io.analytics', callback: function (err) {
+    joola.logger.debug('Fetching configuration from: ' + joola.config.get('config:url') + 'joola.io.analytics');
+    joola.config.add('analytics', { type: 'http', url: joola.config.get('config:url') + 'joola.io.analytics', callback: function (err) {
       if (err) {
         //Fallback to file
-        joola.config.add('analytics', { type: 'file', file: joola.config.get('conf') || './config/' + 'joola.io.analytics' + '.json' });
+        joola.logger.warn('Failed to fetch config, fallback to local FS: ' + joola.config.get('config:url') + 'joola.io.analytics');
+        joola.config.add('analytics', { type: 'file', file: joola.config.get('conf') || './config/joola.io.analytics.json' });
       }
 
       //Validate config
@@ -46,7 +54,7 @@ var loadConfig = function (callback) {
         throw new Error('Failed to load configuration file');
 
       joola.logger.setLevel(joola.config.get('loglevel'));
-      callback();
+      return callback();
     }});
   }
   catch (ex) {
@@ -59,7 +67,7 @@ var setupApplication = function (callback) {
 
   var winstonStream = {
     write: function (message, encoding) {
-      joola.logger.info(message);
+      // joola.logger.info(message);
     }
   };
   app.use(express.logger((global.test ? function (req, res) {
@@ -71,32 +79,58 @@ var setupApplication = function (callback) {
   app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
-  app.use(express.session({expires: new Date(Date.now() + 1200000)}));
+  app.use(express.cookieParser());
+  /*app.use(express.session({
+   secret: 'what-should-be-the-secret?',
+   maxAge: new Date(Date.now() + 3600000), //1 Hour
+   expires: new Date(Date.now() + 3600000) //1 Hour
+   }));
+   */
 
-  callback();
+  var mwCache = Object.create(null);
+  function virtualHostSession(req, res, next) {
+    var host = req.get('referrer') || req.get('origin') || req.get('host'); 
+    if (host.indexOf('http') > -1) 
+      host = url.parse(host).hostname;
+
+    var hostSession = mwCache[host];
+    if (!hostSession) {
+      hostSession = mwCache[host] = express.session({
+        secret: 'what-should-be-the-secret?',
+        maxAge: new Date(Date.now() + 3600000), //1 Hour
+        expires: new Date(Date.now() + 3600000) //1 Hour
+      });
+    }
+    hostSession(req, res, next);
+  }
+  app.use(virtualHostSession);
+
+  app.use(require('joola.io.auth')(joola.config.get('server:auth')));
+  app.use(require('joola.io.status')({baseDir: __dirname}));
+  return callback(null);
 };
 
 var setupRoutes = function (callback) {
   var
-    login = require('./routes/login'),
+  //login = require('./routes/login'),
     serveSDK = require('./routes/serveSDK'),
     index = require('./routes/index');
 
   app.get('/', index.index2);
   app.get('/index', index.index2);
   app.get('/homepage', index.homepage);
-  app.get('/login', login.index);
-  app.get('/login.do', login.login);
-  app.post('/login.do', login.login);
+  //app.get('/login', login.index);
+  //app.get('/login.do', login.login);
+  //app.post('/login.do', login.login);
   app.get('/joola*.js', serveSDK.serveSDK);
 
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(app.router);
 
   app.use(function (error, req, res, next) {
+    joola.logger.warn(error);
     res.status(500);
-    res.render('page500', { title: 'Page error - Joola Analytics', error: error });
+    res.render('page500', { title: 'Page error - Joola Analytics', error: error.replace('\n', '<br/>') });
   });
 
   app.use(function (req, res, next) {
@@ -134,10 +168,10 @@ var startHTTP = function (callback) {
       joola.logger.info('Joola Analytics HTTP server listening on port ' + joola.config.get('server:port'));
       result.status = 'Success';
       httpServer = _httpServer;
-      return callback(result);
+      return callback(null, result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
-        return callback(result);
+        return callback(ex);
       }).on('close', function () {
         status = 'Stopped';
         joola.logger.warn('Joola Analytics HTTP server listening on port ' + (joola.config.get('server:port')).toString() + ' received a CLOSE command.');
@@ -145,7 +179,7 @@ var startHTTP = function (callback) {
   }
   catch (ex) {
     result.status = 'Failed: ' + ex.message;
-    return callback(result);
+    return callback(ex);
   }
   return null;
 };
@@ -165,17 +199,17 @@ var startHTTPS = function (callback) {
       joola.logger.info('Joola Analytics HTTPS server listening on port ' + joola.config.get('server:securePort'));
       result.status = 'Success';
       httpsServer = _httpsServer;
-      return callback(result);
+      return callback(null, result);
     }).on('error',function (ex) {
         result.status = 'Failed: ' + ex.message;
-        return callback(result);
+        return callback(ex);
       }).on('close', function () {
         joola.logger.warn('Joola Analytics HTTPS server listening on port ' + joola.config.get('server:securePort').toString() + ' received a CLOSE command.');
       });
   }
   catch (ex) {
     result.status = 'Failed: ' + ex.message;
-    return callback(result);
+    return callback(ex);
   }
   return null;
 };
@@ -235,23 +269,35 @@ var done = function () {
   joola.logger.info('Initialization complete.');
 };
 
-loadConfig(function () {
+loadConfig(function (err) {
+  if (err)
+    throw err;
   joola.logger.debug('Configuration loaded, version: ' + joola.config.get('version'));
 
-  setupApplication(function () {
+  setupApplication(function (err) {
+    if (err)
+      throw err;
     joola.logger.debug('Application setup complete, running.');
 
-    setupRoutes(function () {
+    setupRoutes(function (err) {
+      if (err)
+        throw err;
       joola.logger.debug('Routes configured');
 
-      setupControlPort(function () {
+      setupControlPort(function (err) {
+        if (err)
+          throw err;
         joola.logger.info('Control port running on port ' + joola.config.get('server:controlPort:port'));
 
-        startHTTP(function () {
+        startHTTP(function (err) {
+          if (err)
+            throw err;
           joola.logger.debug('HTTP running');
 
           if (joola.config.get('server:secure') === true) {
-            startHTTPS(function () {
+            startHTTPS(function (err) {
+              if (err)
+                throw err;
               joola.logger.debug('HTTPS running');
 
               done();
@@ -266,3 +312,12 @@ loadConfig(function () {
 });
 
 
+process.on('uncaughtException', function (exception) {
+  // handle or ignore error
+  console.log('FATAL EXCEPTION: ' + exception.message);
+  console.log(exception.stack);
+
+  joola.logger.error('FATAL EXCEPTION: ' + exception.message + '\n' + exception.stack, null, function () {
+    process.exit(1);
+  });
+});

@@ -834,7 +834,7 @@ body > .navbar .brand:hover {
 body > .navbar .brand {
     padding-right: 0;
     padding-left: 0;
-    margin-left: 20px;
+    margin-left: 0;
     float: right;
     font-weight: bold;
     color: black;

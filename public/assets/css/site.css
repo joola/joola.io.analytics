@@ -1,4 +1,13 @@
-.ortest {
+.clear-both{
+    clear:both;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
 }
 
 .joolaio.logo {
@@ -132,8 +141,8 @@ body {
 .navbar .nav li a:hover {
     /*margin-bottom: 0;*/
 
-    border-bottom: 0px solid #5D95FA;
-    color: #5D95FA;
+    border-bottom: 0px solid #c7186c;
+    color: #c7186c;
 
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
@@ -141,8 +150,8 @@ body {
 
 .navbar .nav li.active a:hover {
     margin-bottom: 0;
-    border-bottom: 2px solid #5D95FA;
-    color: #5D95FA;
+    border-bottom: 2px solid #c7186c;
+    color: #c7186c;
 
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
@@ -151,8 +160,8 @@ body {
 
 .navbar .nav li.active a {
     margin-bottom: 0;
-    border-bottom: 0px solid #5D95FA;
-    color: #5D95FA;
+    border-bottom: 0px solid #c7186c;
+    color: #c7186c;
 }
 
 .topnav {
@@ -216,10 +225,12 @@ body {
 
 .brand {
     float: left !important;
-    line-height: 40px;
-    margin-top: 20px !important;
     color: white !important;
     font-size: 240% !important;
+
+    line-height: 26px;
+    margin-top: 10px !important;
+    margin-left: 0;
 }
 
 .navbar .downloadnav {
@@ -253,7 +264,7 @@ body {
     font-weight: 700;
     margin: 1em 0 0.4em;
     font-size: 130%;
-    color: #5D95FA;
+    color: #c7186c;
     margin-right: 70px;
 }
 
@@ -316,7 +327,7 @@ body {
     font-size: 45px;
     font-weight: 700;
     margin-top: 30px;
-    color: #5D95FA;
+    color: #c7186c;
 }
 
 .hero-unit h3.headertext {
@@ -364,7 +375,7 @@ body {
 
 h1.injecttext {
     text-align: center;
-    color: #5D95FA;
+    color: #c7186c;
     font-style: italic;
     font-size: 48px;
     text-transform: uppercase;
@@ -443,7 +454,7 @@ h1.injecttext {
 form.largerform select {
     width: 106.5%;
 
-    border: 1px #5D95FA solid;
+    border: 1px #c7186c solid;
     background-color: white;
     font-size: 16px;
     line-height: 22.4px;
@@ -456,7 +467,7 @@ form.largerform select {
 form.largerform select.on {
     width: 106.5%;
 
-    border: 1px #5D95FA solid;
+    border: 1px #c7186c solid;
     background-color: white;
     font-size: 16px;
     line-height: 22.4px;
@@ -464,13 +475,13 @@ form.largerform select.on {
     color: black;
 
     height: 48px;
-    border-left: 5px #5D95FA solid;
+    border-left: 5px #c7186c solid;
 }
 
 form.largerform input[type="text"], form.largerform textarea, form.largerform input[type="password"] {
     width: 100%;
     line-height: 1.6em;
-    border: 1px #5D95FA solid;
+    border: 1px #c7186c solid;
     background-color: white;
     font-size: 16px;
     line-height: 22.4px;
@@ -481,16 +492,16 @@ form.largerform input[type="text"], form.largerform textarea, form.largerform in
 }
 
 form.largerform input[type="text"]:focus, form.largerform textarea:focus, form.largerform input[type="password"]:focus, form.largerform input.on {
-    border-left: 5px #5D95FA solid;
+    border-left: 5px #c7186c solid;
 }
 
 form.managed input[type="text"]:focus, form.managed input[type="text"].on {
-    border-left: 5px #5D95FA solid;
+    border-left: 5px #c7186c solid;
 
 }
 
 form.largerform textarea.on {
-    border-left: 5px #5D95FA solid;
+    border-left: 5px #c7186c solid;
 }
 
 form.managed input.error {
@@ -527,7 +538,7 @@ form.largerform textarea.error {
 }
 
 .shortcaption {
-    border-bottom: 2px solid #5D95FA;
+    border-bottom: 2px solid #c7186c;
     text-align: center;
     line-height: 35px;
     font-size: 22px;
@@ -575,7 +586,7 @@ p.larger {
 }
 
 .footer a, .footer a:hover {
-    color: #5D95FA;
+    color: #c7186c;
 }
 
 .downloadoption {
@@ -586,13 +597,13 @@ p.larger {
 }
 
 .downloadoption:hover {
-    color: #5D95FA;
+    color: #c7186c;
     margin-left: 3px;
     cursor: pointer;
 }
 
 .downloadoption.on {
-    border-left: 3px solid #5D95FA;
+    border-left: 3px solid #c7186c;
     margin-left: 0;
     cursor: pointer;
 }
@@ -635,7 +646,7 @@ p.larger {
 
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
     background: inherit;
-    color: #5D95FA;
+    color: #c7186c;
 }
 
 #forgotbutton:hover {
@@ -659,7 +670,7 @@ p.larger {
 
 .navbar .nav li.defaultnav a:hover {
     color: white;
-    background: #5D95FA;
+    background: #c7186c;
     border: 0;
 }
 
@@ -1542,3 +1553,166 @@ table .header:hover::after {
     display: none;
 }
 
+body.login .login-wrapper {
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+}
+
+body.login div.logo .logo-image, body.status div.logo .logo-image {
+    background-image: url('/assets/img/logo.analytics.dark.png');
+    width: 345px;
+    height: 50px;
+
+
+}
+
+body.login div.logo .logo-image{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.login .inputs {
+    margin-top: 20px;
+}
+
+body.login input[type="text"],
+body.login input[type="password"] {
+    height: 20px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+body.login div.message:not(:empty) {
+    /*width: 280px;*/
+    height: 20px;
+    background: #ffbbbb;
+    padding: 10px 16px;
+    font-size: 18px;
+
+    color: #333;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+body.login button {
+    -moz-box-shadow: inset 0px 1px 0px 0px #e51887;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #e51887;
+    box-shadow: inset 0px 1px 0px 0px #e51887;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e51887), color-stop(1, #c7186c));
+    background: -moz-linear-gradient(center top, #e51887 5%, #c7186c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e51887', endColorstr='#c7186c');
+    background-color: #c7186c;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-bottom-left-radius: 0px;
+    text-indent: 0;
+    border: 1px solid #c7186c;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #c7186c;
+}
+
+body.login button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c7186c), color-stop(1, #e51887));
+    background: -moz-linear-gradient(center top, #c7186c 5%, #e51887 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c7186c', endColorstr='#e51887');
+    background-color: #c7186c;
+
+    cursor: pointer;
+}
+
+body.login button:active {
+    position: relative;
+    top: 1px;
+}
+
+wrapper.error {
+
+}
+
+wrapper.error .error-header, wrapper.error .error-image {
+    text-align: center;
+}
+
+wrapper.error .error-intro {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: left;
+    padding-top: 20px;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+wrapper.error .error-wrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+}
+
+wrapper.error .error-wrapper .error-message {
+    font-size: 11px;
+}
+
+wrapper.error .caption {
+    padding: 40px;
+    margin-top: 20px;
+}
+
+wrapper.error .caption h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: inherit;
+}
+
+div.loginname {
+    font-size: 120%;
+
+    margin-left: 150px;
+    margin-top: 25px;
+
+    margin-bottom: 2px;
+    color: #FFF;
+    float: right;
+    padding: 10px 15px 10px;
+
+    cursor: default;
+}
+
+input:-webkit-autofill {
+    background-color: white !important;
+}
