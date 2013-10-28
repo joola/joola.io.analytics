@@ -1,4 +1,13 @@
-.ortest {
+.clear-both{
+    clear:both;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
 }
 
 .joolaio.logo {
@@ -1552,11 +1561,15 @@ body.login .login-wrapper {
     margin-top: 300px;
 }
 
-body.login div.logo .logo-image {
+body.login div.logo .logo-image, body.status div.logo .logo-image {
     background-image: url('/assets/img/logo.analytics.dark.png');
     width: 345px;
     height: 50px;
 
+
+}
+
+body.login div.logo .logo-image{
     margin-left: auto;
     margin-right: auto;
 }
