@@ -3867,3 +3867,10 @@ th.nopaddingtop.metric {
     margin-left: 40px;
   }
 }
+
+.fullopacity {
+  opacity:1;
+}
+span.disabled {
+  border-bottom:0 !important;
+} 
