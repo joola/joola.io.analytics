@@ -11,7 +11,7 @@ var loadSDK = function (req, res, next) {
     etag: null
   };
 
-  delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')]
+  delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')];
   result.version = require(__dirname + '/../node_modules/joola.io.sdk/package.json').version;
 
   fs.readFile(__dirname + '/../node_modules/joola.io.sdk/bin/joolaio.js', function (err, data) {
