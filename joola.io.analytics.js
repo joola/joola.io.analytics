@@ -75,7 +75,7 @@ var setupApplication = function (callback) {
 
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.favicon('public/assets/ico/favicon.ico'));
+  app.use(express.favicon(__dirname + '/public/assets/ico/favicon.ico'));
   app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
