@@ -715,3 +715,20 @@ $(window).bind('joolaio-initialized', function () {
         location.href = '/login';
     })
 });
+
+var interval = 1200000;
+
+function setLogoutTimeout() {
+  $.get('/logout', function (data) {
+    location.reload();
+  });
+}
+
+$(document).ready(function () {
+  var timeout = setTimeout(setLogoutTimeout, interval);
+  $(window).click(function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(setLogoutTimeout, interval);
+  });
+
+});
