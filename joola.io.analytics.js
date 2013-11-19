@@ -54,6 +54,7 @@ var loadConfig = function (callback) {
         throw new Error('Failed to load configuration file');
 
       joola.logger.setLevel(joola.config.get('loglevel'));
+
       return callback();
     }});
   }
@@ -72,8 +73,7 @@ var setupApplication = function (callback) {
   };
   app.use(express.logger((global.test ? function (req, res) {
   } : {stream: winstonStream})));
-
-  app.set('views', __dirname + '/views');
+  app.set('views', joola.config.get('viewpath') || __dirname + './views');
   app.set('view engine', 'jade');
   app.use(express.favicon(__dirname + '/public/assets/ico/favicon.ico'));
   app.use(express.compress());
@@ -124,7 +124,7 @@ var setupRoutes = function (callback) {
   //app.post('/login.do', login.login);
   app.get('/joola*.js', serveSDK.serveSDK);
 
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(joola.config.get('publicpath') || __dirname + './public'));
   app.use(app.router);
 
   app.use(function (error, req, res, next) {
