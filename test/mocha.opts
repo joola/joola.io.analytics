@@ -1,6 +1,0 @@
---require ./test/common.js
-
---reporter spec
---recursive
-
---globals joola,loggername,id,CookieAccessInfo,Cookie,CookieJar,auth,date

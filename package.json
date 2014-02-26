@@ -1,77 +1,12 @@
 {
-  "name": "joola.io.analytics",
-  "preferGlobal": false,
-  "version": "3.2.6",
-  "author": "Joola <info@joo.la>",
-  "description": "joola.io's analytics website",
-  "engine": "node >= 0.10.x",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joola/joola.io.analytics.git"
-  },
-  "bugs": "https://joolatech.atlassian.net/browse/JARVIS",
-  "contributors": [
-    {
-      "name": "Itay Weinberger",
-      "email": "itay@joo.la",
-      "url": "http://joo.la"
-    },
-    {
-      "name": "Or Weinberger",
-      "email": "or@joo.la",
-      "url": "http://joo.la"
-    }
-  ],
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "make test",
-    "start": "node joola.io.analytics.js",
-    "debug": "npm-inspector && npm start && open \"http://http://127.0.0.1:8080/debug?port=5858\"",
-    "monitor": "mocha --reporter min --watch",
-    "debugtest": "mocha --debug-brk --reporter spec",
-    "blanket": {
-      "pattern": "lib",
-      "data-cover-never": "node_modules"
-    },
-    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | node ./node_modules/coveralls/bin/coveralls.js",
-    "citest": "mocha --reporter xunit > test-reports.xml"
+    "start": "node app.js"
   },
   "dependencies": {
-    "joola.io.auth":"3.x",
-    "joola.io.logger":"3.x",
-    "joola.io.config":"3.x",
-    "joola.io.sdk": "3.x",
-    "joola.io.status": "3.x",
-
-    "node-controlport":"0.x",
-
-    "optimist":"*",
-    "express": "*",
-    "jade": "*",
-    "async": "*",
-    "underscore": "*",
-    "winston": "*",
-    "request": "*",
-    "process": "*",
-    "path": "*",
-    "ncp": "*",
-
-    "nconf":"*",
-    "nconf-http":"*"
-  },
-  "devDependencies": {
-    "closurecompiler": "*",
-    "underscore": "*",
-    "mocha-lcov-reporter": "*",
-    "coveralls": "*",
-    "should": "*",
-    "mocha": "*",
-    "sinon": "*",
-    "chai": "*",
-    "sinon-chai": "*",
-    "blanket": "*",
-    "jshint": "*",
-    "supertest":"*"
-  },
-  "license": "GPL-3.0"
+    "express": "3.4.8",
+    "jade": "*"
+  }
 }
