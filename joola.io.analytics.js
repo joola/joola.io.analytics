@@ -73,9 +73,9 @@ var setupApplication = function (callback) {
   };
   app.use(express.logger((global.test ? function (req, res) {
   } : {stream: winstonStream})));
-  app.set('views', joola.config.get('viewpath') || __dirname + './views');
+  app.set('views', joola.config.get('viewpath') || path.join(__dirname, './views'));
   app.set('view engine', 'jade');
-  app.use(express.favicon(__dirname + '/public/assets/ico/favicon.ico'));
+  app.use(express.favicon(path.join(__dirname, '/public/assets/ico/favicon.ico')));
   app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -88,9 +88,10 @@ var setupApplication = function (callback) {
    */
 
   var mwCache = Object.create(null);
+
   function virtualHostSession(req, res, next) {
-    var host = req.get('referrer') || req.get('origin') || req.get('host'); 
-    if (host.indexOf('http') > -1) 
+    var host = req.get('referrer') || req.get('origin') || req.get('host');
+    if (host.indexOf('http') > -1)
       host = url.parse(host).hostname;
 
     var hostSession = mwCache[host];
@@ -103,6 +104,7 @@ var setupApplication = function (callback) {
     }
     hostSession(req, res, next);
   }
+
   app.use(virtualHostSession);
 
   app.use(require('joola.io.auth')(joola.config.get('server:auth')));
@@ -111,10 +113,12 @@ var setupApplication = function (callback) {
 };
 
 var setupRoutes = function (callback) {
+
+  console.log('setuproutes', process.cwd(), __dirname)
   var
   //login = require('./routes/login'),
-    serveSDK = require('./routes/serveSDK'),
-    index = require('./routes/index');
+    serveSDK = require(path.join(__dirname, '/routes/serveSDK')),
+    index = require(path.join(__dirname, '/routes/index'));
 
   app.get('/', index.index2);
   app.get('/index', index.index2);
@@ -124,7 +128,7 @@ var setupRoutes = function (callback) {
   //app.post('/login.do', login.login);
   app.get('/joola*.js', serveSDK.serveSDK);
 
-  app.use(express.static(joola.config.get('publicpath') || __dirname + './public'));
+  app.use(express.static(joola.config.get('publicpath') || path.join(__dirname, './public')));
   app.use(app.router);
 
   app.use(function (error, req, res, next) {

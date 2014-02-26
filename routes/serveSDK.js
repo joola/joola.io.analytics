@@ -1,5 +1,6 @@
 var
   fs = require('fs'),
+  path = require('path'),
   url = require('url');
 
 var loadSDK = function (req, res, next) {
@@ -11,16 +12,16 @@ var loadSDK = function (req, res, next) {
     etag: null
   };
 
-  delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')];
-  result.version = require(__dirname + '/../node_modules/joola.io.sdk/package.json').version;
+  delete require.cache[require.resolve(path.join(__dirname, '/../node_modules/joola.io.sdk/package.json'))];
+  result.version = require(path.join(__dirname, '/../node_modules/joola.io.sdk/package.json')).version;
 
-  fs.readFile(__dirname + '/../node_modules/joola.io.sdk/bin/joolaio.js', function (err, data) {
+  fs.readFile(path.join(__dirname, '/../node_modules/joola.io.sdk/bin/joolaio.js'), function (err, data) {
     if (err) {
       result.success = false;
       throw new Error('Failed to load SDK file: ' + err);
     }
     else {
-      fs.stat(__dirname + '/../node_modules/joola.io.sdk/bin/joolaio.js', function (err, stat) {
+      fs.stat(path.join(__dirname, '/../node_modules/joola.io.sdk/bin/joolaio.js'), function (err, stat) {
         if (err) {
           result.success = false;
           throw new Error('Failed to load SDK file: ' + err);
@@ -59,7 +60,7 @@ var processSDK = function (sdk, request) {
     if (host.indexOf(':') > -1)
       host = host.substring(0, host.indexOf(':'));
   }
-  
+
   var _sdk = sdk.sdk.toString();
   _sdk = _sdk.replace(/\[\[JOOLAIO-VERSION\]\]/g, sdk.version);
   _sdk = _sdk.replace(/\[\[JOOLAIO-TOKEN\]\]/g, request.token);
