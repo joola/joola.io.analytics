@@ -11,16 +11,16 @@ var loadSDK = function (req, res, next) {
     etag: null
   };
 
-  delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')]
-  result.version = require('../node_modules/joola.io.sdk/package.json').version;
+  delete require.cache[require.resolve('../node_modules/joola.io.sdk/package.json')];
+  result.version = require(__dirname + '/../node_modules/joola.io.sdk/package.json').version;
 
-  fs.readFile('node_modules/joola.io.sdk/bin/joolaio.js', function (err, data) {
+  fs.readFile(__dirname + '/../node_modules/joola.io.sdk/bin/joolaio.js', function (err, data) {
     if (err) {
       result.success = false;
       throw new Error('Failed to load SDK file: ' + err);
     }
     else {
-      fs.stat('node_modules/joola.io.sdk/bin/joolaio.js', function (err, stat) {
+      fs.stat(__dirname + '/../node_modules/joola.io.sdk/bin/joolaio.js', function (err, stat) {
         if (err) {
           result.success = false;
           throw new Error('Failed to load SDK file: ' + err);

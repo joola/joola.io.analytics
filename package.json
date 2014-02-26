@@ -1,7 +1,7 @@
 {
   "name": "joola.io.analytics",
   "preferGlobal": false,
-  "version": "3.2.2",
+  "version": "3.2.6",
   "author": "Joola <info@joo.la>",
   "description": "joola.io's analytics website",
   "engine": "node >= 0.10.x",
@@ -46,7 +46,7 @@
     "node-controlport":"0.x",
 
     "optimist":"*",
-    "express": "3.2.6",
+    "express": "*",
     "jade": "*",
     "async": "*",
     "underscore": "*",
@@ -61,17 +61,17 @@
   },
   "devDependencies": {
     "closurecompiler": "*",
-    "underscore": "1.x",
-    "mocha-lcov-reporter": "0.x",
-    "coveralls": "2.x",
-    "should": "1.x",
-    "mocha": "1.x",
-    "sinon": "1.x",
-    "chai": "1.x",
-    "sinon-chai": "2.x",
-    "blanket": "1.x",
-    "jshint": "2.x",
-    "supertest":"0.x"
+    "underscore": "*",
+    "mocha-lcov-reporter": "*",
+    "coveralls": "*",
+    "should": "*",
+    "mocha": "*",
+    "sinon": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "blanket": "*",
+    "jshint": "*",
+    "supertest":"*"
   },
   "license": "GPL-3.0"
 }

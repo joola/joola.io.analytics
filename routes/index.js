@@ -14,7 +14,7 @@ exports.index = function (req, res) {
     });
   }
   else*/
-    res.render('index', { joolaioToken: req.session.token, sampleData: joola.config.get('server:sampleData'), user: req.session.user  });
+    res.render('index', { joolaioToken: req.session.token, sampleData: joola.config.get('server:sampleData'), user: req.session.displayName  });
 };
 
 exports.index2 = function (req, res) {
@@ -32,7 +32,7 @@ exports.index2 = function (req, res) {
     });
   }
   else*/
-    res.render('index', {joolaioToken: req.session.token, sampleData: joola.config.get('server:sampleData') , user: req.session.user});
+    res.render('index', {joolaioToken: req.session.token, sampleData: joola.config.get('server:sampleData') , user: req.session.displayName});
 };
 
 exports.homepage = function (req, res) {
