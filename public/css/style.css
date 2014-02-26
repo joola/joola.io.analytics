@@ -84,8 +84,8 @@ table.tablesorter thead tr th:hover {
 }
 
 .navbar-brand {
-  padding: 8px 8px;
-  height:61px;
+  padding: 12px 8px;
+  height:auto;
 }
 
 /* Edit Below to Customize Widths > 768px */
@@ -108,7 +108,7 @@ table.tablesorter thead tr th:hover {
     left: 225px;
     width: 225px;
     position: fixed;
-    top: 62px;
+    top: 80px;
     height: 100%;
     border-radius: 0;
     border: none;
@@ -592,4 +592,13 @@ div.topic.active {
 .successmessage {
   color:green;
   display:none;
+}
+
+.navbar-inverse, .navbar-header {
+  height:80px;
+  margin-bottom:0;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-top:12px;
 }
