@@ -4,5 +4,8 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  if (!req.session.jtoken)
+    res.redirect('/login');
+  
+  res.render('index', { title: 'Express', jtoken: req.session.jtoken });
 };
