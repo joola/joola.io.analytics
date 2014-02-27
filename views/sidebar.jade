@@ -7,52 +7,27 @@
           .colorspacer
           i.fa.fa-dashboard
           .topiccaption Dashboards
-        ul.nav-dashboards.subtopic
-          li.subtopicheader.subtopicheader_wrapper
-            a#dashboard-overview.topiclink(title='Overview', href="/manage/dashboard/index")
-              .subtopiccaption Overview
-          li.subtopicheader.subtopicheader_wrapper
-            a#nodes.topiclink(title='System Performance', href="/manage/dashboard/nodes")
-              .subtopiccaption System Performance
-          li.subtopicheader.subtopicheader_wrapper
-            a#dispatch.topiclink(title='Message Dispatch', href="/manage/dashboard/dispatch")
-              .subtopiccaption Message Dispatch
+        ul#dashboardFeed.nav-dashboards.subtopic
       .topic.topic-reports
         .topicheader
           .colorspacer
 
-          i.fa.fa-table
-          .topiccaption: a.maintopiclink(href="/manage/dataintegration/index") Data Integration
       .topic.topic-usermanagement
         .topicheader
           .colorspacer
 
           i.fa.fa-users
-          .topiccaption User Management
-        ul.nav-reports.subtopic
-          li.subtopicheader.subtopicheader_wrapper
-            a#users.topiclink(title='Users', href="/manage/users/index")
-              .subtopiccaption Users
-          li.subtopicheader.subtopicheader_wrapper
-            a#roles.topiclink(title='Roles & Permissions', href="/manage/users/roles")
-              .subtopiccaption Roles & Permissions
-          li.subtopicheader.subtopicheader_wrapper
-            a#orgs.topiclink(title='Organizations', href="/manage/users/organizations")
-              .subtopiccaption Organizations
+          .topiccaption Reports
+        ul#reportFeed.nav-reports.subtopic
+          
 
       .topic.topic-settings
         .topicheader
           .colorspacer
 
           i.fa.fa-gears
-          .topiccaption Settings
-        ul.nav-reports.subtopic
-          li.subtopicheader.subtopicheader_wrapper
-            a#generalSettings.topiclink(title='General Settings', href="/manage/settings/index")
-              .subtopiccaption General settings
-          li.subtopicheader.subtopicheader_wrapper
-            a#interfaceSettings.topiclink(title='Interface Settings', href="/manage/settings/interfaces")
-              .subtopiccaption Interfaces
+          .topiccaption Realtime
+        ul#realtimeFeed.nav-reports.subtopic
 
 
   ul.nav.navbar-nav.navbar-right.navbar-user
