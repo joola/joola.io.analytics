@@ -18,19 +18,19 @@ exports.login = function (req, res) {
     if (err)
       throw err;
     
-    joolaio.TOKEN = '12345';
-    req.session.jtoken = joolaio.TOKEN;
-    res.redirect('/');
-    /*
-    joolaio.users.authenticate('joola', 'admin', 'password', function (err, token) {
-      //TODO: Waiting for fix #264
-      //joolaio.TOKEN = token._;
 
-      //joola.io is now ready for work, event `core.ready` is emitted
-      
-      
-      
+        
+    joolaio.users.authenticate('joola', 'admin', 'password', function (err, token) {
+      if (err)
+        res.redirect('/login');
+      else {
+        joolaio.TOKEN = token._;
+        joolaio.USER = token.user;
+        req.session.jtoken = joolaio.TOKEN;
+        req.session.displayName = joolaio.USER.displayName;
+        res.redirect('/');  
+      }
     });
-    */
+    
   });
 };

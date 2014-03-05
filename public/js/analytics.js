@@ -1,21 +1,21 @@
 var menuHTML = '<li class="subtopicheader subtopicheader_wrapper">' +
   '<a id="dashboard-overview" class="topiclink subtopiccaption" title="Overview">Overview</a>'
-  '</li>';
+'</li>';
 
-$.get('/feeds/dashboards', function(data) {
-  data.forEach(function(d) {
+$.get('/feeds/dashboards', function (data) {
+  data.forEach(function (d) {
     $('#dashboardFeed').append('<li class="subtopicheader subtopicheader_wrapper"><a id="dashboard-overview" class="topiclink subtopiccaption" title="Overview">' + d.name + '</a></li>');
   })
 });
 
-$.get('/feeds/reports', function(data) {
-  data.forEach(function(d) {
+$.get('/feeds/reports', function (data) {
+  data.forEach(function (d) {
     $('#reportFeed').append('<li class="subtopicheader subtopicheader_wrapper"><a id="dashboard-overview" class="topiclink subtopiccaption" title="Overview">' + d.name + '</a></li>');
   })
 });
 
-$.get('/feeds/realtime', function(data) {
-  data.forEach(function(d) {
+$.get('/feeds/realtime', function (data) {
+  data.forEach(function (d) {
     $('#realtimeFeed').append('<li class="subtopicheader subtopicheader_wrapper"><a id="dashboard-overview" class="topiclink subtopiccaption" title="Overview">' + d.name + '</a></li>');
   })
 });
@@ -65,4 +65,24 @@ if (location.pathname == '/manage/users/roles') {
 if (location.pathname == '/manage/users/organizations') {
   usersOpen = true;
   users_orgs = true;
+}
+console.log(jtoken);
+joolaio.init({token: jtoken}, function (err) {
+  
+  if (err)
+    console.log('Error', err);
+
+  setupDashboard();
+
+});
+function setupDashboard() {
+  $('#test').Metric({
+    caption: 'test',
+    query: {
+      timeframe: 'last_minute',
+      interval: 'minute',
+      dimensions: ['timestamp'],
+      metrics: [{key:'nodes',dependsOn:'nodes',collection:'stats-node-count'}]
+    }
+  });
 }
